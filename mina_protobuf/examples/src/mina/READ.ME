@@ -1,0 +1,92 @@
+MINA 编码解码
+
+ProtocolCodecFactory用于提供ProtocolDecoder,ProtocolEncoder.
+下面的每个模块的Factory都是继承自ProtocolCodecFactory,而且每个模块里Decoder和Encoder都是继承自ProtocolDecoder,ProtocolEncoder.
+
+
+org.apache.mina.filter.codec
+
+	Interfaces：
+		ProtocolCodecFactory
+		ProtocolDecoder
+		ProtocolDecoderOutput
+		ProtocolEncoder
+		ProtocolEncoderOutput
+
+	Classes：
+		AbstractProtocolDecoderOutput	：A ProtocolDecoderOutput based on queue.
+		AbstractProtocolEncoderOutput	：A ProtocolEncoderOutput based on queue.
+		CumulativeProtocolDecoder		：A ProtocolDecoder 实现：帮助ProtocolDecoder 实现者 缓冲其接受到的IO buffers .
+		ProtocolCodecFilter				：An IoFilter.如果想要转换binary or protocol specific data 到message objects 就应该使用这个. 反之亦然则应该使用ProtocolCodecFactory, ProtocolEncoder, or ProtocolDecoder.
+		ProtocolCodecSession			：A virtual IoSession that provides ProtocolEncoderOutput and ProtocolDecoderOutput. It is useful for unit-testing codec and reusing codec for non-network-use (e.g. serialization).
+		ProtocolDecoderAdapter			：An abstract ProtocolDecoder implementation for those who don't need ProtocolDecoder.finishDecode(IoSession, ProtocolDecoderOutput) nor ProtocolDecoder.dispose(IoSession) method.
+		ProtocolEncoderAdapter			：An abstract ProtocolEncoder implementation for those who don't have any resources to dispose.
+		SynchronizedProtocolDecoder		：A ProtocolDecoder implementation which decorates an existing decoder to be thread-safe
+		SynchronizedProtocolEncoder		：A ProtocolEncoder implementation which decorates an existing encoder to be thread-safe
+
+
+org.apache.mina.filter.codec.demux: 多路分配
+DemuxingProtocolCodecFactory 用于提供DemuxingProtocolEncoder 和DemuxingProtocolDecoder 的ProtocolCodecFactory.
+DemuxingProtocolEncoder 和 DemuxingProtocolDecoder 对接受到的 messages 和buffers 多路分配给MessageEncoders and MessageDecoders.
+
+	Interfaces
+		MessageDecoder
+		MessageDecoderFactory
+		MessageEncoder
+		MessageEncoderFactory
+
+	Classes
+		DemuxingProtocolCodecFactory
+		DemuxingProtocolDecoder
+		DemuxingProtocolEncoder
+		MessageDecoderAdapter
+		MessageDecoderResult
+
+
+org.apache.mina.filter.codec.prefixedstring：前缀字串
+使用定长的前缀对java字符串对象进行编码和解码
+	Classes
+		PrefixedStringCodecFactory
+		PrefixedStringDecoder
+		PrefixedStringEncoder
+
+
+org.apache.mina.filter.codec.serialization：序列化
+用于序列化和反序列化java对象. 这个模块在没有使用其他编码格式(json, protobuf等)下特别有用
+	Classes
+		ObjectSerializationCodecFactory
+		ObjectSerializationDecoder
+		ObjectSerializationEncoder
+		ObjectSerializationInputStream
+		ObjectSerializationOutputStream
+
+
+org.apache.mina.filter.codec.statemachine：状态机
+	Interfaces
+		DecodingState
+
+	Classes
+		ConsumeToCrLfDecodingState
+		ConsumeToDynamicTerminatorDecodingState
+		ConsumeToEndOfSessionDecodingState
+		ConsumeToLinearWhitespaceDecodingState
+		ConsumeToTerminatorDecodingState
+		CrLfDecodingState
+		DecodingStateMachine
+		DecodingStateProtocolDecoder
+		FixedLengthDecodingState
+		IntegerDecodingState
+		LinearWhitespaceSkippingState
+		ShortIntegerDecodingState
+		SingleByteDecodingState
+		SkippingState
+
+
+
+org.apache.mina.filter.codec.textline：文本行
+在 text line data 和Java string object进行编码和解码.这种解码器用于基于文本的消息协议(例如SMTP and IMAP).
+	Classes
+		LineDelimiter
+		TextLineCodecFactory
+		TextLineDecoder
+		TextLineEncoder

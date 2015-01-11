@@ -1,0 +1,12 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgActivityRewardRole {
+	required uint32	rewardType			= 1;
+	required uint32	rewardRank			= 2;
+	required string roleName            = 3;
+	required uint32 profession			= 4;
+}
+

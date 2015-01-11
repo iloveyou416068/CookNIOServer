@@ -1,0 +1,12 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 祈福信息
+message MsgYijunPray {
+    required uint64 prayTime = 1; // 祈福时间（毫秒）
+    required string roleName = 2; // 角色名称
+}

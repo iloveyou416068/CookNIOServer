@@ -1,0 +1,12 @@
+package test;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "demo";
+
+message MsgRankItem {
+    required uint64 rank      	 = 1;
+    required string name     	 = 2;
+    optional uint32 rankValue    = 3;
+}

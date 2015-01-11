@@ -1,0 +1,12 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgDungeonReward {
+    optional uint64    			copper    		= 1; // 当前的铜钱
+    optional uint32     		power   		= 2; // 当前的体力(扫荡扣除后的体力)    
+    optional uint64		  		jugong			= 3; // 当前军功
+    optional uint64				exp				= 4; // 完成一次副本增加经验
+    optional uint32				star			= 5; // 评星
+  }

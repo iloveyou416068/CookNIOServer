@@ -1,0 +1,16 @@
+package sanguo;
+
+import "constants.proto";
+import "kungfu_skill.proto";
+
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+
+message MsgKungfuSlotChild {
+	required uint32 slotChildrenLevel = 1; // 套路下槽对应等级
+	required uint32 slotChildrenProperty = 2; // 套路下槽等级对应加成
+	required uint32 slotChildID       = 3; // 槽索引(1,2,3,4)
+	optional MsgKungfuSkill msgKungfuSkill = 4; // 装备的武学
+}

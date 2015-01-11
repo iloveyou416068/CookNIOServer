@@ -1,0 +1,15 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 义军成员
+message MsgYijunMember {
+    required uint64 roleID       = 1; // 角色ID
+    required string roleName     = 2; // 角色名称
+    required uint32 roleLevel    = 3; // 角色等级
+    required uint64 contribution = 4; // 义军总贡献
+    required uint64 offlineTime  = 5; // 离线时长
+}

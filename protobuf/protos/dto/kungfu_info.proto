@@ -1,0 +1,18 @@
+package sanguo;
+
+import "constants.proto";
+import "open_kungfu_slot_condition.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+
+message MsgKungFuInfo {
+    required uint32 kungfuMainID = 1; 
+    required uint32 kungfuSlotNum = 2;  // 表示对应按钮开启以及开启多少个槽数
+	required string equipKungfuId = 3;  // 格式:"100,100"
+	required MsgOpenKungfuSlotCondition openSlotCondition = 4; // 开启槽条件
+	required uint32 openStatus = 5; // 0表示未开启，1表示开启
+	repeated uint32 slotChildrenLevel = 6; // 套路下槽对应等级
+	repeated uint32 slotChildrenProperty = 7; // 套路下槽等级对应加成
+}

@@ -1,0 +1,13 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 义军申请
+message MsgYijunApplication {
+    required uint64 roleId    = 1; // 申请者ID
+    required uint32 roleLevel = 2; // 申请者等级
+    required string roleName  = 3; // 申请者名称
+}

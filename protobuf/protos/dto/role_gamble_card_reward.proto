@@ -1,0 +1,14 @@
+package sanguo;
+
+import "role_gem_bag_goods.proto";
+import "role_bag_goods.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgGambleCardReward { 
+	optional uint64             copper        =  1; 
+	optional uint64             honour        =  2; //荣誉
+	optional MsgRoleGemBagGoods gem    		  =  3; //宝石
+    optional MsgRoleBagGoods    bagGoods	  =  4; //背包物品:装备 技能竹简
+}

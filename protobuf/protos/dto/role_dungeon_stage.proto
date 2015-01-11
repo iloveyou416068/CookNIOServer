@@ -1,0 +1,9 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgRoleDungeonStage {
+    required uint32 stageId = 1; // 副本关卡ID
+    required uint32 star    = 2; // 星评（0表示还未过关）
+}

@@ -1,0 +1,13 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 签到奖励信息
+message MsgSignReward {
+	required uint64		giftID					  = 1; // 奖励ID：
+    required string     rewardInfo        		  = 2; // 奖励详细信息
+	required uint32		days					  = 3; // 礼包对应天数：5,10,15,20,25
+}

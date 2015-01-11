@@ -1,0 +1,17 @@
+package sanguo;
+
+import "role.proto";
+import "role_bag_goods.proto";
+import "pet.proto";
+
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 主城内的角色信息
+message MsgRoleInMainCity {
+    required MsgRoleData     basicInfo  = 1;
+    repeated MsgRoleBagGoods equipments = 2;
+    repeated MsgPet      	 pet          = 3;
+}
+

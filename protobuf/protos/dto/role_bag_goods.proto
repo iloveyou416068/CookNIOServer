@@ -1,0 +1,12 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgRoleBagGoods {
+    required uint64 autoIncrID = 1;
+    required uint32 attrID     = 2;
+    required uint32 count      = 3;
+    optional uint32 exp        = 4;
+    optional uint32 level      = 5;
+}

@@ -1,0 +1,14 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 祈福信息
+message MsgRoleFriendAprrove {
+    required uint64 roleID     = 1; // 申请人角色ID
+    required string roleName   = 2; // 角色名称
+	required uint32 level	   = 3; // 等级
+	required uint32 proffesion = 4; // 职业
+}

@@ -1,0 +1,9 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgGambleCardItem { 
+	required uint32 		key 		= 1;  // 牌的类型(1 装备 技能竹简残卷 武学秘籍, 2 宝石 ,3 铜钱,4 荣誉)
+	required uint64 		value 		= 2;  // 牌值,根据类型表示具体的值
+}

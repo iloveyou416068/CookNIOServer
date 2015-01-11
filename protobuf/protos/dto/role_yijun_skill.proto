@@ -1,0 +1,10 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 义军技能
+message MsgRoleYijunSkill {
+    required uint32 attrID = 1; // 技能ID（按此ID从静态表查数据）
+    required uint32 level  = 2; // 技能等级
+}

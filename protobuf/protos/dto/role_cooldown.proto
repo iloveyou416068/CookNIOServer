@@ -1,0 +1,11 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgRoleCooldown {
+    required uint32 type      = 1;
+    required uint64 startTime = 2;
+    required uint64 endTime   = 3;
+    required uint32 status    = 4;
+}

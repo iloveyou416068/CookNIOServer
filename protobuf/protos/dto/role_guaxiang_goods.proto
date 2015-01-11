@@ -1,0 +1,17 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+//卦象的数据类
+message MsgGuaxiangGoods {
+    optional uint64 autoIncrID = 1;
+    required uint32 attrID     = 2;
+    required uint32 count      = 3;
+    optional uint32 exp        = 4;
+    optional uint32 level      = 5;   
+    optional uint32 place      = 6; 
+    optional GoodsStatus goodsStatus = 7;
+}

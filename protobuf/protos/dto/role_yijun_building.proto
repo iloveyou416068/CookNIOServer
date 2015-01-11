@@ -1,0 +1,10 @@
+package sanguo;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 义军建筑
+message MsgRoleYijunBuilding {
+    required uint32 id    = 1; // 建筑ID（1、2、3）
+    required uint32 level = 2; // 技能等级
+}

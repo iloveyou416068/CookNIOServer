@@ -1,0 +1,12 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgLeaderItembordData {
+    required uint32 rank      = 1; // 排名
+    required string roleName  = 2; // 角色名称
+	required uint64 rankValue = 3; // 对应某种排行具体的值
+}

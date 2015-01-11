@@ -1,0 +1,24 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 角色排名数据
+message MsgRoleMail {
+    required uint64 id      	 = 1; 
+    required string tiltle     	 = 2; 
+	required string context    	 = 3; 
+	required string kit     	 = 4; 
+    required uint64 senderId     = 5; 
+	required uint64 receiverId   = 6; 
+	required uint32 mailStatus   = 7; 
+	required uint32 kitStatus    = 8; 
+	required uint64 endTime      = 9; 
+	required string senderName   = 10; 
+	required string receiverName = 11; 
+	required uint32 haveReward   = 12; 
+	required string name		 = 13; 
+	required string startTime    = 14;
+}

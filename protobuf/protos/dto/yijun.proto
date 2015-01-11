@@ -1,0 +1,25 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+// 义军
+message MsgYijun {
+    // 基本信息
+    required uint64 id          =  1; // 义军ID
+    required string name        =  2; // 义军名称
+    required uint32 level       =  3; // 义军等级
+    required uint32 memberCount =  4; // 人数
+    required uint64 wealth      =  5; // 义军财富
+    required uint64 wealthPD    =  6; // 军饷
+    required uint64 marshalID   =  7; // 主帅ID
+    required string marshalName =  8; // 主帅名称
+    required uint32 applied     =  9; // 已经申请？0表示没有，非零表示申请过
+    // 详细信息
+    optional uint64 generalAID  =  10; // 将军1ID
+    optional uint64 generalBID  =  11; // 将军2ID
+    optional string notice      =  12; // 公告
+    optional sint64 spyWealthPD    =  13; // 侦查到的军饷
+}

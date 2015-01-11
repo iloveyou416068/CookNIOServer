@@ -1,0 +1,19 @@
+package sanguo;
+
+import "constants.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.cwa.sanguo.messages.dto";
+
+message MsgShopGoodsInfoData {
+	 required uint64 id = 1;
+	 required uint32 type = 2;
+	 required uint32 subtype = 3;
+	 required uint32 goodsid        = 4;
+	 required uint32 level        = 5;
+	 required uint32 count        = 6;
+	 required uint32  price = 7;
+	 required uint32 sale = 8;
+	 required uint32 state = 9;
+	 }
+
