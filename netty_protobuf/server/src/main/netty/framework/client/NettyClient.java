@@ -15,9 +15,13 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
-public class NettyClient {
+public enum NettyClient {
 
-	public void connect(int port, String host) throws Exception {
+	INSTANCE;
+	
+	public void connect() throws Exception {
+		int port = 8080;
+		String host = "127.0.0.1";
 		// 配置客户端NIO线程组
 		EventLoopGroup group = new NioEventLoopGroup();
 		try {
@@ -48,19 +52,4 @@ public class NettyClient {
 		}
 	}
 
-	/**
-	 * @param args
-	 * @throws Exception
-	 */
-	public static void main(String[] args) throws Exception {
-		int port = 8080;
-		if (args != null && args.length > 0) {
-			try {
-				port = Integer.valueOf(args[0]);
-			} catch (NumberFormatException e) {
-				// 采用默认值
-			}
-		}
-		new NettyClient().connect(port, "127.0.0.1");
-	}
 }
