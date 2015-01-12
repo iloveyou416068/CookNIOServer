@@ -15,53 +15,33 @@
  */
 package netty.framework.client;
 
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * @author lilinfeng
- * @date 2014年2月14日
- * @version 1.0
- */
-public class NettyClientHandler extends ChannelHandlerAdapter {
+public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
 	public NettyClientHandler() {
 	}
 
-//	@Override
-//	public void channelActive(ChannelHandlerContext ctx) {
-//		for (int i = 0; i < 10; i++) {
-////			ctx.write(subReq(i));
-//		}
-//		ctx.flush();
-//	}
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) {
+		for (int i = 0; i < 10; i++) {
+//			ctx.write(subReq(i));
+		}
+		ctx.flush();
+	}
 
-//	private SubscribeReqProto.SubscribeReq subReq(int i) {
-//		List<String> address = new ArrayList<>();
-//		address.add("NanJing YuHuaTai");
-//		address.add("BeiJing LiuLiChang");
-//		address.add("ShenZhen HongShuLin");
-//		return SubscribeReq.newBuilder()
-//				.setSubReqID(i)
-//				.setUserName("Lilinfeng")
-//				.setProductName("Netty Book For Protobuf")
-//				.addAllAddress(address)
-//				.build();
-//	}
 
-//	@Override
-//	public void channelRead(ChannelHandlerContext ctx, Object msg)
-//			throws Exception {
-//		System.out.println("Receive server response : [" + msg + "]");
-//	}
-//
-//	@Override
-//	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-//		ctx.flush();
-//	}
+	@Override
+	public void channelRead(ChannelHandlerContext ctx, Object msg)
+			throws Exception {
+		System.out.println("Receive server response : [" + msg + "]");
+	}
+
+	@Override
+	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+		ctx.flush();
+	}
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {

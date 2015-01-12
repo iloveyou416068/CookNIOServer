@@ -1,0 +1,17 @@
+package cook;
+
+import "msg_id.proto";
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "netty.framework";
+option java_outer_classname = "MessagerMessage";
+
+message MessagerRequest {
+    required MsgID  msgID    = 1; 
+    repeated int32  content  = 2;
+}
+
+message MessagerResponse {
+    required MsgID      msgID     = 1;
+    repeated int32 		content   = 2;
+}

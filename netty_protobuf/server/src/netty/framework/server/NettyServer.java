@@ -1,6 +1,8 @@
 
 package netty.framework.server;
 
+import netty.framework.MessagerMessage;
+import netty.framework.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -10,6 +12,8 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.protobuf.ProtobufDecoder;
+import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
@@ -78,10 +82,9 @@ public enum NettyServer {
 	}
 
 	private void addProtobuf(ChannelPipeline pipeline) {
-//		SubscribeReq req = SubscribeReqProto.SubscribeReq
-//				.getDefaultInstance();
-//		pipeline.addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
-//		pipeline.addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
+		MessagerRequest req = MessagerMessage.MessagerRequest.getDefaultInstance();
+		pipeline.addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
+		pipeline.addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
 
 	}
 }

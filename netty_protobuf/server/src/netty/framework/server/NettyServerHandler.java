@@ -15,9 +15,11 @@
  */
 package netty.framework.server;
 
+import netty.framework.MessagerMessage;
+import netty.framework.MsgId.MsgID;
 import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * @author lilinfeng
@@ -25,7 +27,7 @@ import io.netty.channel.ChannelHandlerContext;
  * @version 1.0
  */
 @Sharable
-public class NettyServerHandler extends ChannelHandlerAdapter {
+public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
 	
 	@Override
@@ -34,26 +36,18 @@ public class NettyServerHandler extends ChannelHandlerAdapter {
 
 	@Override
 	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-		// TODO Auto-generated method stub
 		super.handlerRemoved(ctx);
 	}
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg)
 			throws Exception {
-		SubscribeReqProto.SubscribeReq req = (SubscribeReqProto.SubscribeReq) msg;
-		if ("Lilinfeng".equalsIgnoreCase(req.getUserName())) {
-			System.out.println("Service accept client subscribe req : [" + req.toString() + "]");
-			ctx.writeAndFlush(resp(req.getSubReqID()));
-		}
+		MessagerMessage.MessagerRequest req = (MessagerMessage.MessagerRequest) msg;
+		MsgID msgId = req.getMsgID();
+		req.getContentList();
+		ctx.writeAndFlush("");
 	}
 
-	private SubscribeResp resp(int subReqID) {
-		return SubscribeResp.newBuilder()
-				.setSubReqID(subReqID)
-				.setDesc("Netty book order succeed, 3 days later, sent to the designated address")
-				.build();
-	}
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {

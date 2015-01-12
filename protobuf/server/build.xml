@@ -1,9 +1,9 @@
-<project name="cwa-sanguo-messages" default="jar" basedir=".">
+<project name="messages" default="jar" basedir=".">
     <property name="src" location="../generated/java"/>
     <property name="build" location="build"/>
     <property name="jar.dest" location="../generated/jar"/>
 	
-	<property name="server" location="../../server/lib" />
+	<property name="server" location="../" />
 	<property name="generated" location="../generated" />
 	
     <path id="lib.path">

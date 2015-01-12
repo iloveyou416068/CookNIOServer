@@ -25,10 +25,13 @@ if errorlevel 1 (
     pause
     exit /B
 )
-svn cleanup
-svn info protos|findstr /ibc:"Last Changed Rev:" /c:"最后修改的版本:">generated\cwa-sanguo-messages-Revision.txt
+
 java -cp pb-helper\cwa-sanguo-pbhelper.jar ^
     com.cwa.sanguo.pb2json.Main ^
     protos generated\cpp generated\js
+
+dir
+cd server
+call ant clean jar
 
 pause
