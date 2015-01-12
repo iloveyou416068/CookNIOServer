@@ -15,8 +15,6 @@
  */
 package netty.framework.server;
 
-import netty.nettyCodec.protobuf.protos.SubscribeReqProto;
-import netty.nettyCodec.protobuf.protos.SubscribeRespProto.SubscribeResp;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -28,6 +26,17 @@ import io.netty.channel.ChannelHandlerContext;
  */
 @Sharable
 public class NettyServerHandler extends ChannelHandlerAdapter {
+
+	
+	@Override
+	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+	}
+
+	@Override
+	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+		// TODO Auto-generated method stub
+		super.handlerRemoved(ctx);
+	}
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg)

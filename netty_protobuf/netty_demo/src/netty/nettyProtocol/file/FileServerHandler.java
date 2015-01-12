@@ -59,4 +59,11 @@ public class FileServerHandler extends SimpleChannelInboundHandler<String> {
 		cause.printStackTrace();
 		ctx.close();
 	}
+
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, String msg)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }

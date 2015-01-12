@@ -15,10 +15,8 @@
  */
 package netty.nettyAPI;
 
-import java.net.SocketAddress;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelPromise;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 对网络操作进行读写操作
@@ -27,7 +25,7 @@ import io.netty.channel.ChannelPromise;
  * @date 2014年2月14日
  * @version 1.0
  */
-public class TimeServerHandler extends ChannelHandlerAdapter {
+public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
 	/**
 	 * 将msg转换成netty的ByteBuf(类似于NIO的ByteBuffer,但是它有更强大的功能)
@@ -49,11 +47,11 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		ctx.close();
 	}
 
-	@Override
-	public void bind(ChannelHandlerContext ctx, SocketAddress localAddress,
-			ChannelPromise promise) throws Exception {
-		System.out.println("bind");
-	}
+//	@Override
+//	public void bind(ChannelHandlerContext ctx, SocketAddress localAddress,
+//			ChannelPromise promise) throws Exception {
+//		System.out.println("bind");
+//	}
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
@@ -76,29 +74,29 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		System.out.println("channelWritabilityChanged");
 	}
 
-	@Override
-	public void close(ChannelHandlerContext ctx, ChannelPromise promise)
-			throws Exception {
-		System.out.println("close");
-	}
+//	@Override
+//	public void close(ChannelHandlerContext ctx, ChannelPromise promise)
+//			throws Exception {
+//		System.out.println("close");
+//	}
+//
+//	@Override
+//	public void connect(ChannelHandlerContext ctx, SocketAddress remoteAddress,
+//			SocketAddress localAddress, ChannelPromise promise)
+//			throws Exception {
+//		System.out.println("connect");
+//	}
+//
+//	@Override
+//	public void disconnect(ChannelHandlerContext ctx, ChannelPromise promise)
+//			throws Exception {
+//		System.out.println("disconnect");
+//	}
 
-	@Override
-	public void connect(ChannelHandlerContext ctx, SocketAddress remoteAddress,
-			SocketAddress localAddress, ChannelPromise promise)
-			throws Exception {
-		System.out.println("connect");
-	}
-
-	@Override
-	public void disconnect(ChannelHandlerContext ctx, ChannelPromise promise)
-			throws Exception {
-		System.out.println("disconnect");
-	}
-
-	@Override
-	public void flush(ChannelHandlerContext ctx) throws Exception {
-		System.out.println("flush");
-	}
+//	@Override
+//	public void flush(ChannelHandlerContext ctx) throws Exception {
+//		System.out.println("flush");
+//	}
 
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -116,10 +114,10 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		return super.isSharable();
 	}
 
-	@Override
-	public void read(ChannelHandlerContext ctx) throws Exception {
-		System.out.println("read");
-	}
+//	@Override
+//	public void read(ChannelHandlerContext ctx) throws Exception {
+//		System.out.println("read");
+//	}
 
 	@Override
 	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
@@ -127,11 +125,11 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		System.out.println("userEventTriggered");
 	}
 
-	@Override
-	public void write(ChannelHandlerContext ctx, Object msg,
-			ChannelPromise promise) throws Exception {
-		System.out.println("write");
-	}
+//	@Override
+//	public void write(ChannelHandlerContext ctx, Object msg,
+//			ChannelPromise promise) throws Exception {
+//		System.out.println("write");
+//	}
 	
 	
 }

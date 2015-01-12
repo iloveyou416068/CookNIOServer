@@ -51,7 +51,6 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 
 	private WebSocketServerHandshaker handshaker;
 
-	@Override
 	public void messageReceived(ChannelHandlerContext ctx, Object msg)
 			throws Exception {
 		// 传统的HTTP接入
@@ -147,5 +146,12 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
 			throws Exception {
 		cause.printStackTrace();
 		ctx.close();
+	}
+
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, Object msg)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

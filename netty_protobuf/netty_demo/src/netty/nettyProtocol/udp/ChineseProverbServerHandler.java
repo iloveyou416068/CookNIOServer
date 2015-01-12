@@ -40,7 +40,6 @@ public class ChineseProverbServerHandler extends
 	return DICTIONARY[quoteId];
     }
 
-    @Override
     public void messageReceived(ChannelHandlerContext ctx, DatagramPacket packet)
 	    throws Exception {
 	String req = packet.content().toString(CharsetUtil.UTF_8);
@@ -58,4 +57,11 @@ public class ChineseProverbServerHandler extends
 	ctx.close();
 	cause.printStackTrace();
     }
+
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket msg)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }

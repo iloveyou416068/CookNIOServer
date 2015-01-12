@@ -15,8 +15,8 @@
  */
 package netty.nettyProtocol.netty.client;
 
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +34,7 @@ import com.phei.netty.protocol.netty.struct.NettyMessage;*/
  * @date 2014年3月15日
  * @version 1.0
  */
-public class HeartBeatReqHandler extends ChannelHandlerAdapter {
+public class HeartBeatReqHandler extends ChannelInboundHandlerAdapter {
 
     private volatile ScheduledFuture<?> heartBeat;
 

@@ -43,7 +43,6 @@ public class HttpXmlClientHandle extends
 	ctx.close();
     }
 
-    @Override
     protected void messageReceived(ChannelHandlerContext ctx,
 	    HttpXmlResponse msg) throws Exception {
 	System.out.println("The client receive response of http header is : "
@@ -51,4 +50,11 @@ public class HttpXmlClientHandle extends
 	System.out.println("The client receive response of http body is : "
 		+ msg.getResult());
     }
+
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, HttpXmlResponse msg)
+			throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }

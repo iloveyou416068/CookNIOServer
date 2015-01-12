@@ -15,11 +15,11 @@
  */
 package netty.nettyHalfPack.fault;
 
-import netty.Util;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 该例展示了为考虑粘包的情况
@@ -28,7 +28,7 @@ import io.netty.channel.ChannelHandlerContext;
  * @date 2014年2月14日
  * @version 1.0
  */
-public class TimeServerHandler extends ChannelHandlerAdapter {
+public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
 	private int counter; // 
 
@@ -42,8 +42,8 @@ public class TimeServerHandler extends ChannelHandlerAdapter {
 		String body = new String(req, "UTF-8");
 		System.out.println("server recive: " + (++counter) + ". body size:" + body.length() + ". body:" + body);
 
-		ByteBuf resp = Unpooled.copiedBuffer(Util.currentTime(body).getBytes());
-		ctx.writeAndFlush(resp);
+//		ByteBuf resp = Unpooled.copiedBuffer(Util.currentTime(body).getBytes());
+//		ctx.writeAndFlush(resp);
 	}
 
 	@Override

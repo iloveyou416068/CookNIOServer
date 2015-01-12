@@ -16,8 +16,8 @@
 package netty.nettyProtocol.netty.server;
 
 import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelPipeline;
 
 import java.net.InetSocketAddress;
@@ -34,7 +34,7 @@ import netty.nettyProtocol.netty.struct.NettyMessage;
  * @date 2014年3月15日
  * @version 1.0
  */
-public class LoginAuthRespHandler extends ChannelHandlerAdapter {
+public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter {
 
     private Map<String, Boolean> nodeCheck = new ConcurrentHashMap<String, Boolean>();
     private String[] whitekList = { "127.0.0.1", "192.168.1.104" };

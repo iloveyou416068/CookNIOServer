@@ -1,4 +1,5 @@
-package nettyCodec.marshalling;
+package netty.nettyCodec.marshalling;
+
 
 
 import io.netty.handler.codec.marshalling.DefaultMarshallerProvider;

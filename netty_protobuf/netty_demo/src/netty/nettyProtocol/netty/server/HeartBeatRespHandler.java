@@ -15,8 +15,8 @@
  */
 package netty.nettyProtocol.netty.server;
 
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import netty.nettyProtocol.netty.MessageType;
 import netty.nettyProtocol.netty.struct.Header;
 import netty.nettyProtocol.netty.struct.NettyMessage;
@@ -26,7 +26,7 @@ import netty.nettyProtocol.netty.struct.NettyMessage;
  * @date 2014年3月15日
  * @version 1.0
  */
-public class HeartBeatRespHandler extends ChannelHandlerAdapter {
+public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg)
 	    throws Exception {

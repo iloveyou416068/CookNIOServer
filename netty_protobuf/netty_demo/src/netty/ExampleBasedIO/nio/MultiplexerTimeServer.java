@@ -26,7 +26,6 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import testJavaNet.NIO.select.TestSelectionKey;
 
 /**
  * {@link TestSelectionKey}

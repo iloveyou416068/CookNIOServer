@@ -16,8 +16,8 @@
 package netty.nettyProtocol.netty.client;
 
 import io.netty.channel.ChannelHandler;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelPipeline;
 import netty.nettyProtocol.netty.MessageType;
 import netty.nettyProtocol.netty.struct.Header;
@@ -28,7 +28,7 @@ import netty.nettyProtocol.netty.struct.NettyMessage;
  * @date 2014年3月15日
  * @version 1.0
  */
-public class LoginAuthReqHandler extends ChannelHandlerAdapter {
+public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * Calls {@link ChannelHandlerContext#fireChannelActive()} to forward to the

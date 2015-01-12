@@ -19,8 +19,8 @@ import java.util.Date;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * 对网络操作进行读写操作
@@ -29,7 +29,7 @@ import io.netty.channel.ChannelHandlerContext;
  * @date 2014年2月14日
  * @version 1.0
  */
-public class TimeServerHandler extends ChannelHandlerAdapter {
+public class TimeServerHandler extends ChannelInboundHandlerAdapter {
 
 	/**
 	 * 将msg转换成netty的ByteBuf(类似于NIO的ByteBuffer,但是它有更强大的功能)

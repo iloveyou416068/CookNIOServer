@@ -18,8 +18,8 @@ package netty.nettyCodec.marshalling;
 import netty.nettyCodec.pojo.SubscribeReq;
 import netty.nettyCodec.pojo.SubscribeResp;
 import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * @author lilinfeng
@@ -27,7 +27,7 @@ import io.netty.channel.ChannelHandlerContext;
  * @version 1.0
  */
 @Sharable
-public class SubReqServerHandler extends ChannelHandlerAdapter {
+public class SubReqServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg)
