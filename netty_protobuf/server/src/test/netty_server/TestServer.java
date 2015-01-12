@@ -1,6 +1,6 @@
 package netty_server;
 
-import netty.framework.server.NettyServer;
+import netty.framework.core.server.NettyServer;
 
 public class TestServer {
 

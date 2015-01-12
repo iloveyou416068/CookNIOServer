@@ -21,8 +21,10 @@ CCDictionary* msgToJson(int msgId, MessageLite *msg);
 
 // Request
 MessagerRequest* jsonToMsg_MessagerRequest(CCDictionary *json);
+TestRequest* jsonToMsg_TestRequest(CCDictionary *json);
 // Response
 CCDictionary* msgToJson_MessagerResponse(const MessagerResponse *msg);
+CCDictionary* msgToJson_TestResponse(const TestResponse *msg);
 // DTO
 
 #endif

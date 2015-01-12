@@ -49,6 +49,7 @@ struct StaticDescriptorInitializer_msg_5fid_2eproto {
 bool MsgID_IsValid(int value) {
   switch(value) {
     case 1:
+    case 2:
       return true;
     default:
       return false;

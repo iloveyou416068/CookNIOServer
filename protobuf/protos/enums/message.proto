@@ -3,7 +3,7 @@ package cook;
 import "msg_id.proto";
 
 option optimize_for = LITE_RUNTIME;
-option java_package = "netty.framework";
+option java_package = "netty.framework.messages";
 option java_outer_classname = "MessagerMessage";
 
 message MessagerRequest {

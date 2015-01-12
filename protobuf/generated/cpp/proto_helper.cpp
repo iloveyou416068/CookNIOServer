@@ -7,6 +7,7 @@
 MessageLite* createMsg(int msgId) {
 switch (msgId) {
   case MSG_MESSAGER: return new MessagerResponse();
+  case MSG_TEST: return new TestResponse();
   default:
     CCLOG("createMsg(): unkonw msgId:%d", msgId);
     throw runtime_error("createMsg() failed!");
@@ -15,6 +16,7 @@ switch (msgId) {
 MessageLite* jsonToMsg(int msgId, CCDictionary *json) {
 switch (msgId) {
   case MSG_MESSAGER: return jsonToMsg_MessagerRequest(json);
+  case MSG_TEST: return jsonToMsg_TestRequest(json);
   default:
     CCLOG("jsonToMsg(): unkonw msgId:%d", msgId);
     throw runtime_error("jsonToMsg() failed!");
@@ -23,6 +25,7 @@ switch (msgId) {
 CCDictionary* msgToJson(int msgId, MessageLite *msg) {
 switch (msgId) {
   case MSG_MESSAGER: return msgToJson_MessagerResponse(static_cast<MessagerResponse *>(msg));
+  case MSG_TEST: return msgToJson_TestResponse(static_cast<TestResponse *>(msg));
   default:
     CCLOG("msgToJson(): unkonw msgId:%d", msgId);
     throw runtime_error("msgToJson() failed!");
@@ -39,11 +42,22 @@ MessagerRequest* jsonToMsg_MessagerRequest(CCDictionary *json) {
   msg->set_allocated_content(dto_content);
   return msg;
 }
+TestRequest* jsonToMsg_TestRequest(CCDictionary *json) {
+  SGDictionary dict(json);
+  TestRequest *msg = new TestRequest();
+  msg->set_msgid((MsgID) dict.getDouble("msgID"));
+  return msg;
+}
 // Response
 CCDictionary* msgToJson_MessagerResponse(const MessagerResponse *msg) {
   SGDictionary dict(CCDictionary::create());
   dict.setDouble(msg->msgid(), "msgID");
   dict.setDict(msgToJson_bytes(&(msg->content())), "content");
+  return dict.getCCDictionary();
+}
+CCDictionary* msgToJson_TestResponse(const TestResponse *msg) {
+  SGDictionary dict(CCDictionary::create());
+  dict.setDouble(msg->msgid(), "msgID");
   return dict.getCCDictionary();
 }
 // DTO

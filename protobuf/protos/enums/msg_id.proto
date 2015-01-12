@@ -1,10 +1,10 @@
 package cook;
 
 option optimize_for = LITE_RUNTIME;
-option java_package = "netty.framework";
+option java_package = "netty.framework.messages";
 
 enum MsgID {
    
     MSG_MESSAGER   				 			= 1; 			
-   
+    MSG_TEST   				 			= 2; 
 }

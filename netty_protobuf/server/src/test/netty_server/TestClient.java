@@ -1,6 +1,6 @@
 package netty_server;
 
-import netty.framework.client.NettyClient;
+import netty.framework.core.client.NettyClient;
 
 public class TestClient {
 
