@@ -8,10 +8,10 @@ option java_outer_classname = "MessagerMessage";
 
 message MessagerRequest {
     required MsgID  msgID    = 1; 
-    repeated int32  content  = 2;
+    required bytes  content  = 2;
 }
 
 message MessagerResponse {
     required MsgID      msgID     = 1;
-    repeated int32 		content   = 2;
+    required bytes 		content   = 2;
 }

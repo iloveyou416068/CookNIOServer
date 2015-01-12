@@ -21,19 +21,15 @@ public final class MessagerMessage {
      */
     netty.framework.MsgId.MsgID getMsgID();
 
-    // repeated int32 content = 2;
+    // required bytes content = 2;
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    java.util.List<java.lang.Integer> getContentList();
+    boolean hasContent();
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    int getContentCount();
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    int getContent(int index);
+    com.google.protobuf.ByteString getContent();
   }
   /**
    * Protobuf type {@code cook.MessagerRequest}
@@ -87,25 +83,9 @@ public final class MessagerMessage {
               }
               break;
             }
-            case 16: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                content_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              content_.add(input.readInt32());
-              break;
-            }
             case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                content_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                content_.add(input.readInt32());
-              }
-              input.popLimit(limit);
+              bitField0_ |= 0x00000002;
+              content_ = input.readBytes();
               break;
             }
           }
@@ -116,9 +96,6 @@ public final class MessagerMessage {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = java.util.Collections.unmodifiableList(content_);
-        }
         makeExtensionsImmutable();
       }
     }
@@ -154,32 +131,25 @@ public final class MessagerMessage {
       return msgID_;
     }
 
-    // repeated int32 content = 2;
+    // required bytes content = 2;
     public static final int CONTENT_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> content_;
+    private com.google.protobuf.ByteString content_;
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    public java.util.List<java.lang.Integer>
-        getContentList() {
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public com.google.protobuf.ByteString getContent() {
       return content_;
-    }
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    public int getContentCount() {
-      return content_.size();
-    }
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    public int getContent(int index) {
-      return content_.get(index);
     }
 
     private void initFields() {
       msgID_ = netty.framework.MsgId.MsgID.MSG_MESSAGER;
-      content_ = java.util.Collections.emptyList();
+      content_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -187,6 +157,10 @@ public final class MessagerMessage {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasMsgID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContent()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -200,8 +174,8 @@ public final class MessagerMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgID_.getNumber());
       }
-      for (int i = 0; i < content_.size(); i++) {
-        output.writeInt32(2, content_.get(i));
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, content_);
       }
     }
 
@@ -215,14 +189,9 @@ public final class MessagerMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgID_.getNumber());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < content_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(content_.get(i));
-        }
-        size += dataSize;
-        size += 1 * getContentList().size();
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, content_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -317,7 +286,7 @@ public final class MessagerMessage {
         super.clear();
         msgID_ = netty.framework.MsgId.MsgID.MSG_MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
-        content_ = java.util.Collections.emptyList();
+        content_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -346,9 +315,8 @@ public final class MessagerMessage {
           to_bitField0_ |= 0x00000001;
         }
         result.msgID_ = msgID_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = java.util.Collections.unmodifiableList(content_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
         result.content_ = content_;
         result.bitField0_ = to_bitField0_;
@@ -360,21 +328,18 @@ public final class MessagerMessage {
         if (other.hasMsgID()) {
           setMsgID(other.getMsgID());
         }
-        if (!other.content_.isEmpty()) {
-          if (content_.isEmpty()) {
-            content_ = other.content_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureContentIsMutable();
-            content_.addAll(other.content_);
-          }
-          
+        if (other.hasContent()) {
+          setContent(other.getContent());
         }
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasMsgID()) {
+          
+          return false;
+        }
+        if (!hasContent()) {
           
           return false;
         }
@@ -436,68 +401,38 @@ public final class MessagerMessage {
         return this;
       }
 
-      // repeated int32 content = 2;
-      private java.util.List<java.lang.Integer> content_ = java.util.Collections.emptyList();
-      private void ensureContentIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = new java.util.ArrayList<java.lang.Integer>(content_);
-          bitField0_ |= 0x00000002;
-         }
+      // required bytes content = 2;
+      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
-      public java.util.List<java.lang.Integer>
-          getContentList() {
-        return java.util.Collections.unmodifiableList(content_);
+      public com.google.protobuf.ByteString getContent() {
+        return content_;
       }
       /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
-      public int getContentCount() {
-        return content_.size();
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public int getContent(int index) {
-        return content_.get(index);
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder setContent(
-          int index, int value) {
-        ensureContentIsMutable();
-        content_.set(index, value);
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        content_ = value;
         
         return this;
       }
       /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder addContent(int value) {
-        ensureContentIsMutable();
-        content_.add(value);
-        
-        return this;
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder addAllContent(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureContentIsMutable();
-        super.addAll(values, content_);
-        
-        return this;
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
       public Builder clearContent() {
-        content_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = getDefaultInstance().getContent();
         
         return this;
       }
@@ -526,19 +461,15 @@ public final class MessagerMessage {
      */
     netty.framework.MsgId.MsgID getMsgID();
 
-    // repeated int32 content = 2;
+    // required bytes content = 2;
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    java.util.List<java.lang.Integer> getContentList();
+    boolean hasContent();
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    int getContentCount();
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    int getContent(int index);
+    com.google.protobuf.ByteString getContent();
   }
   /**
    * Protobuf type {@code cook.MessagerResponse}
@@ -592,25 +523,9 @@ public final class MessagerMessage {
               }
               break;
             }
-            case 16: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                content_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              content_.add(input.readInt32());
-              break;
-            }
             case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                content_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                content_.add(input.readInt32());
-              }
-              input.popLimit(limit);
+              bitField0_ |= 0x00000002;
+              content_ = input.readBytes();
               break;
             }
           }
@@ -621,9 +536,6 @@ public final class MessagerMessage {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = java.util.Collections.unmodifiableList(content_);
-        }
         makeExtensionsImmutable();
       }
     }
@@ -659,32 +571,25 @@ public final class MessagerMessage {
       return msgID_;
     }
 
-    // repeated int32 content = 2;
+    // required bytes content = 2;
     public static final int CONTENT_FIELD_NUMBER = 2;
-    private java.util.List<java.lang.Integer> content_;
+    private com.google.protobuf.ByteString content_;
     /**
-     * <code>repeated int32 content = 2;</code>
+     * <code>required bytes content = 2;</code>
      */
-    public java.util.List<java.lang.Integer>
-        getContentList() {
+    public boolean hasContent() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required bytes content = 2;</code>
+     */
+    public com.google.protobuf.ByteString getContent() {
       return content_;
-    }
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    public int getContentCount() {
-      return content_.size();
-    }
-    /**
-     * <code>repeated int32 content = 2;</code>
-     */
-    public int getContent(int index) {
-      return content_.get(index);
     }
 
     private void initFields() {
       msgID_ = netty.framework.MsgId.MsgID.MSG_MESSAGER;
-      content_ = java.util.Collections.emptyList();
+      content_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -692,6 +597,10 @@ public final class MessagerMessage {
       if (isInitialized != -1) return isInitialized == 1;
 
       if (!hasMsgID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasContent()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -705,8 +614,8 @@ public final class MessagerMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgID_.getNumber());
       }
-      for (int i = 0; i < content_.size(); i++) {
-        output.writeInt32(2, content_.get(i));
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, content_);
       }
     }
 
@@ -720,14 +629,9 @@ public final class MessagerMessage {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgID_.getNumber());
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < content_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(content_.get(i));
-        }
-        size += dataSize;
-        size += 1 * getContentList().size();
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, content_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -822,7 +726,7 @@ public final class MessagerMessage {
         super.clear();
         msgID_ = netty.framework.MsgId.MsgID.MSG_MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
-        content_ = java.util.Collections.emptyList();
+        content_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
@@ -851,9 +755,8 @@ public final class MessagerMessage {
           to_bitField0_ |= 0x00000001;
         }
         result.msgID_ = msgID_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = java.util.Collections.unmodifiableList(content_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
         }
         result.content_ = content_;
         result.bitField0_ = to_bitField0_;
@@ -865,21 +768,18 @@ public final class MessagerMessage {
         if (other.hasMsgID()) {
           setMsgID(other.getMsgID());
         }
-        if (!other.content_.isEmpty()) {
-          if (content_.isEmpty()) {
-            content_ = other.content_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureContentIsMutable();
-            content_.addAll(other.content_);
-          }
-          
+        if (other.hasContent()) {
+          setContent(other.getContent());
         }
         return this;
       }
 
       public final boolean isInitialized() {
         if (!hasMsgID()) {
+          
+          return false;
+        }
+        if (!hasContent()) {
           
           return false;
         }
@@ -941,68 +841,38 @@ public final class MessagerMessage {
         return this;
       }
 
-      // repeated int32 content = 2;
-      private java.util.List<java.lang.Integer> content_ = java.util.Collections.emptyList();
-      private void ensureContentIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          content_ = new java.util.ArrayList<java.lang.Integer>(content_);
-          bitField0_ |= 0x00000002;
-         }
+      // required bytes content = 2;
+      private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>required bytes content = 2;</code>
+       */
+      public boolean hasContent() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
-      public java.util.List<java.lang.Integer>
-          getContentList() {
-        return java.util.Collections.unmodifiableList(content_);
+      public com.google.protobuf.ByteString getContent() {
+        return content_;
       }
       /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
-      public int getContentCount() {
-        return content_.size();
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public int getContent(int index) {
-        return content_.get(index);
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder setContent(
-          int index, int value) {
-        ensureContentIsMutable();
-        content_.set(index, value);
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        content_ = value;
         
         return this;
       }
       /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder addContent(int value) {
-        ensureContentIsMutable();
-        content_.add(value);
-        
-        return this;
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
-       */
-      public Builder addAllContent(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureContentIsMutable();
-        super.addAll(values, content_);
-        
-        return this;
-      }
-      /**
-       * <code>repeated int32 content = 2;</code>
+       * <code>required bytes content = 2;</code>
        */
       public Builder clearContent() {
-        content_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
+        content_ = getDefaultInstance().getContent();
         
         return this;
       }

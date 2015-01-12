@@ -44,7 +44,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 			throws Exception {
 		MessagerMessage.MessagerRequest req = (MessagerMessage.MessagerRequest) msg;
 		MsgID msgId = req.getMsgID();
-		req.getContentList();
+		byte[] bytes = req.getContent().asReadOnlyByteBuffer().array();
+		
 		ctx.writeAndFlush("");
 	}
 

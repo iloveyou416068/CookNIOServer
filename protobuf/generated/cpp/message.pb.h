@@ -98,24 +98,26 @@ class MessagerRequest : public ::google::protobuf::MessageLite {
   inline ::cook::MsgID msgid() const;
   inline void set_msgid(::cook::MsgID value);
 
-  // repeated int32 content = 2;
-  inline int content_size() const;
+  // required bytes content = 2;
+  inline bool has_content() const;
   inline void clear_content();
   static const int kContentFieldNumber = 2;
-  inline ::google::protobuf::int32 content(int index) const;
-  inline void set_content(int index, ::google::protobuf::int32 value);
-  inline void add_content(::google::protobuf::int32 value);
-  inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
-      content() const;
-  inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
-      mutable_content();
+  inline const ::std::string& content() const;
+  inline void set_content(const ::std::string& value);
+  inline void set_content(const char* value);
+  inline void set_content(const void* value, size_t size);
+  inline ::std::string* mutable_content();
+  inline ::std::string* release_content();
+  inline void set_allocated_content(::std::string* content);
 
   // @@protoc_insertion_point(class_scope:cook.MessagerRequest)
  private:
   inline void set_has_msgid();
   inline void clear_has_msgid();
+  inline void set_has_content();
+  inline void clear_has_content();
 
-  ::google::protobuf::RepeatedField< ::google::protobuf::int32 > content_;
+  ::std::string* content_;
   int msgid_;
 
   mutable int _cached_size_;
@@ -194,24 +196,26 @@ class MessagerResponse : public ::google::protobuf::MessageLite {
   inline ::cook::MsgID msgid() const;
   inline void set_msgid(::cook::MsgID value);
 
-  // repeated int32 content = 2;
-  inline int content_size() const;
+  // required bytes content = 2;
+  inline bool has_content() const;
   inline void clear_content();
   static const int kContentFieldNumber = 2;
-  inline ::google::protobuf::int32 content(int index) const;
-  inline void set_content(int index, ::google::protobuf::int32 value);
-  inline void add_content(::google::protobuf::int32 value);
-  inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
-      content() const;
-  inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
-      mutable_content();
+  inline const ::std::string& content() const;
+  inline void set_content(const ::std::string& value);
+  inline void set_content(const char* value);
+  inline void set_content(const void* value, size_t size);
+  inline ::std::string* mutable_content();
+  inline ::std::string* release_content();
+  inline void set_allocated_content(::std::string* content);
 
   // @@protoc_insertion_point(class_scope:cook.MessagerResponse)
  private:
   inline void set_has_msgid();
   inline void clear_has_msgid();
+  inline void set_has_content();
+  inline void clear_has_content();
 
-  ::google::protobuf::RepeatedField< ::google::protobuf::int32 > content_;
+  ::std::string* content_;
   int msgid_;
 
   mutable int _cached_size_;
@@ -258,29 +262,74 @@ inline void MessagerRequest::set_msgid(::cook::MsgID value) {
   msgid_ = value;
 }
 
-// repeated int32 content = 2;
-inline int MessagerRequest::content_size() const {
-  return content_.size();
+// required bytes content = 2;
+inline bool MessagerRequest::has_content() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void MessagerRequest::set_has_content() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void MessagerRequest::clear_has_content() {
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void MessagerRequest::clear_content() {
-  content_.Clear();
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    content_->clear();
+  }
+  clear_has_content();
 }
-inline ::google::protobuf::int32 MessagerRequest::content(int index) const {
-  return content_.Get(index);
+inline const ::std::string& MessagerRequest::content() const {
+  return *content_;
 }
-inline void MessagerRequest::set_content(int index, ::google::protobuf::int32 value) {
-  content_.Set(index, value);
+inline void MessagerRequest::set_content(const ::std::string& value) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(value);
 }
-inline void MessagerRequest::add_content(::google::protobuf::int32 value) {
-  content_.Add(value);
+inline void MessagerRequest::set_content(const char* value) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(value);
 }
-inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
-MessagerRequest::content() const {
+inline void MessagerRequest::set_content(const void* value, size_t size) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* MessagerRequest::mutable_content() {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
   return content_;
 }
-inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
-MessagerRequest::mutable_content() {
-  return &content_;
+inline ::std::string* MessagerRequest::release_content() {
+  clear_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = content_;
+    content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void MessagerRequest::set_allocated_content(::std::string* content) {
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    delete content_;
+  }
+  if (content) {
+    set_has_content();
+    content_ = content;
+  } else {
+    clear_has_content();
+    content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 // -------------------------------------------------------------------
@@ -310,29 +359,74 @@ inline void MessagerResponse::set_msgid(::cook::MsgID value) {
   msgid_ = value;
 }
 
-// repeated int32 content = 2;
-inline int MessagerResponse::content_size() const {
-  return content_.size();
+// required bytes content = 2;
+inline bool MessagerResponse::has_content() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void MessagerResponse::set_has_content() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void MessagerResponse::clear_has_content() {
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline void MessagerResponse::clear_content() {
-  content_.Clear();
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    content_->clear();
+  }
+  clear_has_content();
 }
-inline ::google::protobuf::int32 MessagerResponse::content(int index) const {
-  return content_.Get(index);
+inline const ::std::string& MessagerResponse::content() const {
+  return *content_;
 }
-inline void MessagerResponse::set_content(int index, ::google::protobuf::int32 value) {
-  content_.Set(index, value);
+inline void MessagerResponse::set_content(const ::std::string& value) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(value);
 }
-inline void MessagerResponse::add_content(::google::protobuf::int32 value) {
-  content_.Add(value);
+inline void MessagerResponse::set_content(const char* value) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(value);
 }
-inline const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
-MessagerResponse::content() const {
+inline void MessagerResponse::set_content(const void* value, size_t size) {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
+  content_->assign(reinterpret_cast<const char*>(value), size);
+}
+inline ::std::string* MessagerResponse::mutable_content() {
+  set_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    content_ = new ::std::string;
+  }
   return content_;
 }
-inline ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
-MessagerResponse::mutable_content() {
-  return &content_;
+inline ::std::string* MessagerResponse::release_content() {
+  clear_has_content();
+  if (content_ == &::google::protobuf::internal::kEmptyString) {
+    return NULL;
+  } else {
+    ::std::string* temp = content_;
+    content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+    return temp;
+  }
+}
+inline void MessagerResponse::set_allocated_content(::std::string* content) {
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    delete content_;
+  }
+  if (content) {
+    set_has_content();
+    content_ = content;
+  } else {
+    clear_has_content();
+    content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
+  }
 }
 
 

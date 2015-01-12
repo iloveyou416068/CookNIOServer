@@ -34,24 +34,16 @@ MessagerRequest* jsonToMsg_MessagerRequest(CCDictionary *json) {
   SGDictionary dict(json);
   MessagerRequest *msg = new MessagerRequest();
   msg->set_msgid((MsgID) dict.getDouble("msgID"));
-  CCArray *arr_content = dict.getArray("content");
-  CCObject *tmp_content;
-  CCARRAY_FOREACH(arr_content, tmp_content) {
-    double val = dynamic_cast<CCDouble *>(tmp_content)->getValue();
-    msg->add_content(val);
-  }
+  bytes *dto_content = new bytes();
+  jsonToDto_bytes(dict.getDict("content"), dto_content);
+  msg->set_allocated_content(dto_content);
   return msg;
 }
 // Response
 CCDictionary* msgToJson_MessagerResponse(const MessagerResponse *msg) {
   SGDictionary dict(CCDictionary::create());
   dict.setDouble(msg->msgid(), "msgID");
-  CCArray *arr_content = CCArray::createWithCapacity(msg->content_size());
-  for (int idx = 0; idx < msg->content_size(); idx++) {
-    double val = msg->content(idx);
-    arr_content->addObject(CCDouble::create(val));
-  }
-  dict.setArray(arr_content, "content");
+  dict.setDict(msgToJson_bytes(&(msg->content())), "content");
   return dict.getCCDictionary();
 }
 // DTO

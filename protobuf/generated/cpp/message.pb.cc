@@ -78,6 +78,7 @@ MessagerRequest::MessagerRequest(const MessagerRequest& from)
 void MessagerRequest::SharedCtor() {
   _cached_size_ = 0;
   msgid_ = 1;
+  content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -86,6 +87,9 @@ MessagerRequest::~MessagerRequest() {
 }
 
 void MessagerRequest::SharedDtor() {
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    delete content_;
+  }
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   if (this != &default_instance()) {
   #else
@@ -117,8 +121,12 @@ MessagerRequest* MessagerRequest::New() const {
 void MessagerRequest::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     msgid_ = 1;
+    if (has_content()) {
+      if (content_ != &::google::protobuf::internal::kEmptyString) {
+        content_->clear();
+      }
+    }
   }
-  content_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -142,28 +150,20 @@ bool MessagerRequest::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(16)) goto parse_content;
+        if (input->ExpectTag(18)) goto parse_content;
         break;
       }
 
-      // repeated int32 content = 2;
+      // required bytes content = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_content:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 16, input, this->mutable_content())));
-        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                   == ::google::protobuf::internal::WireFormatLite::
-                      WIRETYPE_LENGTH_DELIMITED) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_content())));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_content()));
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(16)) goto parse_content;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -191,10 +191,10 @@ void MessagerRequest::SerializeWithCachedSizes(
       1, this->msgid(), output);
   }
 
-  // repeated int32 content = 2;
-  for (int i = 0; i < this->content_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(
-      2, this->content(i), output);
+  // required bytes content = 2;
+  if (has_content()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+      2, this->content(), output);
   }
 
 }
@@ -209,17 +209,14 @@ int MessagerRequest::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgid());
     }
 
-  }
-  // repeated int32 content = 2;
-  {
-    int data_size = 0;
-    for (int i = 0; i < this->content_size(); i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->content(i));
+    // required bytes content = 2;
+    if (has_content()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->content());
     }
-    total_size += 1 * this->content_size() + data_size;
-  }
 
+  }
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = total_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
@@ -233,10 +230,12 @@ void MessagerRequest::CheckTypeAndMergeFrom(
 
 void MessagerRequest::MergeFrom(const MessagerRequest& from) {
   GOOGLE_CHECK_NE(&from, this);
-  content_.MergeFrom(from.content_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_msgid()) {
       set_msgid(from.msgid());
+    }
+    if (from.has_content()) {
+      set_content(from.content());
     }
   }
 }
@@ -248,7 +247,7 @@ void MessagerRequest::CopyFrom(const MessagerRequest& from) {
 }
 
 bool MessagerRequest::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
 
   return true;
 }
@@ -256,7 +255,7 @@ bool MessagerRequest::IsInitialized() const {
 void MessagerRequest::Swap(MessagerRequest* other) {
   if (other != this) {
     std::swap(msgid_, other->msgid_);
-    content_.Swap(&other->content_);
+    std::swap(content_, other->content_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     std::swap(_cached_size_, other->_cached_size_);
   }
@@ -291,6 +290,7 @@ MessagerResponse::MessagerResponse(const MessagerResponse& from)
 void MessagerResponse::SharedCtor() {
   _cached_size_ = 0;
   msgid_ = 1;
+  content_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -299,6 +299,9 @@ MessagerResponse::~MessagerResponse() {
 }
 
 void MessagerResponse::SharedDtor() {
+  if (content_ != &::google::protobuf::internal::kEmptyString) {
+    delete content_;
+  }
   #ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   if (this != &default_instance()) {
   #else
@@ -330,8 +333,12 @@ MessagerResponse* MessagerResponse::New() const {
 void MessagerResponse::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     msgid_ = 1;
+    if (has_content()) {
+      if (content_ != &::google::protobuf::internal::kEmptyString) {
+        content_->clear();
+      }
+    }
   }
-  content_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -355,28 +362,20 @@ bool MessagerResponse::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(16)) goto parse_content;
+        if (input->ExpectTag(18)) goto parse_content;
         break;
       }
 
-      // repeated int32 content = 2;
+      // required bytes content = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED) {
          parse_content:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 16, input, this->mutable_content())));
-        } else if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag)
-                   == ::google::protobuf::internal::WireFormatLite::
-                      WIRETYPE_LENGTH_DELIMITED) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, this->mutable_content())));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_content()));
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(16)) goto parse_content;
         if (input->ExpectAtEnd()) return true;
         break;
       }
@@ -404,10 +403,10 @@ void MessagerResponse::SerializeWithCachedSizes(
       1, this->msgid(), output);
   }
 
-  // repeated int32 content = 2;
-  for (int i = 0; i < this->content_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(
-      2, this->content(i), output);
+  // required bytes content = 2;
+  if (has_content()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+      2, this->content(), output);
   }
 
 }
@@ -422,17 +421,14 @@ int MessagerResponse::ByteSize() const {
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgid());
     }
 
-  }
-  // repeated int32 content = 2;
-  {
-    int data_size = 0;
-    for (int i = 0; i < this->content_size(); i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->content(i));
+    // required bytes content = 2;
+    if (has_content()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::BytesSize(
+          this->content());
     }
-    total_size += 1 * this->content_size() + data_size;
-  }
 
+  }
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = total_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
@@ -446,10 +442,12 @@ void MessagerResponse::CheckTypeAndMergeFrom(
 
 void MessagerResponse::MergeFrom(const MessagerResponse& from) {
   GOOGLE_CHECK_NE(&from, this);
-  content_.MergeFrom(from.content_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_msgid()) {
       set_msgid(from.msgid());
+    }
+    if (from.has_content()) {
+      set_content(from.content());
     }
   }
 }
@@ -461,7 +459,7 @@ void MessagerResponse::CopyFrom(const MessagerResponse& from) {
 }
 
 bool MessagerResponse::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
 
   return true;
 }
@@ -469,7 +467,7 @@ bool MessagerResponse::IsInitialized() const {
 void MessagerResponse::Swap(MessagerResponse* other) {
   if (other != this) {
     std::swap(msgid_, other->msgid_);
-    content_.Swap(&other->content_);
+    std::swap(content_, other->content_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     std::swap(_cached_size_, other->_cached_size_);
   }
