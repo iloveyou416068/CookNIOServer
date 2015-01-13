@@ -9,7 +9,7 @@ rmdir /S /Q %CPP_OUT%
 mkdir %JAVA_OUT%
 mkdir %CPP_OUT%
 
-set PROTOC_CMD=protoc-2.5.0-win32\protoc
+set PROTOC_CMD=tools\protoc-2.5.0-win32\protoc
 for /D %%a in (protos/*) do (
   set PROTOC_CMD=!PROTOC_CMD! -I=protos/%%a
 )
@@ -26,12 +26,11 @@ if errorlevel 1 (
     exit /B
 )
 
-java -cp pb-helper\cwa-sanguo-pbhelper.jar ^
+java -cp tools\pb-helper\pbhelper.jar ^
     com.cwa.sanguo.pb2json.Main ^
     protos generated\cpp generated\js
 
 dir
-cd server
 call ant clean jar
 
 pause
