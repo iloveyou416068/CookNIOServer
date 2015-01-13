@@ -1,6 +1,8 @@
 
 package netty.framework.core.server;
 
+import org.apache.log4j.Logger;
+
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.ServerBootstrap;
@@ -23,6 +25,8 @@ public enum NettyServer {
 
 	INSTANCE;
 
+	private final static Logger logger = Logger.getLogger(NettyServer.class);
+	
 	private boolean isStart = false;
 
 	public void start() {
@@ -62,6 +66,7 @@ public enum NettyServer {
 			// 绑定端口，同步等待成功
 			ChannelFuture f = null;
 			try {
+				logger.info("server started on 8080");
 				f = b.bind(8080).sync();
 			} catch (InterruptedException e) {
 				e.printStackTrace();

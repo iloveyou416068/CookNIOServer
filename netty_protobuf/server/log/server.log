@@ -1,0 +1,15 @@
+2015-01-13 16:39:31.101  INFO [NettyServer.java:69] - server started on 8080
+2015-01-13 16:39:49.557 DEBUG [NettyClientHandler.java:19] - Client : channelActive
+2015-01-13 16:39:49.574 DEBUG [NettyServerHandler.java:17] - Server : handlerAdded
+2015-01-13 16:42:49.282 DEBUG [NettyClientHandler.java:36] - Client : channelReadComplete
+2015-01-13 16:42:49.285 DEBUG [NettyClientHandler.java:44] - Client : exceptionCaught
+2015-01-13 16:42:55.262  INFO [NettyServer.java:69] - server started on 8080
+2015-01-13 16:42:59.041 DEBUG [NettyClientHandler.java:19] - Client : channelActive
+2015-01-13 16:42:59.057 DEBUG [NettyServerHandler.java:17] - Server : handlerAdded io.netty.channel.DefaultChannelHandlerContext@374d8c71
+2015-01-13 16:43:33.260 DEBUG [NettyServerHandler.java:40] - Server : exceptionCaught
+2015-01-13 16:43:33.268 DEBUG [NettyServerHandler.java:23] - Server : handlerRemoved
+2015-01-13 16:43:38.298  INFO [NettyServer.java:69] - server started on 8080
+2015-01-13 16:43:42.032 DEBUG [NettyClientHandler.java:19] - Client : channelActive
+2015-01-13 16:43:42.048 DEBUG [NettyServerHandler.java:17] - Server : handlerAdded io.netty.channel.DefaultChannelHandlerContext@1f8f110d
+2015-01-13 16:46:05.790 DEBUG [NettyClientHandler.java:36] - Client : channelReadComplete
+2015-01-13 16:46:05.793 DEBUG [NettyClientHandler.java:44] - Client : exceptionCaught
