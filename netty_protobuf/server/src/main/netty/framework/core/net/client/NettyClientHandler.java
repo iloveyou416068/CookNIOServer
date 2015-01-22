@@ -1,6 +1,6 @@
-package netty.framework.core.client;
+package netty.framework.core.net.client;
 
-import netty.framework.core.ProtobufParser;
+import netty.framework.core.net.ProtobufParser;
 
 import org.apache.log4j.Logger;
 

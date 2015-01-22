@@ -1,8 +1,8 @@
-package netty.framework.core.server;
+package netty.framework.core.net.server;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.ProtobufParser;
+import netty.framework.core.net.ProtobufParser;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

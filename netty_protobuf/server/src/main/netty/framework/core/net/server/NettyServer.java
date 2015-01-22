@@ -1,5 +1,5 @@
 
-package netty.framework.core.server;
+package netty.framework.core.net.server;
 
 import org.apache.log4j.Logger;
 

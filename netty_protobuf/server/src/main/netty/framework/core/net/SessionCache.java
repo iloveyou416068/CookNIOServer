@@ -1,4 +1,4 @@
-package netty.framework.core;
+package netty.framework.core.net;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
