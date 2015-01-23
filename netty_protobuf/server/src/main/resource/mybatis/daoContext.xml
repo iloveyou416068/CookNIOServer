@@ -10,6 +10,6 @@
 		</property>
 	</bean>
 
-	<bean id="roleDao" class="netty.framework.dao.RoleDao" parent="abstractDAO" />
+	<bean id="testDao" class="netty.framework.dao.TestDao" parent="abstractDAO" />
 
 </beans>

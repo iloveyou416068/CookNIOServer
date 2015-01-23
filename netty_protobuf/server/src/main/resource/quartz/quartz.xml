@@ -28,10 +28,10 @@
 	-->
 
 	<!-- 引入调度程序 -->
-	<bean id="refreshJob" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<bean id="testJob" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail">
 			<bean class="org.springframework.scheduling.quartz.JobDetailBean">
-				<property name="jobClass" value="testSpring.quartzJobs.RefreshJob" />
+				<property name="jobClass" value="netty.framework.jobs.TestJob" />
 			</bean>
 		</property>
 		<property name="cronExpression" value="0 0 0 * * ?" />
@@ -41,7 +41,7 @@
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-				<ref local="refreshJob" />
+				<ref local="testJob" />
 			</list>
 		</property>
 	</bean>

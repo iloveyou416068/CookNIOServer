@@ -10,7 +10,7 @@
 
 	<bean id="user.sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="user.ds"/>
-		<property name="configLocation" value="classpath:testSpring/mybatis/sqlmapContext.xml"/>
+		<property name="configLocation" value="classpath:resource/mybatis/sqlmapContext.xml"/>
 	</bean>
 
 	<bean id="user.sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
