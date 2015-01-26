@@ -1,14 +1,17 @@
 package netty.framework.core.net;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.log4j.Logger;
 
 import netty.framework.action.AbstractAtction;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.util.ClassFinder;
 
-import com.google.protobuf.MessageLite;
+import com.google.protobuf.Parser;
 
 /**
  * 保存action类和解析protobuf的parser类
@@ -19,44 +22,74 @@ public enum CoreCache {
 
 	INSTANCE;
 	
+	private final Logger logger = Logger.getLogger(CoreCache.class);
+	
 	// parser解析器
-	private final Map<String, Object> parser = new HashMap<>();
+	private final Map<String, Parser> requestMap = new HashMap<>();
+	private final Map<String, Parser> responseMap = new HashMap<>();
+	
 	// actions
 	private final Map<String, AbstractAtction> actions = new HashMap<>();
 	
 	// 服务器启动时,初始化parser 和actions
 	public void init() {
 
+		logger.debug("begain load actions and parsers");
+
 		try {
 			List<Class> actionclass = ClassFinder.findClasses(
 					"netty.framework.action", "Action");
 			for (Class action : actionclass) {
-				String[] splits = action.getName().split(".");
+				String[] splits = action.getName().split("\\.");
 				String actionName = splits[splits.length - 1];
 				String name = actionName.split("Action")[0];
 
 				actions.put(name, (AbstractAtction) action.newInstance());
+				
+				logger.debug("load action : " + name);
 			}
 
-			List<Class> messages = ClassFinder.findClasses(
-					"netty.framework.messages", "Message");
-			for (Class message : messages) {
-				String[] splits = message.getName().split(".");
-				String messageName = splits[splits.length - 1];
-				if (!messageName.endsWith("Message"))
-					parser.put(messageName, message.newInstance());
-			}
+			parseMessage(requestMap, "Request");
+			parseMessage(responseMap, "Response");
 
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
+		} catch (final Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public MessageLite getParser(int id) {
-		MsgID.valueOf(id).name();
-		return (MessageLite)parser.get(id);
+	private void parseMessage(Map<String, Parser> map,  String classEndName) {
+		
+		List<Class> requests = ClassFinder.findClasses(
+				"netty.framework.messages", classEndName);
+		
+		for (Class message : requests) {
+			try {
+				String[] splits = message.getName().split("\\.");
+				String messageName = splits[splits.length - 1];
+				logger.debug("load " + classEndName + " : " + messageName);
+				
+				Method defaultInstance = message.getMethod("getDefaultInstance");
+				Object newBuilder = defaultInstance.invoke(message);
+
+				Method getParserForType = newBuilder.getClass().getMethod("getParserForType");
+				
+				Parser parser = (Parser)getParserForType.invoke(newBuilder);
+				map.put(messageName, parser);
+				logger.debug("load message : " + messageName);
+				
+			} catch (final Exception e1) {
+				e1.printStackTrace();
+				return;
+			}
+		}
+	}
+	
+	public Parser getRequestParserBy(int id) {
+		return requestMap.get(MsgID.valueOf(id).name());
+	}
+	
+	public Parser getResponseParserBy(int id) {
+		return responseMap.get(MsgID.valueOf(id).name());
 	}
 	
 	public AbstractAtction getExecutor(String key) {

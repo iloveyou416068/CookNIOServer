@@ -28,7 +28,7 @@ public enum NettyClient {
 	
 	public void connect() {
 		
-		CountDownLatch latch = new CountDownLatch(1);
+		CountDownLatch latch = new CountDownLatch(2);
 		
 		executor.execute(new ClientRunnable(latch));
 		
@@ -67,7 +67,7 @@ public enum NettyClient {
 									MessagerRequest req = MessagerMessage.MessagerRequest.getDefaultInstance();
 									ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 									ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-									ch.pipeline().addLast(new NettyClientHandler());
+									ch.pipeline().addLast(new NettyClientHandler(latch));
 //									ch.pipeline().addLast(new SimpleNettyClientHandler());
 								}
 							});
@@ -81,10 +81,11 @@ public enum NettyClient {
 					f.channel().closeFuture().sync();
 				} finally {
 					// 优雅退出，释放NIO线程组
+					System.out.println("Client shutdownGracefully");
 					group.shutdownGracefully();
 				}
 			} catch(final Exception e) {
-				
+				e.printStackTrace();
 			}
 			
 		} 

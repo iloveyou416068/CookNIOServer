@@ -6,6 +6,8 @@ import java.util.concurrent.Executors;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.google.protobuf.Parser;
+
 import netty.framework.core.net.Session;
 import netty.framework.core.net.client.ClientSessionCache;
 import netty.framework.core.net.client.NettyClient;
@@ -21,6 +23,8 @@ public class TestClient {
 		try {
 			NettyClient.INSTANCE.connect();
 			
+			System.out.println(System.currentTimeMillis());
+			
 			Session session = ClientSessionCache.INSTANCE.get();
 
 			TestRequest test = TestRequest.newBuilder()
@@ -31,9 +35,11 @@ public class TestClient {
 			.setMsgID(MsgID.MSG_MESSAGER)
 			.setContent(test.toByteString())
 			.build();
-			
+			TestRequest.getDefaultInstance().getParserForType();
+			Parser<TestRequest> parser = test.getParserForType();
 			session.write(message);
-			
+
+			while(true){}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

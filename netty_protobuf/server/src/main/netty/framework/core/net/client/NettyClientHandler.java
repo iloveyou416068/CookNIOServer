@@ -1,5 +1,7 @@
 package netty.framework.core.net.client;
 
+import java.util.concurrent.CountDownLatch;
+
 import netty.framework.core.net.ProtobufParser;
 import netty.framework.core.net.Session;
 
@@ -11,8 +13,11 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
 	private final static Logger logger = Logger.getLogger(NettyClientHandler.class);
+	// TODO 考虑并发
+	private final CountDownLatch latch;
 	
-	public NettyClientHandler() {
+	public NettyClientHandler(CountDownLatch latch) {
+		this.latch = latch;
 	}
 	
 	@Override
@@ -28,7 +33,8 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 			Session session = new Session();
 			session.setContext(ctx);
 			ClientSessionCache.INSTANCE.put(session);
-			logger.debug("Client : add session : " + ctx.channel().localAddress().toString());
+			latch.countDown();
+			logger.debug("Client : add session : " + ctx.channel().localAddress().toString() + "  " + System.currentTimeMillis());
 		}
 		
 		ctx.fireChannelActive();
