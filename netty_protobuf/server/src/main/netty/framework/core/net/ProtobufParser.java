@@ -1,15 +1,20 @@
 package netty.framework.core.net;
 
+import org.apache.log4j.Logger;
+
 import io.netty.channel.ChannelHandlerContext;
 import netty.framework.action.AbstractAtction;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MsgId.MsgID;
+import netty.framework.util.JsonTool;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 
 public class ProtobufParser {
 
+	private static final Logger logger = Logger.getLogger(ProtobufParser.class);
+	
 	public static void parer(ChannelHandlerContext ctx, Object msg) {
 		// 解析最外层的protobuf
 		MessagerMessage.MessagerRequest req = (MessagerMessage.MessagerRequest) msg;
@@ -21,7 +26,9 @@ public class ProtobufParser {
 		MessageLite parser = CoreCache.INSTANCE.getParser(msgId.getNumber());
 		MessageLite message = null;
 		try {
+			logger.debug("ParseMessage : " + msgId);
 			message = parser.getParserForType().parseFrom(bytes);
+			logger.info(JsonTool.toJson(message));
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}

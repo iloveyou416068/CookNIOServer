@@ -57,6 +57,7 @@ public enum NettyServer {
 							addThreadpool(pipeline);
 							
 							pipeline.addLast(new NettyServerHandler());
+//							pipeline.addLast(new SimpleNettyServerHandler());
 						}
 					});
 

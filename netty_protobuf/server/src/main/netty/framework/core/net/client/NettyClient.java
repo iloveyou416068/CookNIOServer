@@ -1,5 +1,10 @@
 package netty.framework.core.net.client;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import netty.framework.core.net.server.SimpleNettyServerHandler;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.Bootstrap;
@@ -19,37 +24,71 @@ public enum NettyClient {
 
 	INSTANCE;
 	
-	public void connect() throws Exception {
-		int port = 8080;
-		String host = "127.0.0.1";
-		// 配置客户端NIO线程组
-		EventLoopGroup group = new NioEventLoopGroup();
+	private final ExecutorService executor = Executors.newCachedThreadPool();
+	
+	public void connect() {
+		
+		CountDownLatch latch = new CountDownLatch(1);
+		
+		executor.execute(new ClientRunnable(latch));
+		
 		try {
-			Bootstrap b = new Bootstrap();
-			b.group(group).channel(NioSocketChannel.class)
-					.option(ChannelOption.TCP_NODELAY, true)
-					.handler(new ChannelInitializer<SocketChannel>() {
-						@Override
-						public void initChannel(SocketChannel ch)
-								throws Exception {
-							ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-							ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
-							MessagerRequest req = MessagerMessage.MessagerRequest.getDefaultInstance();
-							ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
-							ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-							ch.pipeline().addLast(new NettyClientHandler());
-						}
-					});
-
-			// 发起异步连接操作
-			ChannelFuture f = b.connect(host, port).sync();
-
-			// 当代客户端链路关闭
-			f.channel().closeFuture().sync();
-		} finally {
-			// 优雅退出，释放NIO线程组
-			group.shutdownGracefully();
+			latch.await();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 
+	private static class ClientRunnable implements Runnable{
+
+		private final CountDownLatch latch;
+		
+		protected ClientRunnable(CountDownLatch latch) {
+			this.latch = latch;
+		}
+		
+		@Override
+		public void run() {
+			try{
+				int port = 8080;
+				String host = "127.0.0.1";
+				// 配置客户端NIO线程组
+				EventLoopGroup group = new NioEventLoopGroup();
+				try {
+					Bootstrap b = new Bootstrap();
+					b.group(group).channel(NioSocketChannel.class)
+							.option(ChannelOption.TCP_NODELAY, true)
+							.handler(new ChannelInitializer<SocketChannel>() {
+								@Override
+								public void initChannel(SocketChannel ch)
+										throws Exception {
+									ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
+									ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
+									MessagerRequest req = MessagerMessage.MessagerRequest.getDefaultInstance();
+									ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
+									ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
+									ch.pipeline().addLast(new NettyClientHandler());
+//									ch.pipeline().addLast(new SimpleNettyClientHandler());
+								}
+							});
+
+					// 发起异步连接操作
+					ChannelFuture f = b.connect(host, port).sync();
+
+					latch.countDown();
+					
+					// 阻塞, 等待客户端链路关闭
+					f.channel().closeFuture().sync();
+				} finally {
+					// 优雅退出，释放NIO线程组
+					group.shutdownGracefully();
+				}
+			} catch(final Exception e) {
+				
+			}
+			
+		} 
+		
+	}
+	
 }

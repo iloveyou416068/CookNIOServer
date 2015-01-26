@@ -1,1 +1,174 @@
-2015-01-22 17:05:45.471  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 11:13:35.437  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 11:13:45.848 DEBUG [NettyClientHandler.java:79] - Client : isSharable
+2015-01-26 11:13:45.852 DEBUG [NettyClientHandler.java:19] - Client : handlerAdded 
+2015-01-26 11:13:45.852 DEBUG [NettyClientHandler.java:57] - Client : channelRegistered
+2015-01-26 11:13:45.856 DEBUG [NettyClientHandler.java:24] - Client : channelActive
+2015-01-26 11:13:45.879 DEBUG [NettyServerHandler.java:21] - Server : isSharable
+2015-01-26 11:13:45.881 DEBUG [NettyServerHandler.java:27] - Server : handlerAdded 
+2015-01-26 11:13:45.881 DEBUG [NettyServerHandler.java:32] - Server : channelRegistered
+2015-01-26 11:13:45.882 DEBUG [NettyServerHandler.java:37] - Server : channelActive
+2015-01-26 11:14:38.963 DEBUG [NettyClientHandler.java:42] - Client : channelReadComplete
+2015-01-26 11:14:38.969 DEBUG [NettyClientHandler.java:88] - Client : exceptionCaught
+2015-01-26 11:14:38.983 DEBUG [NettyClientHandler.java:52] - Client : channelInactive
+2015-01-26 11:14:38.983 DEBUG [NettyClientHandler.java:62] - Client : channelUnregistered
+2015-01-26 11:14:38.983 DEBUG [NettyClientHandler.java:47] - Client : handlerRemoved
+2015-01-26 11:14:38.987 DEBUG [NettyClientHandler.java:79] - Client : isSharable
+2015-01-26 11:14:38.987 DEBUG [NettyClientHandler.java:19] - Client : handlerAdded 
+2015-01-26 11:14:38.987 DEBUG [NettyClientHandler.java:57] - Client : channelRegistered
+2015-01-26 11:14:39.990 DEBUG [NettyClientHandler.java:62] - Client : channelUnregistered
+2015-01-26 11:14:39.990 DEBUG [NettyClientHandler.java:47] - Client : handlerRemoved
+2015-01-26 11:14:40.013 DEBUG [NettyClientHandler.java:79] - Client : isSharable
+2015-01-26 11:14:40.013 DEBUG [NettyClientHandler.java:19] - Client : handlerAdded 
+2015-01-26 11:14:40.014 DEBUG [NettyClientHandler.java:57] - Client : channelRegistered
+2015-01-26 11:16:41.670  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 11:46:13.213 DEBUG [NettyClientHandler.java:79] - Client : isSharable
+2015-01-26 11:46:13.216 DEBUG [NettyClientHandler.java:19] - Client : handlerAdded 
+2015-01-26 11:46:13.216 DEBUG [NettyClientHandler.java:57] - Client : channelRegistered
+2015-01-26 11:46:13.220 DEBUG [NettyClientHandler.java:24] - Client : channelActive
+2015-01-26 11:46:13.238 DEBUG [NettyServerHandler.java:21] - Server : isSharable
+2015-01-26 11:46:13.240 DEBUG [NettyServerHandler.java:27] - Server : handlerAdded 
+2015-01-26 11:46:13.240 DEBUG [NettyServerHandler.java:32] - Server : channelRegistered
+2015-01-26 11:46:13.240 DEBUG [NettyServerHandler.java:37] - Server : channelActive
+2015-01-26 11:58:02.662 DEBUG [NettyServerHandler.java:58] - Server : channelReadComplete
+2015-01-26 11:58:02.664 DEBUG [NettyServerHandler.java:95] - Server : exceptionCaught
+2015-01-26 11:58:02.671 DEBUG [NettyServerHandler.java:70] - Server : channelInactive
+2015-01-26 11:58:02.671 DEBUG [NettyServerHandler.java:75] - Server : channelUnregistered
+2015-01-26 11:58:02.671 DEBUG [NettyServerHandler.java:65] - Server : handlerRemoved
+2015-01-26 11:58:09.080  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 11:58:12.129 DEBUG [NettyClientHandler.java:81] - Client : isSharable
+2015-01-26 11:58:12.132 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 11:58:12.133 DEBUG [NettyClientHandler.java:59] - Client : channelRegistered
+2015-01-26 11:58:12.137 DEBUG [NettyClientHandler.java:25] - Client : channelActive/127.0.0.1:8080
+2015-01-26 11:58:12.153 DEBUG [NettyServerHandler.java:21] - Server : isSharable
+2015-01-26 11:58:12.155 DEBUG [NettyServerHandler.java:27] - Server : handlerAdded 
+2015-01-26 11:58:12.155 DEBUG [NettyServerHandler.java:32] - Server : channelRegistered
+2015-01-26 11:58:12.155 DEBUG [NettyServerHandler.java:37] - Server : channelActive
+2015-01-26 12:07:28.329 DEBUG [NettyClientHandler.java:86] - Client : isSharable
+2015-01-26 12:07:28.332 DEBUG [NettyClientHandler.java:21] - Client : handlerAdded 
+2015-01-26 12:07:28.333 DEBUG [NettyClientHandler.java:64] - Client : channelRegistered
+2015-01-26 12:07:28.335 DEBUG [NettyServerHandler.java:21] - Server : isSharable
+2015-01-26 12:07:28.335 DEBUG [NettyServerHandler.java:27] - Server : handlerAdded 
+2015-01-26 12:07:28.336 DEBUG [NettyServerHandler.java:32] - Server : channelRegistered
+2015-01-26 12:07:28.336 DEBUG [NettyServerHandler.java:37] - Server : channelActive
+2015-01-26 12:07:28.337 DEBUG [NettyClientHandler.java:26] - Client : channelActive
+2015-01-26 12:09:06.864 DEBUG [NettyClientHandler.java:44] - Client : channelReadComplete
+2015-01-26 12:09:06.865 DEBUG [NettyClientHandler.java:49] - Client : channelReadComplete
+2015-01-26 12:09:06.866 DEBUG [NettyClientHandler.java:90] - Client : exceptionCaught
+2015-01-26 12:09:06.867 DEBUG [NettyClientHandler.java:95] - Client : exceptionCaught
+2015-01-26 12:09:06.872 DEBUG [NettyClientHandler.java:54] - Client : channelInactive
+2015-01-26 12:09:06.872 DEBUG [NettyClientHandler.java:64] - Client : channelUnregistered
+2015-01-26 12:09:06.872 DEBUG [NettyClientHandler.java:49] - Client : handlerRemoved
+2015-01-26 12:09:06.872 DEBUG [NettyClientHandler.java:59] - Client : channelInactive
+2015-01-26 12:09:06.872 DEBUG [NettyClientHandler.java:69] - Client : channelUnregistered
+2015-01-26 12:09:06.873 DEBUG [NettyClientHandler.java:54] - Client : handlerRemoved
+2015-01-26 12:13:42.492  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 12:13:45.766 DEBUG [NettyClientHandler.java:85] - Client : isSharable
+2015-01-26 12:13:45.771 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 12:13:45.771 DEBUG [NettyClientHandler.java:63] - Client : channelRegistered
+2015-01-26 12:13:45.776 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 12:13:45.794 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 12:13:45.796 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 12:13:45.796 DEBUG [NettyServerHandler.java:33] - Server : channelRegistered
+2015-01-26 12:13:45.797 DEBUG [NettyServerHandler.java:38] - Server : channelActive
+2015-01-26 12:15:18.614 DEBUG [NettyClientHandler.java:48] - Client : channelReadComplete
+2015-01-26 12:15:18.617 DEBUG [NettyClientHandler.java:94] - Client : exceptionCaught
+2015-01-26 12:15:18.623 DEBUG [NettyClientHandler.java:58] - Client : channelInactive
+2015-01-26 12:15:18.624 DEBUG [NettyClientHandler.java:68] - Client : channelUnregistered
+2015-01-26 12:15:18.624 DEBUG [NettyClientHandler.java:53] - Client : handlerRemoved
+2015-01-26 12:15:29.409  INFO [NettyServer.java:66] - server started on 8080
+2015-01-26 12:15:33.067 DEBUG [NettyClientHandler.java:86] - Client : isSharable
+2015-01-26 12:15:33.070 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 12:15:33.071 DEBUG [NettyClientHandler.java:64] - Client : channelRegistered
+2015-01-26 12:15:33.074 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 12:15:33.075 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:54259
+2015-01-26 12:15:33.092 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 12:15:33.093 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 12:15:33.093 DEBUG [NettyServerHandler.java:33] - Server : channelRegistered
+2015-01-26 12:15:33.094 DEBUG [NettyServerHandler.java:38] - Server : channelActive
+2015-01-26 12:15:33.094 DEBUG [NettyServerHandler.java:45] - Server : addSession :/127.0.0.1:54259
+2015-01-26 12:23:06.280 DEBUG [NettyServerHandler.java:67] - Server : channelReadComplete
+2015-01-26 12:23:06.282 DEBUG [NettyServerHandler.java:104] - Server : exceptionCaught
+2015-01-26 12:23:06.288 DEBUG [NettyServerHandler.java:79] - Server : channelInactive
+2015-01-26 12:23:06.288 DEBUG [NettyServerHandler.java:84] - Server : channelUnregistered
+2015-01-26 12:23:06.288 DEBUG [NettyServerHandler.java:74] - Server : handlerRemoved
+2015-01-26 13:19:17.814  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 13:46:30.364  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 13:46:33.253 DEBUG [NettyClientHandler.java:103] - Client : isSharable
+2015-01-26 13:46:33.256 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 13:46:33.256 DEBUG [NettyClientHandler.java:73] - Client : channelRegistered
+2015-01-26 13:46:33.260 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 13:46:33.261 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:56578
+2015-01-26 13:46:33.277 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 13:46:33.279 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 13:46:33.279 DEBUG [NettyServerHandler.java:35] - Server : channelRegistered
+2015-01-26 13:46:33.279 DEBUG [NettyServerHandler.java:42] - Server : channelActive
+2015-01-26 13:46:33.280 DEBUG [NettyServerHandler.java:49] - Server : addSession :/127.0.0.1:56578
+2015-01-26 13:48:01.575 DEBUG [NettyClientHandler.java:53] - Client : channelReadComplete
+2015-01-26 13:48:01.578 DEBUG [NettyClientHandler.java:112] - Client : exceptionCaught
+2015-01-26 13:48:01.584 DEBUG [NettyClientHandler.java:66] - Client : channelInactive
+2015-01-26 13:48:01.584 DEBUG [NettyClientHandler.java:80] - Client : channelUnregistered
+2015-01-26 13:48:01.584 DEBUG [NettyClientHandler.java:60] - Client : handlerRemoved
+2015-01-26 13:56:57.933  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 13:57:02.328 DEBUG [NettyClientHandler.java:103] - Client : isSharable
+2015-01-26 13:57:02.331 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 13:57:02.331 DEBUG [NettyClientHandler.java:73] - Client : channelRegistered
+2015-01-26 13:57:02.335 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 13:57:02.336 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:56887
+2015-01-26 13:57:02.351 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 13:57:02.352 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 13:57:02.353 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 13:57:02.353 DEBUG [NettyServerHandler.java:42] - Server : channelActive
+2015-01-26 13:57:02.354 DEBUG [NettyServerHandler.java:49] - Server : addSession :/127.0.0.1:56887
+2015-01-26 14:01:40.821 DEBUG [NettyServerHandler.java:74] - Server : channelReadComplete
+2015-01-26 14:01:40.823 DEBUG [NettyServerHandler.java:122] - Server : exceptionCaught
+2015-01-26 14:01:40.829 DEBUG [NettyServerHandler.java:89] - Server : channelInactive
+2015-01-26 14:01:40.829 DEBUG [NettyServerHandler.java:96] - Server : channelUnregistered
+2015-01-26 14:01:40.829 DEBUG [NettyServerHandler.java:83] - Server : handlerRemoved
+2015-01-26 14:07:04.042  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 14:07:11.497 DEBUG [NettyClientHandler.java:103] - Client : isSharable
+2015-01-26 14:07:11.500 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 14:07:11.500 DEBUG [NettyClientHandler.java:73] - Client : channelRegistered
+2015-01-26 14:07:11.504 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 14:07:11.505 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:57304
+2015-01-26 14:07:11.522 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 14:07:11.524 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 14:07:11.524 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 14:07:11.524 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 14:07:11.525 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:57304
+2015-01-26 14:07:21.651 DEBUG [NettyClientHandler.java:53] - Client : channelReadComplete
+2015-01-26 14:07:21.654 DEBUG [NettyClientHandler.java:112] - Client : exceptionCaught
+2015-01-26 14:07:21.661 DEBUG [NettyClientHandler.java:66] - Client : channelInactive
+2015-01-26 14:07:21.661 DEBUG [NettyClientHandler.java:80] - Client : channelUnregistered
+2015-01-26 14:07:21.661 DEBUG [NettyClientHandler.java:60] - Client : handlerRemoved
+2015-01-26 14:08:34.149  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 14:08:41.293 DEBUG [NettyClientHandler.java:103] - Client : isSharable
+2015-01-26 14:08:41.296 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 14:08:41.296 DEBUG [NettyClientHandler.java:73] - Client : channelRegistered
+2015-01-26 14:08:41.300 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 14:08:41.301 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:57429
+2015-01-26 14:08:41.318 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 14:08:41.320 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 14:08:41.320 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 14:08:41.320 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 14:08:41.321 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:57429
+2015-01-26 14:08:46.574 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 14:08:46.576 DEBUG [NettyServerHandler.java:121] - Server : exceptionCaught
+2015-01-26 14:08:46.581 DEBUG [NettyServerHandler.java:88] - Server : channelInactive
+2015-01-26 14:08:46.581 DEBUG [NettyServerHandler.java:95] - Server : channelUnregistered
+2015-01-26 14:08:46.582 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved
+2015-01-26 14:15:28.881  INFO [NettyServer.java:67] - server started on 8080
+2015-01-26 14:15:33.047 DEBUG [NettyClientHandler.java:103] - Client : isSharable
+2015-01-26 14:15:33.050 DEBUG [NettyClientHandler.java:20] - Client : handlerAdded 
+2015-01-26 14:15:33.050 DEBUG [NettyClientHandler.java:73] - Client : channelRegistered
+2015-01-26 14:15:33.054 DEBUG [NettyClientHandler.java:25] - Client : channelActive
+2015-01-26 14:15:33.055 DEBUG [NettyClientHandler.java:31] - Client : add session : /127.0.0.1:57643
+2015-01-26 14:15:33.073 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 14:15:33.075 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 14:15:33.075 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 14:15:33.075 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 14:15:33.076 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:57643
+2015-01-26 14:15:33.382 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 14:15:33.384 DEBUG [NettyServerHandler.java:121] - Server : exceptionCaught
+2015-01-26 14:15:33.390 DEBUG [NettyServerHandler.java:88] - Server : channelInactive
+2015-01-26 14:15:33.390 DEBUG [NettyServerHandler.java:95] - Server : channelUnregistered
+2015-01-26 14:15:33.390 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved
