@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.google.protobuf.Parser;
+import com.google.protobuf.ByteString;
 
 import netty.framework.core.net.Session;
 import netty.framework.core.net.client.ClientSessionCache;
@@ -33,10 +33,14 @@ public class TestClient {
 			.setMsgID(MsgID.MESSAGER)
 			.setContent(test.toByteString())
 			.build();
-			TestRequest.getDefaultInstance().getParserForType();
+			
 			session.write(message);
 
-			System.out.println(test.toByteString());
+			ByteString str = test.toByteString();
+			for (byte b : str.toByteArray()) {
+				System.out.print(b);
+			}
+			System.out.println();
 			while(true){}
 		} catch (Exception e) {
 			e.printStackTrace();

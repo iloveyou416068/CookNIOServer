@@ -20,17 +20,17 @@ public class ProtobufParser {
 		
 		// 解析最外层的protobuf
 		MessagerMessage.MessagerRequest req = (MessagerMessage.MessagerRequest) msg;
+	
 		// 获取业务层消息号和消息内容
 		MsgID msgId = req.getMsgID();
 		byte[] bytes = req.getContent().toByteArray();
-		System.out.println(bytes);
+		
 		// 根据消息号找到解析器,然后解析消息内容
 		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId.getNumber());
 		MessageLite message = null;
 		try {
-			logger.debug("ParseMessage : " + msgId);
 			message = (MessageLite)requestParser.parseFrom(bytes);
-			logger.info(JsonTool.toJson(message));
+			logger.info("ParseMessage : " + msgId + JsonTool.toJson(message));
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}

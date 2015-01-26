@@ -8,10 +8,8 @@ option java_outer_classname = "TestMessage";
 
 message TestRequest {
     required MsgID  msgID    = 1; 
-    
 }
 
 message TestResponse {
     required MsgID      msgID     = 1;
-    
 }
