@@ -653,3 +653,108 @@
 2015-01-26 17:06:52.596 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved
 2015-01-26 17:06:52.596 DEBUG [NettyClientHandler.java:86] - Client : channelUnregistered
 2015-01-26 17:06:52.596 DEBUG [NettyClientHandler.java:66] - Client : handlerRemoved
+2015-01-26 17:18:50.422 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 17:18:53.072  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 17:18:53.122 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 17:18:53.224 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 17:18:53.237 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 17:18:53.262 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 17:18:53.263 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 17:18:55.963 DEBUG [NettyClientHandler.java:109] - Client : isSharable
+2015-01-26 17:18:55.967 DEBUG [NettyClientHandler.java:25] - Client : handlerAdded 
+2015-01-26 17:18:55.967 DEBUG [NettyClientHandler.java:79] - Client : channelRegistered
+2015-01-26 17:18:55.971 DEBUG [NettyClientHandler.java:30] - Client : channelActive
+2015-01-26 17:18:55.972 DEBUG [NettyClientHandler.java:37] - Client : add session : /127.0.0.1:50540  1422263935972
+2015-01-26 17:18:55.980 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 17:18:55.980 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 17:18:55.980 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 17:18:55.981 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 17:18:55.981 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:50540
+2015-01-26 17:18:56.016 DEBUG [NettyServerHandler.java:62] - Server : channelRead
+2015-01-26 17:18:56.092  INFO [ProtobufParser.java:33] - ParseMessage : TEST{"bitField0_":1,"msgID_":"TEST","memoizedIsInitialized":1,"memoizedSerializedSize":-1}
+2015-01-26 17:18:56.094 DEBUG [NettyServerHandler.java:121] - Server : exceptionCaught
+2015-01-26 17:18:56.094 DEBUG [NettyClientHandler.java:59] - Client : channelReadComplete
+2015-01-26 17:18:56.094 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 17:18:56.095 DEBUG [NettyServerHandler.java:88] - Server : channelInactive
+2015-01-26 17:18:56.095 DEBUG [NettyServerHandler.java:95] - Server : channelUnregistered
+2015-01-26 17:18:56.096 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved
+2015-01-26 17:18:56.096 DEBUG [NettyClientHandler.java:72] - Client : channelInactive
+2015-01-26 17:18:56.096 DEBUG [NettyClientHandler.java:86] - Client : channelUnregistered
+2015-01-26 17:18:56.097 DEBUG [NettyClientHandler.java:66] - Client : handlerRemoved
+2015-01-26 17:31:44.571 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 17:31:47.228  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 17:31:47.281 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 17:31:47.378 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 17:31:47.390 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 17:31:47.415 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 17:31:47.416 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 17:31:53.040 DEBUG [NettyClientHandler.java:109] - Client : isSharable
+2015-01-26 17:31:53.044 DEBUG [NettyClientHandler.java:25] - Client : handlerAdded 
+2015-01-26 17:31:53.044 DEBUG [NettyClientHandler.java:79] - Client : channelRegistered
+2015-01-26 17:31:53.048 DEBUG [NettyClientHandler.java:30] - Client : channelActive
+2015-01-26 17:31:53.049 DEBUG [NettyClientHandler.java:37] - Client : add session : /127.0.0.1:50916  1422264713049
+2015-01-26 17:31:53.057 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 17:31:53.058 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 17:31:53.058 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 17:31:53.058 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 17:31:53.059 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:50916
+2015-01-26 17:31:53.083 DEBUG [NettyServerHandler.java:62] - Server : channelRead
+2015-01-26 17:31:53.136  INFO [ProtobufParser.java:33] - ParseMessage : TEST{"bitField0_":1,"msgID_":"TEST","memoizedIsInitialized":1,"memoizedSerializedSize":-1}
+2015-01-26 17:31:53.139 DEBUG [NettyServerHandler.java:121] - Server : exceptionCaught
+2015-01-26 17:31:53.138 DEBUG [NettyClientHandler.java:59] - Client : channelReadComplete
+2015-01-26 17:31:53.139 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 17:31:53.141 DEBUG [NettyServerHandler.java:88] - Server : channelInactive
+2015-01-26 17:31:53.141 DEBUG [NettyServerHandler.java:95] - Server : channelUnregistered
+2015-01-26 17:31:53.141 DEBUG [NettyClientHandler.java:72] - Client : channelInactive
+2015-01-26 17:31:53.141 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved
+2015-01-26 17:31:53.141 DEBUG [NettyClientHandler.java:86] - Client : channelUnregistered
+2015-01-26 17:31:53.141 DEBUG [NettyClientHandler.java:66] - Client : handlerRemoved
+2015-01-26 17:32:39.467 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 17:32:42.116  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 17:32:42.179 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 17:32:42.288 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 17:32:42.309 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 17:32:42.336 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 17:32:42.338 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 17:32:43.634 DEBUG [NettyClientHandler.java:109] - Client : isSharable
+2015-01-26 17:32:43.637 DEBUG [NettyClientHandler.java:25] - Client : handlerAdded 
+2015-01-26 17:32:43.637 DEBUG [NettyClientHandler.java:79] - Client : channelRegistered
+2015-01-26 17:32:43.641 DEBUG [NettyClientHandler.java:30] - Client : channelActive
+2015-01-26 17:32:43.642 DEBUG [NettyClientHandler.java:37] - Client : add session : /127.0.0.1:51030  1422264763642
+2015-01-26 17:32:43.651 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 17:32:43.652 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 17:32:43.652 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 17:32:43.652 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 17:32:43.653 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:51030
+2015-01-26 17:32:43.677 DEBUG [NettyServerHandler.java:62] - Server : channelRead
+2015-01-26 17:32:43.730  INFO [ProtobufParser.java:33] - ParseMessage : TEST{"bitField0_":1,"msgID_":"TEST","memoizedIsInitialized":1,"memoizedSerializedSize":-1}
+2015-01-26 17:33:18.180 DEBUG [NettyClientHandler.java:59] - Client : channelReadComplete
+2015-01-26 17:33:18.182 DEBUG [NettyClientHandler.java:118] - Client : exceptionCaught
+2015-01-26 17:33:18.183 DEBUG [NettyClientHandler.java:72] - Client : channelInactive
+2015-01-26 17:33:18.183 DEBUG [NettyClientHandler.java:86] - Client : channelUnregistered
+2015-01-26 17:33:18.183 DEBUG [NettyClientHandler.java:66] - Client : handlerRemoved
+2015-01-26 17:33:25.130 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 17:33:27.785  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 17:33:27.826 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 17:33:27.919 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 17:33:27.928 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 17:33:27.957 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 17:33:27.958 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 17:33:29.618 DEBUG [NettyClientHandler.java:109] - Client : isSharable
+2015-01-26 17:33:29.621 DEBUG [NettyClientHandler.java:25] - Client : handlerAdded 
+2015-01-26 17:33:29.621 DEBUG [NettyClientHandler.java:79] - Client : channelRegistered
+2015-01-26 17:33:29.626 DEBUG [NettyClientHandler.java:30] - Client : channelActive
+2015-01-26 17:33:29.627 DEBUG [NettyClientHandler.java:37] - Client : add session : /127.0.0.1:51131  1422264809627
+2015-01-26 17:33:29.634 DEBUG [NettyServerHandler.java:22] - Server : isSharable
+2015-01-26 17:33:29.634 DEBUG [NettyServerHandler.java:28] - Server : handlerAdded 
+2015-01-26 17:33:29.634 DEBUG [NettyServerHandler.java:34] - Server : channelRegistered
+2015-01-26 17:33:29.635 DEBUG [NettyServerHandler.java:41] - Server : channelActive
+2015-01-26 17:33:29.636 DEBUG [NettyServerHandler.java:48] - Server : addSession :/127.0.0.1:51131
+2015-01-26 17:33:29.660 DEBUG [NettyServerHandler.java:62] - Server : channelRead
+2015-01-26 17:33:29.713  INFO [ProtobufParser.java:33] - ParseMessage : TEST{"bitField0_":1,"msgID_":"TEST","memoizedIsInitialized":1,"memoizedSerializedSize":-1}
+2015-01-26 17:33:29.716 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 17:35:51.435 DEBUG [NettyServerHandler.java:73] - Server : channelReadComplete
+2015-01-26 17:35:51.438 DEBUG [NettyServerHandler.java:121] - Server : exceptionCaught
+2015-01-26 17:35:51.438 DEBUG [NettyServerHandler.java:88] - Server : channelInactive
+2015-01-26 17:35:51.438 DEBUG [NettyServerHandler.java:95] - Server : channelUnregistered
+2015-01-26 17:35:51.438 DEBUG [NettyServerHandler.java:82] - Server : handlerRemoved

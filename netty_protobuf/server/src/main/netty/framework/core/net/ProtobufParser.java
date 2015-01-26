@@ -36,11 +36,8 @@ public class ProtobufParser {
 		}
 
 		// 执行业务逻辑
-		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getExecutor(msgId.name());
-		MessageLite result = action.execute(message);
-		
-//		MessageLite responseParser = CoreCache.INSTANCE.getResponseParserBy(msgId.getNumber());
-//		responseParser.
+		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
+		MessageLite result = action.execute(message, msgId);
 		
 		// 向客户端返回消息
 		ctx.writeAndFlush(result.toByteArray());

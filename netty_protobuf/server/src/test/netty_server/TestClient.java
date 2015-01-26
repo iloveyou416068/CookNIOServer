@@ -30,7 +30,7 @@ public class TestClient {
 			.build();
 			
 			MessagerRequest message = MessagerRequest.newBuilder()
-			.setMsgID(MsgID.MESSAGER)
+			.setMsgID(MsgID.TEST)
 			.setContent(test.toByteString())
 			.build();
 			

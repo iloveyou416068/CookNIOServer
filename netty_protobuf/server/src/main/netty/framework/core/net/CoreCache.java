@@ -47,7 +47,7 @@ public enum CoreCache {
 				if(name.equals("Abstract"))
 					continue;
 				
-				actions.put(name, (AbstractAction) action.newInstance());
+				actions.put(name.toUpperCase(), (AbstractAction) action.newInstance());
 				
 				logger.debug("load action : " + name);
 			}
@@ -96,7 +96,7 @@ public enum CoreCache {
 		return responseMap.get(MsgID.valueOf(id).name());
 	}
 	
-	public AbstractAction getExecutor(String key) {
+	public AbstractAction getAction(String key) {
 		return actions.get(key);
 	}
 }
