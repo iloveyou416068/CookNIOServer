@@ -23,22 +23,20 @@ public class TestClient {
 		try {
 			NettyClient.INSTANCE.connect();
 			
-			System.out.println(System.currentTimeMillis());
-			
 			Session session = ClientSessionCache.INSTANCE.get();
 
 			TestRequest test = TestRequest.newBuilder()
-			.setMsgID(MsgID.MSG_TEST)
+			.setMsgID(MsgID.TEST)
 			.build();
 			
 			MessagerRequest message = MessagerRequest.newBuilder()
-			.setMsgID(MsgID.MSG_MESSAGER)
+			.setMsgID(MsgID.MESSAGER)
 			.setContent(test.toByteString())
 			.build();
 			TestRequest.getDefaultInstance().getParserForType();
-			Parser<TestRequest> parser = test.getParserForType();
 			session.write(message);
 
+			System.out.println(test.toByteString());
 			while(true){}
 		} catch (Exception e) {
 			e.printStackTrace();

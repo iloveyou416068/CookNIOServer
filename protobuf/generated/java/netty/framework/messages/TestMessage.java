@@ -117,7 +117,7 @@ public final class TestMessage {
     }
 
     private void initFields() {
-      msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -241,7 +241,7 @@ public final class TestMessage {
 
       public Builder clear() {
         super.clear();
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -310,7 +310,7 @@ public final class TestMessage {
       private int bitField0_;
 
       // required .cook.MsgID msgID = 1;
-      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       /**
        * <code>required .cook.MsgID msgID = 1;</code>
        */
@@ -340,7 +340,7 @@ public final class TestMessage {
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         
         return this;
       }
@@ -465,7 +465,7 @@ public final class TestMessage {
     }
 
     private void initFields() {
-      msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -589,7 +589,7 @@ public final class TestMessage {
 
       public Builder clear() {
         super.clear();
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -658,7 +658,7 @@ public final class TestMessage {
       private int bitField0_;
 
       // required .cook.MsgID msgID = 1;
-      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       /**
        * <code>required .cook.MsgID msgID = 1;</code>
        */
@@ -688,7 +688,7 @@ public final class TestMessage {
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         
         return this;
       }

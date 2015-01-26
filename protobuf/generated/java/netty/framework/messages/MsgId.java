@@ -14,31 +14,31 @@ public final class MsgId {
   public enum MsgID
       implements com.google.protobuf.Internal.EnumLite {
     /**
-     * <code>MSG_MESSAGER = 1;</code>
+     * <code>MESSAGER = 1;</code>
      */
-    MSG_MESSAGER(0, 1),
+    MESSAGER(0, 1),
     /**
-     * <code>MSG_TEST = 2;</code>
+     * <code>TEST = 2;</code>
      */
-    MSG_TEST(1, 2),
+    TEST(1, 2),
     ;
 
     /**
-     * <code>MSG_MESSAGER = 1;</code>
+     * <code>MESSAGER = 1;</code>
      */
-    public static final int MSG_MESSAGER_VALUE = 1;
+    public static final int MESSAGER_VALUE = 1;
     /**
-     * <code>MSG_TEST = 2;</code>
+     * <code>TEST = 2;</code>
      */
-    public static final int MSG_TEST_VALUE = 2;
+    public static final int TEST_VALUE = 2;
 
 
     public final int getNumber() { return value; }
 
     public static MsgID valueOf(int value) {
       switch (value) {
-        case 1: return MSG_MESSAGER;
-        case 2: return MSG_TEST;
+        case 1: return MESSAGER;
+        case 2: return TEST;
         default: return null;
       }
     }

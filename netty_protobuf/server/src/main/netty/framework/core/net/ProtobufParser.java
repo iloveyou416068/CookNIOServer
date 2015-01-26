@@ -3,7 +3,7 @@ package netty.framework.core.net;
 import org.apache.log4j.Logger;
 
 import io.netty.channel.ChannelHandlerContext;
-import netty.framework.action.AbstractAtction;
+import netty.framework.action.AbstractAction;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.util.JsonTool;
@@ -23,7 +23,7 @@ public class ProtobufParser {
 		// 获取业务层消息号和消息内容
 		MsgID msgId = req.getMsgID();
 		byte[] bytes = req.getContent().toByteArray();
-
+		System.out.println(bytes);
 		// 根据消息号找到解析器,然后解析消息内容
 		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId.getNumber());
 		MessageLite message = null;
@@ -36,8 +36,8 @@ public class ProtobufParser {
 		}
 
 		// 执行业务逻辑
-		AbstractAtction<MessageLite> executor = CoreCache.INSTANCE.getExecutor(msgId.name());
-		MessageLite result = executor.execute(message);
+		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getExecutor(msgId.name());
+		MessageLite result = action.execute(message);
 		
 //		MessageLite responseParser = CoreCache.INSTANCE.getResponseParserBy(msgId.getNumber());
 //		responseParser.

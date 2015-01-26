@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.action.AbstractAtction;
+import netty.framework.action.AbstractAction;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.util.ClassFinder;
 
@@ -29,7 +29,7 @@ public enum CoreCache {
 	private final Map<String, Parser> responseMap = new HashMap<>();
 	
 	// actions
-	private final Map<String, AbstractAtction> actions = new HashMap<>();
+	private final Map<String, AbstractAction> actions = new HashMap<>();
 	
 	// 服务器启动时,初始化parser 和actions
 	public void init() {
@@ -44,7 +44,10 @@ public enum CoreCache {
 				String actionName = splits[splits.length - 1];
 				String name = actionName.split("Action")[0];
 
-				actions.put(name, (AbstractAtction) action.newInstance());
+				if(name.equals("Abstract"))
+					continue;
+				
+				actions.put(name, (AbstractAction) action.newInstance());
 				
 				logger.debug("load action : " + name);
 			}
@@ -66,6 +69,8 @@ public enum CoreCache {
 			try {
 				String[] splits = message.getName().split("\\.");
 				String messageName = splits[splits.length - 1];
+				messageName = messageName.split("\\$")[1].split(classEndName)[0];
+				messageName = messageName.toUpperCase();
 				logger.debug("load " + classEndName + " : " + messageName);
 				
 				Method defaultInstance = message.getMethod("getDefaultInstance");
@@ -75,7 +80,6 @@ public enum CoreCache {
 				
 				Parser parser = (Parser)getParserForType.invoke(newBuilder);
 				map.put(messageName, parser);
-				logger.debug("load message : " + messageName);
 				
 			} catch (final Exception e1) {
 				e1.printStackTrace();
@@ -92,7 +96,7 @@ public enum CoreCache {
 		return responseMap.get(MsgID.valueOf(id).name());
 	}
 	
-	public AbstractAtction getExecutor(String key) {
+	public AbstractAction getExecutor(String key) {
 		return actions.get(key);
 	}
 }

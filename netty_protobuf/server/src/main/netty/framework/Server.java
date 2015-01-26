@@ -12,7 +12,7 @@ public class Server {
 		
 		CoreCache.INSTANCE.init();
 		
-		SpringContext.INSTANCE.getApplicationContext();
+//		SpringContext.INSTANCE.getApplicationContext();
 		
 	}
 }

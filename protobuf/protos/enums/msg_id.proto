@@ -5,6 +5,6 @@ option java_package = "netty.framework.messages";
 
 enum MsgID {
    
-    MSG_MESSAGER   				 			= 1; 			
-    MSG_TEST   				 			= 2; 
+    MESSAGER   				 			= 1; 			
+    TEST   				 				= 2; 
 }

@@ -33,12 +33,12 @@ void protobuf_ShutdownFile_msg_5fid_2eproto();
 
 
 enum MsgID {
-  MSG_MESSAGER = 1,
-  MSG_TEST = 2
+  MESSAGER = 1,
+  TEST = 2
 };
 bool MsgID_IsValid(int value);
-const MsgID MsgID_MIN = MSG_MESSAGER;
-const MsgID MsgID_MAX = MSG_TEST;
+const MsgID MsgID_MIN = MESSAGER;
+const MsgID MsgID_MAX = TEST;
 const int MsgID_ARRAYSIZE = MsgID_MAX + 1;
 
 // ===================================================================

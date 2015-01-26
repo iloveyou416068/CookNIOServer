@@ -148,7 +148,7 @@ public final class MessagerMessage {
     }
 
     private void initFields() {
-      msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       content_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
@@ -284,7 +284,7 @@ public final class MessagerMessage {
 
       public Builder clear() {
         super.clear();
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
         content_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -366,7 +366,7 @@ public final class MessagerMessage {
       private int bitField0_;
 
       // required .cook.MsgID msgID = 1;
-      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       /**
        * <code>required .cook.MsgID msgID = 1;</code>
        */
@@ -396,7 +396,7 @@ public final class MessagerMessage {
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         
         return this;
       }
@@ -588,7 +588,7 @@ public final class MessagerMessage {
     }
 
     private void initFields() {
-      msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       content_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
@@ -724,7 +724,7 @@ public final class MessagerMessage {
 
       public Builder clear() {
         super.clear();
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
         content_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -806,7 +806,7 @@ public final class MessagerMessage {
       private int bitField0_;
 
       // required .cook.MsgID msgID = 1;
-      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+      private netty.framework.messages.MsgId.MsgID msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
       /**
        * <code>required .cook.MsgID msgID = 1;</code>
        */
@@ -836,7 +836,7 @@ public final class MessagerMessage {
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        msgID_ = netty.framework.messages.MsgId.MsgID.MSG_MESSAGER;
+        msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         
         return this;
       }
