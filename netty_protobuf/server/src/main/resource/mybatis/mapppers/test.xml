@@ -4,10 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace.id 组合在一起可以作为在SqlSession 里SelectOne这些方法 的参数调用-->
-<mapper namespace="testMybatis.a.mybatis-mapper">
+<mapper namespace="netty.framework.dao.TestDAO">
 
-	<select id="selectBlog" resultType="SimplePOJO">
-		select * from SimplePOJO where id = #{id}
+	<select id="select" resultType="Test">
+		select * from test;
 	</select>
 
 </mapper>

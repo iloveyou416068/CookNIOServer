@@ -14,7 +14,7 @@ public class TestDAO  extends SqlSessionDaoSupport {
 	public static TestDAO getInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = SpringContext.INSTANCE.getApplicationContext()
-					.getBean("roleDao", TestDAO.class);
+					.getBean("testDAO", TestDAO.class);
 		}
 
 		return INSTANCE;

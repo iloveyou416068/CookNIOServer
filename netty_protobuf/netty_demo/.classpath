@@ -44,5 +44,6 @@
 	<classpathentry kind="lib" path="lib/npn-api-8.1.2.v20120308.jar"/>
 	<classpathentry kind="lib" path="lib/lzma-java-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/rxtxcomm-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk16-1.46.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

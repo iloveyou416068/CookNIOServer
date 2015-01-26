@@ -8,7 +8,7 @@
 
     <!-- import 从同级目录查找文件 -->
 	<import resource="jdbc/dbConfig.xml" 			/>	<!-- JDBC 			-->
-	<import resource="mybatis/mybatisContext.xml" 	/> 	<!-- mybatis 		-->
+	<import resource="mybatis/beans-mybatis.xml" 	/> 	<!-- mybatis 		-->
  	<import resource="quartz/quartz.xml"			/> 	<!-- quartz定时器	 -->
 
 </beans>
