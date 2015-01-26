@@ -1111,3 +1111,31 @@
 2015-01-26 18:25:53.469 DEBUG [NettyClientHandler.java:34] - Client : channelActive
 2015-01-26 18:25:53.473 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:53902  1422267953473
 2015-01-26 18:25:53.786 ERROR [NettyServerHandler.java:133] - /127.0.0.1:53902 发生exception, 关闭连接
+2015-01-26 19:09:03.578 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 19:09:06.223  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 19:09:06.311 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 19:09:06.390 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 19:09:06.398 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 19:09:06.423 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 19:09:06.424 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 19:12:12.596 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 19:12:15.249  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 19:12:15.301 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 19:12:15.381 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 19:12:15.391 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 19:12:15.417 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 19:12:15.418 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 19:22:59.706 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 19:23:02.375  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 19:23:02.424 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 19:23:02.507 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 19:23:02.515 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 19:23:02.538 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 19:23:02.539 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-26 19:23:15.961 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-26 19:23:18.626  INFO [NettyServer.java:78] - server started on 8080
+2015-01-26 19:23:18.672 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-26 19:23:18.757 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-26 19:23:18.765 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-26 19:23:18.786 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-26 19:23:18.787 DEBUG [CoreCache.java:74] - load Response : TEST

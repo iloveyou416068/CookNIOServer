@@ -8,11 +8,11 @@ public class Server {
 
 	public static void main(String[] args) {
 		
-		NettyServer.INSTANCE.start();
+		SpringContext.INSTANCE.getApplicationContext();
 		
 		CoreCache.INSTANCE.init();
 		
-//		SpringContext.INSTANCE.getApplicationContext();
+		NettyServer.INSTANCE.start();
 		
 	}
 }
