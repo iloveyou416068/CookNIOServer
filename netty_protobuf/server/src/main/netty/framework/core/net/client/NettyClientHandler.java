@@ -13,6 +13,9 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 
 	private final static Logger logger = Logger.getLogger(NettyClientHandler.class);
+
+	private final static boolean isDebug = false;
+	
 	// TODO 考虑并发
 	private final CountDownLatch latch;
 	
@@ -22,7 +25,8 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 	
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Client : handlerAdded ");
+		if(isDebug)
+			logger.debug("Client : handlerAdded ");
 	}
 
 	@Override
@@ -56,34 +60,39 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 		ctx.flush();
 		
-		logger.debug("Client : channelReadComplete");
+		if(isDebug)
+			logger.debug("Client : channelReadComplete");
 		
 		ctx.fireChannelReadComplete();
 	}
 	
 	@Override
 	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Client : handlerRemoved");
+		if(isDebug)
+			logger.debug("Client : handlerRemoved");
 		// TODO
 	}
 
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Client : channelInactive");
+		if(isDebug)
+			logger.debug("Client : channelInactive");
 		
 		ctx.fireChannelInactive();
 	}
 
 	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Client : channelRegistered");
+		if(isDebug)
+			logger.debug("Client : channelRegistered");
 		
 		ctx.fireChannelRegistered();
 	}
 
 	@Override
 	public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Client : channelUnregistered");
+		if(isDebug)
+			logger.debug("Client : channelUnregistered");
 		
 		ctx.fireChannelUnregistered();
 	}
@@ -91,7 +100,8 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 	@Override
 	public void channelWritabilityChanged(ChannelHandlerContext ctx)
 			throws Exception {
-		logger.debug("Client : channelWritabilityChanged");
+		if(isDebug)
+			logger.debug("Client : channelWritabilityChanged");
 		
 		ctx.fireChannelWritabilityChanged();
 	}
@@ -99,14 +109,16 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 	@Override
 	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
 			throws Exception {
-		logger.debug("Client : userEventTriggered");
+		if(isDebug)
+			logger.debug("Client : userEventTriggered");
 		
 		ctx.fireUserEventTriggered(evt);
 	}
 
 	@Override
 	public boolean isSharable() {
-		logger.debug("Client : isSharable");
+		if(isDebug)
+			logger.debug("Client : isSharable");
 		return super.isSharable();
 	}
 	
@@ -115,7 +127,8 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 		cause.printStackTrace();
 		ctx.close();
 		
-		logger.debug("Client : exceptionCaught");
+		if(isDebug)
+			logger.debug("Client : exceptionCaught");
 		
 		ctx.fireExceptionCaught(cause);
 	}

@@ -23,6 +23,17 @@ public class TestClient {
 		try {
 			NettyClient.INSTANCE.connect();
 			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	@Ignore
+	public void sendMessage() {
+		try {
+			NettyClient.INSTANCE.connect();
+			
 			Session session = ClientSessionCache.INSTANCE.get();
 
 			TestRequest test = TestRequest.newBuilder()
@@ -36,12 +47,6 @@ public class TestClient {
 			
 			session.write(message);
 
-			ByteString str = test.toByteString();
-			for (byte b : str.toByteArray()) {
-				System.out.print(b);
-			}
-			System.out.println();
-			while(true){}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

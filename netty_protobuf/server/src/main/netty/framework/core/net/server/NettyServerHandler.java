@@ -1,5 +1,7 @@
 package netty.framework.core.net.server;
 
+import java.net.SocketAddress;
+
 import org.apache.log4j.Logger;
 
 import netty.framework.core.net.ProtobufParser;
@@ -13,32 +15,37 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
 	private final static Logger logger = Logger.getLogger(NettyServerHandler.class);
 	
+	private final static boolean isDebug = false;
 	/*
 	 * 当客户端连接之后 Handler依次执行的是  isSharable(), handlerAdded(), channelRegistered(), channelActive()
 	 */
 	
 	@Override
 	public boolean isSharable() {
-		logger.debug("Server : isSharable");
+		if(isDebug)
+			logger.debug("Server : isSharable");
 		return super.isSharable();
 	}
 	
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Server : handlerAdded ");
+		if(isDebug)
+			logger.debug("Server : handlerAdded ");
 		// TODO
 	}
 
 	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Server : channelRegistered");
+		if(isDebug)
+			logger.debug("Server : channelRegistered");
 		
 		ctx.fireChannelRegistered();
 	}
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {
-		logger.debug("Server : channelActive");
+		if(isDebug)
+			logger.debug("Server : channelActive");
 		
 		String remote = ctx.channel().remoteAddress().toString();
 		if(!ServerSessionCache.INSTANCE.contains(remote)) {
@@ -59,7 +66,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelRead(ChannelHandlerContext ctx, Object msg)
 			throws Exception {
 		
-		logger.debug("Server : channelRead");
+		if(isDebug)
+			logger.debug("Server : channelRead");
 
 		ProtobufParser.parer(ctx, msg);
 		
@@ -70,7 +78,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 		ctx.flush();
 		
-		logger.debug("Server : channelReadComplete");
+		if(isDebug)
+			logger.debug("Server : channelReadComplete");
 		
 		ctx.fireChannelReadComplete();
 	}
@@ -79,20 +88,23 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	 */
 	@Override
 	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Server : handlerRemoved");
+		if(isDebug)
+			logger.debug("Server : handlerRemoved");
 		// TODO
 	}
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Server : channelInactive");
+		if(isDebug)
+			logger.debug("Server : channelInactive");
 		
 		ctx.fireChannelInactive();
 	}
 
 	@Override
 	public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-		logger.debug("Server : channelUnregistered");
+		if(isDebug)
+			logger.debug("Server : channelUnregistered");
 		
 		ctx.fireChannelUnregistered();
 	}
@@ -100,7 +112,8 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	@Override
 	public void channelWritabilityChanged(ChannelHandlerContext ctx)
 			throws Exception {
-		logger.debug("Server : channelWritabilityChanged");
+		if(isDebug)
+			logger.debug("Server : channelWritabilityChanged");
 		
 		ctx.fireChannelWritabilityChanged();
 	}
@@ -108,18 +121,19 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	@Override
 	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
 			throws Exception {
-		logger.debug("Server : userEventTriggered");
+		if(isDebug)
+			logger.debug("Server : userEventTriggered");
 		
 		ctx.fireUserEventTriggered(evt);
 	}
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-		cause.printStackTrace();
-		ctx.close();// 发生异常，关闭链路
 		
-		logger.debug("Server : exceptionCaught");
+		SocketAddress address = ctx.channel().remoteAddress();
+		logger.error(address.toString() + " 发生exception, 关闭连接");
 		
 		ctx.fireExceptionCaught(cause);
+		ctx.close();// 发生异常，关闭链路
 	}
 }

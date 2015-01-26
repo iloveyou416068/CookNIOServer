@@ -19,6 +19,14 @@ import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 
+/**
+ * netty socket 客户端连接
+ * 
+ * XXX 目前只要连接完毕,就会断开连接,在新的线程里，没有wait
+ * 
+ * @author Administrator
+ *
+ */
 public enum NettyClient {
 
 	INSTANCE;
