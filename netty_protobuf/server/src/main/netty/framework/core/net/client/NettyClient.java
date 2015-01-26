@@ -4,7 +4,6 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import netty.framework.core.net.server.SimpleNettyServerHandler;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.Bootstrap;
@@ -68,7 +67,6 @@ public enum NettyClient {
 									ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 									ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
 									ch.pipeline().addLast(new NettyClientHandler(latch));
-//									ch.pipeline().addLast(new SimpleNettyClientHandler());
 								}
 							});
 

@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import io.netty.channel.ChannelHandlerContext;
 import netty.framework.action.AbstractAction;
 import netty.framework.messages.MessagerMessage;
+import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.util.JsonTool;
 
@@ -30,16 +31,23 @@ public class ProtobufParser {
 		MessageLite message = null;
 		try {
 			message = (MessageLite)requestParser.parseFrom(bytes);
-			logger.info("ParseMessage : " + msgId + JsonTool.toJson(message));
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
 
 		// 执行业务逻辑
+		logger.info("execute start -- " + msgId.name() + "(msgId:" + msgId.getNumber() + ")\n" + JsonTool.toJson(message));
 		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
-		MessageLite result = action.execute(message, msgId);
+		MessageLite result = action.execute(message);
+		
+		logger.info("execute finshed -- " + msgId.name() + "(msgId:" + msgId.getNumber() +")\n"+ JsonTool.toJson(result));
+		
+		MessagerRequest messageResult = MessagerRequest.newBuilder()
+				.setMsgID(msgId)
+				.setContent(result.toByteString())
+				.build();
 		
 		// 向客户端返回消息
-		ctx.writeAndFlush(result.toByteArray());
+		ctx.writeAndFlush(messageResult.toByteArray());
 	}
 }

@@ -7,9 +7,11 @@ import netty.framework.action.AbstractAction;
 
 public class TestAction extends AbstractAction<TestRequest> {
 
+	
 	@Override
 	public TestResponse execute(TestRequest param) {
-		System.out.println("TestExecutor : " + param.getMsgID());
+		System.out.println("TestAction : " + param.getMsgID());
+		
 		return TestResponse.newBuilder()
 				.setMsgID(MsgID.TEST)
 				.build();
