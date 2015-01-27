@@ -55,7 +55,9 @@ public enum NettyServer {
 				ServerBootstrap b = new ServerBootstrap();
 				b.group(bossGroup, workerGroup)
 						.channel(NioServerSocketChannel.class)	// 设置nio类型的channel
-						.option(ChannelOption.SO_BACKLOG, 100)
+						.option(ChannelOption.SO_BACKLOG, 128)
+						.option(ChannelOption.TCP_NODELAY, true)
+						.option(ChannelOption.AUTO_READ, true)
 						.handler(new LoggingHandler(LogLevel.INFO))
 						.childHandler(new ChannelInitializer<SocketChannel>() {	//有连接到达时会创建一个channel
 							@Override

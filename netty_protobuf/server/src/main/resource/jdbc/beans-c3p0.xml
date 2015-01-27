@@ -5,7 +5,7 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
     
     <!-- 从jdbc.properties 加载配置 -->
-	<bean id="user.ds" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	<bean id="user.ds" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" >
 	
         <property name="driverClass" value="${user.jdbc.driverClass}" />
 		<property name="jdbcUrl" value="${user.jdbc.url}" />
@@ -21,7 +21,19 @@
 		<property name="automaticTestTable" value="${user.automaticTestTable}" />
 		<property name="idleConnectionTestPeriod" value="${user.idleConnectionTestPeriod}" />
 		<property name="testConnectionOnCheckout" value="${user.testConnectionOnCheckout}" />
-		
+
 	</bean>
+	
+	<!-- C3P0数据源 -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+       <property name="jndiName">
+          <value>java:comp/env/jdbc/simpleDataSource</value>
+       </property>
+   </bean>
+   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+       <property name="dataSource">
+           <ref bean="dataSource" />
+       </property>
+   </bean>
 	
 </beans>
