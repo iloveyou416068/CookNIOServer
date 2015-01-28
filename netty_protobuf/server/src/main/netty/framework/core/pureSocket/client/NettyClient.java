@@ -4,6 +4,8 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import org.apache.log4j.Logger;
+
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.Bootstrap;
@@ -33,12 +35,14 @@ public enum NettyClient {
 	
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 	
-	public void connect() {
+	private static final Logger logger = Logger.getLogger(NettyClient.class);
+	
+	public void connect(String host, int port) {
 		
 		CountDownLatch latch = new CountDownLatch(2);
 		
-		executor.execute(new ClientRunnable(latch));
-		
+		executor.execute(new ClientRunnable(latch, host, port));
+
 		try {
 			latch.await();
 		} catch (InterruptedException e) {
@@ -49,16 +53,18 @@ public enum NettyClient {
 	private static class ClientRunnable implements Runnable{
 
 		private final CountDownLatch latch;
+		private final int port;
+		private final String host;
 		
-		protected ClientRunnable(CountDownLatch latch) {
+		protected ClientRunnable(CountDownLatch latch, String host, int port) {
 			this.latch = latch;
+			this.host = host;
+			this.port = port;
 		}
 		
 		@Override
 		public void run() {
 			try{
-				int port = 8080;
-				String host = "127.0.0.1";
 				// 配置客户端NIO线程组
 				EventLoopGroup group = new NioEventLoopGroup();
 				try {
@@ -82,12 +88,15 @@ public enum NettyClient {
 					ChannelFuture f = b.connect(host, port).sync();
 
 					latch.countDown();
+					logger.debug("end countDown");
 					
 					// 阻塞, 等待客户端链路关闭
 					f.channel().closeFuture().sync();
+					logger.debug("closeFuture");
+					
 				} finally {
-					// 优雅退出，释放NIO线程组
-					System.out.println("Client shutdownGracefully");
+					// 释放NIO线程组
+					logger.info("Client shutdownGracefully");
 					group.shutdownGracefully();
 				}
 			} catch(final Exception e) {

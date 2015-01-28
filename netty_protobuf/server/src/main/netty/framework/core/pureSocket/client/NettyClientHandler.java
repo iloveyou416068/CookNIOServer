@@ -1,5 +1,7 @@
 package netty.framework.core.pureSocket.client;
 
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
 import java.util.concurrent.CountDownLatch;
 
 import netty.framework.core.pureSocket.ProtobufParser;
@@ -36,7 +38,10 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 		if(ClientSessionCache.INSTANCE.isNull()) {
 			Session session = new Session();
 			session.setContext(ctx);
-			ClientSessionCache.INSTANCE.put(session);
+			SocketAddress address = ctx.channel().remoteAddress();
+			InetSocketAddress in = (InetSocketAddress)address;
+			String key = in.getHostName() + ":" + in.getPort();
+			ClientSessionCache.INSTANCE.put(key, session);
 			latch.countDown();
 			logger.debug("Client : add session : " + ctx.channel().localAddress().toString() + "  " + System.currentTimeMillis());
 		}
@@ -54,6 +59,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 		ProtobufParser.parer(ctx, msg);
 		
 		ctx.fireChannelRead(msg);
+		
 	}
 
 	@Override

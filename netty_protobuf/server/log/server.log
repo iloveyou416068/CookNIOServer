@@ -335,3 +335,33 @@
   "scheme": "/favicon.ico",
   "parameters": {}
 }
+2015-01-28 20:01:08.756  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 20:01:32.172 DEBUG [NettyClientHandler.java:34] - Client : channelActive
+2015-01-28 20:01:32.175 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50537  1422446492175
+2015-01-28 20:01:32.193 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50537
+2015-01-28 20:01:32.507 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50537 发生exception, 关闭连接
+2015-01-28 20:02:16.699 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50587
+2015-01-28 20:02:16.701 DEBUG [NettyClientHandler.java:34] - Client : channelActive
+2015-01-28 20:02:16.707 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50587  1422446536707
+2015-01-28 20:02:20.186 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50587 发生exception, 关闭连接
+2015-01-28 20:04:11.271 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50673
+2015-01-28 20:04:11.273 DEBUG [NettyClient.java:88] - start countDown
+2015-01-28 20:04:11.273 DEBUG [NettyClientHandler.java:34] - Client : channelActive
+2015-01-28 20:04:11.275 DEBUG [NettyClient.java:90] - end countDown
+2015-01-28 20:04:11.277 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50673  1422446651277
+2015-01-28 20:04:11.593 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50673 发生exception, 关闭连接
+2015-01-28 20:21:47.784 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51137
+2015-01-28 20:21:47.787 DEBUG [NettyClient.java:91] - end countDown
+2015-01-28 20:21:47.787 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-28 20:21:47.807 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51137  1422447707807
+2015-01-28 20:21:48.123 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51137 发生exception, 关闭连接
+2015-01-28 20:24:47.009 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51200
+2015-01-28 20:24:47.011 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-28 20:24:47.011 DEBUG [NettyClient.java:91] - end countDown
+2015-01-28 20:24:47.018 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51200  1422447887018
+2015-01-28 20:24:47.333 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51200 发生exception, 关闭连接
+2015-01-28 20:30:28.240 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51294
+2015-01-28 20:30:28.243 DEBUG [NettyClient.java:91] - end countDown
+2015-01-28 20:30:28.243 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-28 20:30:28.250 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51294  1422448228250
+2015-01-28 20:30:28.566 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51294 发生exception, 关闭连接

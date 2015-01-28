@@ -1,12 +1,15 @@
 package netty.framework.core.pureSocket.client;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import netty.framework.core.pureSocket.Session;
 
 public enum ClientSessionCache {
 
 	INSTANCE;
 	
-	private Session session;
+	private Map<String, Session> sessions = new ConcurrentHashMap<>();
 	
 	/**
 	 * 
@@ -14,15 +17,15 @@ public enum ClientSessionCache {
 	 * @param session
 	 * @return
 	 */
-	public Session put(Session session) {
-		return this.session = session;
+	public Session put(String key, Session session) {
+		return sessions.put(key, session);
 	}
 	
-	public Session get() {
-		return session;
+	public Session get(String key) {
+		return sessions.get(key);
 	}
 	
 	public boolean isNull() {
-		return session == null;
+		return sessions.isEmpty();
 	}
 }

@@ -10,5 +10,5 @@ import netty.framework.core.HttpParamaters;
  */
 public abstract class AbstractCommand {
 
-	public abstract String execute(HttpParamaters param);
+	public abstract Object execute(HttpParamaters param);
 }

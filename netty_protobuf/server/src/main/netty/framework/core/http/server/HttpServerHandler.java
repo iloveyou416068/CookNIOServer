@@ -1,4 +1,4 @@
-package netty.framework.core.http;
+package netty.framework.core.http.server;
 
 import static io.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
 import static io.netty.handler.codec.http.HttpMethod.GET;
@@ -60,8 +60,8 @@ public class HttpServerHandler extends
 			sendError(ctx, METHOD_NOT_ALLOWED, uri);
 			return;
 		}
+
 		final HttpParamaters param = parseUri(ctx, uri);
-		
 		logger.info(uri + "\n" + JsonTool.toJson(param));
 		
 		AbstractCommand command = CoreCache.INSTANCE.getCommand(param.scheme, param.parameters.get("command"));
@@ -70,7 +70,7 @@ public class HttpServerHandler extends
 			return;
 		}
 		
-		String result = command.execute(param);
+		Object result = command.execute(param);
 		logger.info("\n" + JsonTool.toJson(result));
 		
 		send(ctx, result);
@@ -121,10 +121,10 @@ public class HttpServerHandler extends
 		ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
 	}
 	
-	private static void send(ChannelHandlerContext ctx, String result) {
+	private static void send(ChannelHandlerContext ctx, Object result) {
 		FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, OK);
 		response.headers().set(CONTENT_TYPE, "text/html; charset=UTF-8");
-		StringBuilder buf = new StringBuilder(result);
+		StringBuilder buf = new StringBuilder((String)result);
 		ByteBuf buffer = Unpooled.copiedBuffer(buf, CharsetUtil.UTF_8);
 		response.content().writeBytes(buffer);
 		buffer.release();

@@ -1,4 +1,4 @@
-package netty.framework.core.http;
+package netty.framework.core.http.server;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
