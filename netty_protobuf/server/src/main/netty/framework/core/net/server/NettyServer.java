@@ -52,13 +52,20 @@ public enum NettyServer {
 			EventLoopGroup workerGroup = new NioEventLoopGroup(cpuSize);// subReactor负责多路分离已连接的socket,读写网 络数据,对业务处理功能,其扔给worker线程池完成
 
 			try {
+				/*
+				 * option() 	set {@ServerBootstrap#options		(Map<ChannelOption<?>, Object>))
+				 * handler() 	set {@AbstractBootstrap#handler		(ChannelHandler))
+				 * childHandler set {@ServerBootstrap#childHandler	(ChannelHandler))
+				 * 
+				 * build模式 是在对ServerBootstrap 成员属性进行值的设置,
+				 */
 				ServerBootstrap b = new ServerBootstrap();
 				b.group(bossGroup, workerGroup)
-						.channel(NioServerSocketChannel.class)	// 设置nio类型的channel
+						.channel(NioServerSocketChannel.class)	// 设置nio类型的channel,根据channel.class来实例化ChannelFactory对象
 						.option(ChannelOption.SO_BACKLOG, 128)
 						.option(ChannelOption.TCP_NODELAY, true)
 						.option(ChannelOption.AUTO_READ, true)
-						.handler(new LoggingHandler(LogLevel.INFO))
+						.handler(new LoggingHandler(LogLevel.INFO))	// 设置AbstractBootstrap(bossGroup) handler,该handler每个ServerBootstrap 只有一个
 						.childHandler(new ChannelInitializer<SocketChannel>() {	//有连接到达时会创建一个channel
 							@Override
 							public void initChannel(SocketChannel ch) {
@@ -70,7 +77,6 @@ public enum NettyServer {
 								addThreadpool(pipeline);
 								
 								pipeline.addLast(new NettyServerHandler());
-//								pipeline.addLast(new SimpleNettyServerHandler());
 							}
 						});
 
@@ -79,6 +85,12 @@ public enum NettyServer {
 				try {
 					logger.info("server started on 8080");
 					// 配置完成,开始绑定server,通过调用sync同步方法阻塞直到绑定成功
+					/*
+					 * bind() -> AbstractBootstrap#doBind(SocketAddress) -> AbstractBootstrap#initAndRegister() 
+					 * -> AbstractBootstrap#init() -> ServerBootstrap#init()
+					 * 
+					 * 最终调用的是ServerBootstrap#init(), 
+					 */
 					f = b.bind(8080).sync();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
