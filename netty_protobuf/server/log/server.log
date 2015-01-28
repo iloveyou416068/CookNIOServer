@@ -5,3 +5,333 @@
 2015-01-28 10:10:45.743 DEBUG [CoreCache.java:74] - load Response : MESSAGER
 2015-01-28 10:10:45.744 DEBUG [CoreCache.java:74] - load Response : TEST
 2015-01-28 10:10:46.044  INFO [NettyServer.java:80] - server started on 8080
+2015-01-28 17:11:19.164 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-28 17:11:21.872 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-28 17:11:21.938 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-28 17:11:21.945 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-28 17:11:21.965 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-28 17:11:21.966 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-28 17:11:22.050  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:14:05.953 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-28 17:14:08.675 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-28 17:14:08.745 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-28 17:14:08.752 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-28 17:14:08.772 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-28 17:14:08.773 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-28 17:14:08.858  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:15:48.578 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-28 17:15:51.285 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-28 17:15:51.351 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-28 17:15:51.358 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-28 17:15:51.378 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-28 17:15:51.379 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-28 17:15:51.464  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:17:34.300 DEBUG [CoreCache.java:37] - begain load actions and parsers
+2015-01-28 17:17:37.008 DEBUG [CoreCache.java:52] - load action : Test
+2015-01-28 17:17:37.074 DEBUG [CoreCache.java:74] - load Request : MESSAGER
+2015-01-28 17:17:37.081 DEBUG [CoreCache.java:74] - load Request : TEST
+2015-01-28 17:17:37.101 DEBUG [CoreCache.java:74] - load Response : MESSAGER
+2015-01-28 17:17:37.103 DEBUG [CoreCache.java:74] - load Response : TEST
+2015-01-28 17:17:37.188  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:17:37.244  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 17:17:56.321 DEBUG [HttpServerHandler.java:126] - http : /
+2015-01-28 17:17:56.475 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
+2015-01-28 17:19:13.425 DEBUG [HttpServerHandler.java:126] - http : /test
+2015-01-28 17:19:13.608 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
+2015-01-28 17:33:27.671 DEBUG [HttpServerHandler.java:126] - http : /test?command=demo
+2015-01-28 17:33:27.795 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
+2015-01-28 17:36:47.422 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 17:36:50.139 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 17:36:50.222 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 17:36:50.250 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 17:36:50.257 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 17:36:50.279 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 17:36:50.280 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 17:36:50.361  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:36:50.419  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 17:37:59.994 DEBUG [HttpServerHandler.java:133] - http : /test?command=demo
+2015-01-28 17:38:00.124 DEBUG [HttpServerHandler.java:133] - http : /favicon.ico
+2015-01-28 17:38:39.080 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 17:38:41.798 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 17:38:41.893 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 17:38:41.922 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 17:38:41.929 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 17:38:41.953 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 17:38:41.954 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 17:38:42.036  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:38:42.095  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 17:42:43.838 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 17:42:46.607 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 17:42:46.695 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 17:42:46.726 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 17:42:46.734 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 17:42:46.758 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 17:42:46.759 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 17:42:46.846  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:42:46.910  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 17:42:52.680 DEBUG [HttpServerHandler.java:130] - http : D:\public\NioServers\netty_protobuf\server
+2015-01-28 17:42:52.816 DEBUG [HttpServerHandler.java:130] - http : D:\public\NioServers\netty_protobuf\server
+2015-01-28 17:43:51.811 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 17:43:54.540 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 17:43:54.635 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 17:43:54.664 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 17:43:54.671 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 17:43:54.696 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 17:43:54.696 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 17:43:54.780  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 17:43:54.840  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 17:43:58.444 DEBUG [HttpServerHandler.java:130] - http : /test?command=demo
+2015-01-28 17:43:58.584 DEBUG [HttpServerHandler.java:130] - http : /favicon.ico
+2015-01-28 18:05:38.318 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:05:41.025 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:05:41.109 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:05:41.138 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:05:41.146 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:05:41.168 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:05:41.169 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:05:41.249  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:05:41.307  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:07:27.106 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:07:29.841 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:07:29.930 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:07:29.958 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:07:29.966 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:07:29.989 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:07:29.990 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:07:30.072  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:07:30.127  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:08:24.947  INFO [HttpServerHandler.java:150] - /test?command=demo
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "demo"
+  }
+}
+2015-01-28 18:08:25.098  INFO [HttpServerHandler.java:150] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:09:02.239  INFO [HttpServerHandler.java:150] - /test?command=demo
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "demo"
+  }
+}
+2015-01-28 18:09:02.430  INFO [HttpServerHandler.java:150] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:11:03.508 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:11:06.231 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:11:06.318 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:11:06.347 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:11:06.354 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:11:06.377 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:11:06.378 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:11:06.459  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:11:06.515  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:11:53.034  INFO [HttpServerHandler.java:82] - /test?command=demo
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "demo"
+  }
+}
+2015-01-28 18:11:53.258  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:12:17.536  INFO [HttpServerHandler.java:82] - /test?command=test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "test"
+  }
+}
+2015-01-28 18:12:17.753  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:12:31.893  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:12:32.070  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:13:27.021 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:13:29.755 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:13:29.860 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:13:29.890 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:13:29.898 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:13:29.921 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:13:29.922 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:13:30.007  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:13:30.072  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:13:55.570  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:17:46.504 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:17:49.232 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:17:49.334 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:17:49.366 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:17:49.374 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:17:49.399 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:17:49.400 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:17:49.486  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:17:49.547  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:18:03.324  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:18:03.516  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:19:33.010 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:19:35.741 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:19:35.832 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:19:35.858 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:19:35.866 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:19:35.887 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:19:35.888 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:19:35.970  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:19:36.025  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:20:12.203  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:20:12.402  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:21:03.676 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:21:06.405 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:21:06.508 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:21:06.540 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:21:06.548 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:21:06.572 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:21:06.573 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:21:06.660  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:21:06.737  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:21:08.945  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:21:59.452 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:22:02.185 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:22:02.285 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:22:02.315 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:22:02.323 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:22:02.346 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:22:02.347 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:22:02.431  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:22:02.492  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:22:16.390  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:22:30.258  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:23:03.056  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:23:51.418 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:23:54.153 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:23:54.258 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:23:54.290 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:23:54.298 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:23:54.321 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:23:54.322 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:23:54.405  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:23:54.464  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:23:56.360  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:24:09.833  INFO [HttpServerHandler.java:91] - 
+"test response"
+2015-01-28 18:24:27.178  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:24:32.690  INFO [HttpServerHandler.java:91] - 
+"test response"
+2015-01-28 18:26:32.483 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-28 18:26:35.200 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-28 18:26:35.285 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-28 18:26:35.316 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-28 18:26:35.324 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-28 18:26:35.347 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-28 18:26:35.348 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-28 18:26:35.430  INFO [NettyServer.java:91] - server started at 8080
+2015-01-28 18:26:35.486  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
+2015-01-28 18:27:03.753  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:27:03.755  INFO [HttpServerHandler.java:91] - 
+"test response"
+2015-01-28 18:27:03.968  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}
+2015-01-28 18:27:06.129  INFO [HttpServerHandler.java:82] - /test?command=Test
+{
+  "scheme": "/test",
+  "parameters": {
+    "command": "Test"
+  }
+}
+2015-01-28 18:27:06.130  INFO [HttpServerHandler.java:91] - 
+"test response"
+2015-01-28 18:27:06.335  INFO [HttpServerHandler.java:82] - /favicon.ico
+{
+  "scheme": "/favicon.ico",
+  "parameters": {}
+}

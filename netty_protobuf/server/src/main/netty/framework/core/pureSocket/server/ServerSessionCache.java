@@ -1,9 +1,9 @@
-package netty.framework.core.net.server;
+package netty.framework.core.pureSocket.server;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import netty.framework.core.net.Session;
+import netty.framework.core.pureSocket.Session;
 
 public enum ServerSessionCache {
 

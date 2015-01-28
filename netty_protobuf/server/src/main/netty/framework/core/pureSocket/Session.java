@@ -1,4 +1,4 @@
-package netty.framework.core.net;
+package netty.framework.core.pureSocket;
 
 import com.google.protobuf.MessageLite;
 

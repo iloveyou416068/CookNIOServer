@@ -1,4 +1,4 @@
-package netty.framework.core.net;
+package netty.framework.core;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -8,9 +8,12 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import netty.framework.action.AbstractAction;
+import netty.framework.command.AbstractCommand;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.util.ClassFinder;
 
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import com.google.protobuf.Parser;
 
 /**
@@ -31,32 +34,58 @@ public enum CoreCache {
 	// actions
 	private final Map<String, AbstractAction> actions = new HashMap<>();
 	
+	// commands
+	private final Table<String, String, AbstractCommand> commands = HashBasedTable.create();
+	
 	// 服务器启动时,初始化parser 和actions
 	public void init() {
 
 		logger.debug("begain load actions and parsers");
 
 		try {
-			List<Class> actionclass = ClassFinder.findClasses(
-					"netty.framework.action", "Action");
-			for (Class action : actionclass) {
-				String[] splits = action.getName().split("\\.");
-				String actionName = splits[splits.length - 1];
-				String name = actionName.split("Action")[0];
-
-				if(name.equals("Abstract"))
-					continue;
-				
-				actions.put(name.toUpperCase(), (AbstractAction) action.newInstance());
-				
-				logger.debug("load action : " + name);
-			}
-
+			parseAction("netty.framework.action", "Action");
+			parseCommand("netty.framework.command", "Command");
+			
 			parseMessage(requestMap, "Request");
 			parseMessage(responseMap, "Response");
 
 		} catch (final Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	private void parseCommand(String packag, String suff)
+			throws InstantiationException, IllegalAccessException {
+		List<Class> actionclass = ClassFinder.findClasses(packag, suff);
+		for (Class action : actionclass) {
+			String[] splits = action.getName().split("\\.");
+			String actionName = splits[splits.length - 1];
+			String name = actionName.split(suff)[0];
+
+			if (name.equals("Abstract"))
+				continue;
+
+			String type = splits[splits.length - 2];
+			commands.put("/" + type, name, (AbstractCommand) action.newInstance());
+
+			logger.debug("Load " + suff + " : " + name);
+		}
+	}
+	
+	private void parseAction(String packag, String suff) throws InstantiationException,
+			IllegalAccessException {
+		List<Class> actionclass = ClassFinder.findClasses(packag, suff);
+		for (Class action : actionclass) {
+			String[] splits = action.getName().split("\\.");
+			String actionName = splits[splits.length - 1];
+			String name = actionName.split(suff)[0];
+
+			if(name.equals("Abstract"))
+				continue;
+			
+			actions.put(name.toUpperCase(), (AbstractAction) action.newInstance());
+			
+			logger.debug("Load " + suff + " : " + name);
 		}
 	}
 	
@@ -98,5 +127,9 @@ public enum CoreCache {
 	
 	public AbstractAction getAction(String key) {
 		return actions.get(key);
+	}
+	
+	public AbstractCommand getCommand(String type, String key) {
+		return commands.get(type, key);
 	}
 }

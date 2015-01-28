@@ -1,9 +1,9 @@
-package netty.framework.core.net.client;
+package netty.framework.core.pureSocket.client;
 
 import java.util.concurrent.CountDownLatch;
 
-import netty.framework.core.net.ProtobufParser;
-import netty.framework.core.net.Session;
+import netty.framework.core.pureSocket.ProtobufParser;
+import netty.framework.core.pureSocket.Session;
 
 import org.apache.log4j.Logger;
 

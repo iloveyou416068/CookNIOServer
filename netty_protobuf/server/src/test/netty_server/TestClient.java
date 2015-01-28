@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import com.google.protobuf.ByteString;
 
-import netty.framework.core.net.Session;
-import netty.framework.core.net.client.ClientSessionCache;
-import netty.framework.core.net.client.NettyClient;
+import netty.framework.core.pureSocket.Session;
+import netty.framework.core.pureSocket.client.ClientSessionCache;
+import netty.framework.core.pureSocket.client.NettyClient;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.messages.TestMessage.TestRequest;

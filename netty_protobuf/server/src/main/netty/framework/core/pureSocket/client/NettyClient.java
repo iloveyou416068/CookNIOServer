@@ -1,4 +1,4 @@
-package netty.framework.core.net.client;
+package netty.framework.core.pureSocket.client;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

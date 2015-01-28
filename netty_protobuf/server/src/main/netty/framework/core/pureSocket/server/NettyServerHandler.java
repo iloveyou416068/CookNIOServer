@@ -1,11 +1,11 @@
-package netty.framework.core.net.server;
+package netty.framework.core.pureSocket.server;
 
 import java.net.SocketAddress;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.net.ProtobufParser;
-import netty.framework.core.net.Session;
+import netty.framework.core.pureSocket.ProtobufParser;
+import netty.framework.core.pureSocket.Session;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

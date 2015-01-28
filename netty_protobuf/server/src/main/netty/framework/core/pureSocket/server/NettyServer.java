@@ -1,5 +1,5 @@
 
-package netty.framework.core.net.server;
+package netty.framework.core.pureSocket.server;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -34,16 +34,21 @@ public enum NettyServer {
 
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 	
-	public void start() {
+	public void start(int serverPort) {
 
 		if(isStart)
 			throw new RuntimeException("Server Had Started!");
 		isStart = true;
 
-		executor.execute(new NettyRunnable());
+		executor.execute(new NettyRunnable(serverPort));
 	}
 
 	private static class NettyRunnable implements Runnable {
+		
+		int serverPort;
+		NettyRunnable(int serverPort) {
+			this.serverPort = serverPort;
+		}
 		
 		public void run() {
 			int cpuSize = Runtime.getRuntime().availableProcessors();
@@ -83,7 +88,7 @@ public enum NettyServer {
 				// 绑定端口,同步等待成功
 				ChannelFuture f = null;
 				try {
-					logger.info("server started on 8080");
+					logger.info("server started at " + serverPort);
 					// 配置完成,开始绑定server,通过调用sync同步方法阻塞直到绑定成功
 					/*
 					 * bind() -> AbstractBootstrap#doBind(SocketAddress) -> AbstractBootstrap#initAndRegister() 
@@ -91,7 +96,7 @@ public enum NettyServer {
 					 * 
 					 * 最终调用的是ServerBootstrap#init(), 
 					 */
-					f = b.bind(8080).sync();
+					f = b.bind(serverPort).sync();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

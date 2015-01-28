@@ -1,6 +1,6 @@
-package netty.framework.core.net.client;
+package netty.framework.core.pureSocket.client;
 
-import netty.framework.core.net.Session;
+import netty.framework.core.pureSocket.Session;
 
 public enum ClientSessionCache {
 
