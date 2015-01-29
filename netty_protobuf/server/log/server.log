@@ -352,3 +352,216 @@
 2015-01-29 15:56:01.112 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
 2015-01-29 15:56:01.146 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
 2015-01-29 15:56:01.155  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 16:08:20.953 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 16:08:23.683 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 16:08:23.774 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 16:08:23.774 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 16:08:23.802 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 16:08:23.810 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 16:08:23.832 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 16:08:23.833 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 16:08:23.914  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 16:08:23.973  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 16:09:49.326 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:09:49.488 DEBUG [ProtobufClient.java:83] - connect 127.0.0.1:8080
+2015-01-29 16:09:49.488 DEBUG [ProtobufClientHandler.java:32] - Client : channelActive
+2015-01-29 16:09:49.490 DEBUG [ProtobufClientHandler.java:41] - add server session : 127.0.0.1:8080
+2015-01-29 16:09:49.497 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:57616
+2015-01-29 16:10:10.331 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:57616 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:10:10.760 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:10:32.124 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 16:10:34.858 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 16:10:34.943 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 16:10:34.943 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 16:10:34.970 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 16:10:34.978 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 16:10:35.000 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 16:10:35.001 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 16:10:35.080  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 16:10:35.137  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 16:10:36.804 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:10:49.576 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:10:49.734 DEBUG [ProtobufClient.java:83] - connect 127.0.0.1:8080
+2015-01-29 16:10:49.734 DEBUG [ProtobufClientHandler.java:32] - Client : channelActive
+2015-01-29 16:10:49.737 DEBUG [ProtobufClientHandler.java:41] - add server session : 127.0.0.1:8080
+2015-01-29 16:10:49.744 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:57817
+2015-01-29 16:11:58.563 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:57817 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:12:13.232 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:12:37.602 DEBUG [ProtobufClient.java:45] - connect : 127.0.0.1:8080
+2015-01-29 16:16:27.497 DEBUG [ProtobufClient.java:94] - connect 127.0.0.1:8080
+2015-01-29 16:16:27.497 DEBUG [ProtobufClientHandler.java:32] - Client : channelActive
+2015-01-29 16:16:27.499 DEBUG [ProtobufClient.java:53] - connect : 127.0.0.1:8080
+2015-01-29 16:16:27.503 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:58071
+2015-01-29 16:16:27.508 DEBUG [ProtobufClientHandler.java:41] - add server session : 127.0.0.1:8080
+2015-01-29 16:16:27.823 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:58071 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:19:50.859 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:58194
+2015-01-29 16:19:50.862 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:19:50.862 DEBUG [ProtobufClient.java:95] - connect 127.0.0.1:8080
+2015-01-29 16:19:50.869 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:19:50.869 DEBUG [ProtobufClient.java:54] - connect : 127.0.0.1:8080
+2015-01-29 16:19:50.882 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:58194 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:24:32.806 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:58425
+2015-01-29 16:24:32.809 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:24:32.809 DEBUG [ProtobufClient.java:94] - connect 127.0.0.1:8080
+2015-01-29 16:24:32.817 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:24:32.818 DEBUG [ProtobufClient.java:53] - connect : 127.0.0.1:8080
+2015-01-29 16:24:32.831 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:58425 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:25:49.590 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:58491
+2015-01-29 16:25:49.592 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:25:49.592 DEBUG [ProtobufClient.java:95] - start connect 127.0.0.1:8080
+2015-01-29 16:25:49.600 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:25:49.600 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:25:49.613 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:58491 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:34:19.961 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59004
+2015-01-29 16:34:19.963 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:34:19.963 DEBUG [ProtobufClient.java:95] - start connect 127.0.0.1:8080
+2015-01-29 16:34:19.971 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:34:19.971 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:34:19.984 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59004 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:36:20.799 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59100
+2015-01-29 16:36:20.801 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:36:20.801 DEBUG [ProtobufClient.java:99] - start connect 127.0.0.1:8080
+2015-01-29 16:36:20.810 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:36:20.810 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:36:20.822 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59100 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:40:15.764 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59247
+2015-01-29 16:40:15.766 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:40:15.766 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:40:15.774 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:40:15.774 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:40:15.786 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59247 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:41:44.718 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59329
+2015-01-29 16:41:44.721 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:41:44.721 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:41:44.729 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:41:44.729 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:41:44.742 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59329 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:42:51.208 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59417
+2015-01-29 16:42:51.211 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:42:51.217 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:42:51.217 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:42:51.229 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:42:51.231 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59417 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:43:24.847 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59476
+2015-01-29 16:43:24.850 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:43:24.856 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:43:24.856 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:43:24.872 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59476 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:43:44.580 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59525
+2015-01-29 16:43:44.583 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:43:44.589 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:43:50.607 DEBUG [ProtobufClient.java:53] - end connect : 127.0.0.1:8080
+2015-01-29 16:43:50.638 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59525 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:44:16.760 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59583
+2015-01-29 16:44:16.763 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:44:16.768 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:44:23.033 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:44:52.070 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59583 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:45:38.327 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 16:45:41.067 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 16:45:41.152 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 16:45:41.153 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 16:45:41.182 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 16:45:41.190 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 16:45:41.212 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 16:45:41.213 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 16:45:41.293  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 16:45:41.352  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 16:45:46.472 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:45:46.472 DEBUG [ProtobufClient.java:92] - start connect 127.0.0.1:8080
+2015-01-29 16:45:46.480 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:45:46.481 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59799
+2015-01-29 16:47:52.467 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59799 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:48:00.631 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59909
+2015-01-29 16:48:00.633 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:48:00.640 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:48:22.865 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59909 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:48:58.219 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:59967
+2015-01-29 16:48:58.222 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:48:58.227 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:50:09.697 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:59967 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:50:17.507 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60039
+2015-01-29 16:50:17.510 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:50:17.510 DEBUG [ProtobufClient.java:92] - start connect 127.0.0.1:8080
+2015-01-29 16:50:17.517 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:50:17.517 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:50:17.530 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60039 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:51:46.858 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60132
+2015-01-29 16:51:46.861 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:51:46.868 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:51:59.392 DEBUG [ProtobufClient.java:92] - start connect 127.0.0.1:8080
+2015-01-29 16:52:05.074 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:52:05.113 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60132 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:53:08.525 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60207
+2015-01-29 16:53:08.527 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:53:08.527 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:53:08.534 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:53:08.534 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:53:08.546 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60207 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:55:24.818 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60298
+2015-01-29 16:55:24.820 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:55:24.820 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:55:24.827 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:55:24.828 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:55:24.840 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60298 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:56:35.825 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60367
+2015-01-29 16:56:35.828 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:56:35.828 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:56:35.836 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:56:35.836 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:56:35.848 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60367 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:57:15.471 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60418
+2015-01-29 16:57:15.474 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:57:15.474 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:57:15.481 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:57:15.482 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:57:15.494 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60418 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:57:44.726 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60466
+2015-01-29 16:57:44.729 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:57:44.729 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:57:44.736 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:57:44.737 DEBUG [ProtobufClient.java:52] - end connect : 127.0.0.1:8080
+2015-01-29 16:57:44.749 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60466 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:58:27.614 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60522
+2015-01-29 16:58:27.617 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:58:27.617 DEBUG [ProtobufClient.java:93] - start connect 127.0.0.1:8080
+2015-01-29 16:58:27.625 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:59:34.900 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60522 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 16:59:42.761 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60602
+2015-01-29 16:59:42.764 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 16:59:42.769 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 16:59:42.784 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60602 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 17:00:22.626 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60657
+2015-01-29 17:00:22.629 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 17:00:22.635 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 17:00:23.914 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60657 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 17:00:48.543 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:60707
+2015-01-29 17:00:48.547 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 17:00:48.552 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 17:00:48.973 DEBUG [ProtobufClient.java:88] - start connect 127.0.0.1:8080
+2015-01-29 17:04:52.313 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:60707 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 17:19:27.648 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:61803
+2015-01-29 17:19:27.651 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 17:19:27.651 DEBUG [ProtobufClient.java:88] - start connect 127.0.0.1:8080
+2015-01-29 17:19:27.659 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 17:19:27.672 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:61803 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 17:20:43.301 DEBUG [ProtobufClient.java:86] - start connect 127.0.0.1:8080
+2015-01-29 17:20:43.359 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:61878
+2015-01-29 17:20:43.361 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 17:20:43.368 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 17:20:43.381 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:61878 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 17:52:23.603 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 17:52:26.334 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 17:52:26.423 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 17:52:26.423 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 17:52:26.452 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 17:52:26.460 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 17:52:26.482 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 17:52:26.483 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 17:52:26.563  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 17:52:26.620  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 17:52:28.758 DEBUG [ProtobufClient.java:89] - start connect 127.0.0.1:8080
+2015-01-29 17:52:28.758 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-29 17:52:28.766 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-29 17:52:28.767 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:64131
+2015-01-29 17:55:17.334 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:64131 -- 远程主机强迫关闭了一个现有的连接。

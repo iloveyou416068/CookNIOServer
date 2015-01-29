@@ -32,7 +32,7 @@ public class TestClient {
 		try {
 			ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
 			
-			Session session = ClientSessionCache.INSTANCE.get("");
+			Session session = ClientSessionCache.INSTANCE.get("127.0.0.1:8080");
 
 			TestRequest test = TestRequest.newBuilder()
 			.setMsgID(MsgID.TEST)

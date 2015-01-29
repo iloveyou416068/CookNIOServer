@@ -2,6 +2,7 @@ package netty.framework.core.pureSocket.client;
 
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
+import java.util.concurrent.CountDownLatch;
 
 import netty.framework.core.pureSocket.ProtobufParser;
 import netty.framework.core.pureSocket.Session;
@@ -17,8 +18,10 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 
 	private final static boolean isDebug = false;
 	
+	private final CountDownLatch latch;
 	
-	public ProtobufClientHandler() {
+	public ProtobufClientHandler(CountDownLatch latch) {
+		this.latch = latch;
 	}
 	
 	@Override
@@ -42,6 +45,7 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		}
 		
 		ctx.fireChannelActive();
+		latch.countDown();
 	}
 
 
