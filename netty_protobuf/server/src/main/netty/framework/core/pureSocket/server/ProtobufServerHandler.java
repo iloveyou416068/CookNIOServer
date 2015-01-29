@@ -11,9 +11,9 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 @Sharable
-public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 
-	private final static Logger logger = Logger.getLogger(NettyServerHandler.class);
+	private final static Logger logger = Logger.getLogger(ProtobufServerHandler.class);
 	
 	private final static boolean isDebug = false;
 	/*
@@ -131,7 +131,9 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
 		
 		SocketAddress address = ctx.channel().remoteAddress();
-		logger.error(address.toString() + " 发生exception, 关闭连接");
+		logger.error(address.toString() + " -- " + cause.getMessage());
+		if(logger.isDebugEnabled())
+			cause.printStackTrace();
 		
 		ctx.fireExceptionCaught(cause);
 		ctx.close();// 发生异常，关闭链路

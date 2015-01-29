@@ -1,6 +1,5 @@
 package netty.framework.core.pureSocket.client;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -24,40 +23,34 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 /**
  * netty socket 客户端连接
  * 
+ * 必须在向远端发送消息时,提前发起connect连接,要不然会产生空指针异常
+ * 
  * XXX 目前只要连接完毕,就会断开连接,在新的线程里，没有wait
  * 
  * @author Administrator
  *
  */
-public enum NettyClient {
+public enum ProtobufClient {
 
 	INSTANCE;
 	
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 	
-	private static final Logger logger = Logger.getLogger(NettyClient.class);
+	private static final Logger logger = Logger.getLogger(ProtobufClient.class);
 	
 	public void connect(String host, int port) {
 		
-		CountDownLatch latch = new CountDownLatch(2);
+		executor.execute(new NettyRunnable(host, port));
 		
-		executor.execute(new ClientRunnable(latch, host, port));
-
-		try {
-			latch.await();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		logger.debug("connect : " + host + ":" + port);
 	}
 
-	private static class ClientRunnable implements Runnable{
+	private static class NettyRunnable implements Runnable{
 
-		private final CountDownLatch latch;
 		private final int port;
 		private final String host;
 		
-		protected ClientRunnable(CountDownLatch latch, String host, int port) {
-			this.latch = latch;
+		protected NettyRunnable(String host, int port) {
 			this.host = host;
 			this.port = port;
 		}
@@ -80,15 +73,14 @@ public enum NettyClient {
 									MessagerRequest req = MessagerMessage.MessagerRequest.getDefaultInstance();
 									ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 									ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-									ch.pipeline().addLast(new NettyClientHandler(latch));
+									ch.pipeline().addLast(new ProtobufClientHandler());
 								}
 							});
 
 					// 发起异步连接操作
 					ChannelFuture f = b.connect(host, port).sync();
 
-					latch.countDown();
-					logger.debug("end countDown");
+					logger.debug("connect " + host + ":" + port);
 					
 					// 阻塞, 等待客户端链路关闭
 					f.channel().closeFuture().sync();

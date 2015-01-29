@@ -77,11 +77,14 @@ public class HttpServerHandler extends
 	}
 
 	private HttpParamaters parseUri(ChannelHandlerContext ctx, String uri) {
+		
 		HttpParamaters pams = new HttpParamaters();
+		
 		try {
 			String parseUri = URLDecoder.decode(uri, "UTF-8");
 			String[] arr1 = parseUri.split("\\?");
 			if(arr1.length == 0) {
+				// TODO
 				
 			} else if(arr1.length == 1) {
 				pams.scheme = arr1[0];
@@ -94,8 +97,10 @@ public class HttpServerHandler extends
 					pams.parameters.put(arr3[0], arr3[1]);
 				}
 			} else {
-				
+				// TODO
 			}
+			
+			pams.ctx = ctx;
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

@@ -1,383 +1,354 @@
-2015-01-28 10:10:42.458 DEBUG [CoreCache.java:37] - begain load actions and parsers
-2015-01-28 10:10:45.625 DEBUG [CoreCache.java:52] - load action : Test
-2015-01-28 10:10:45.708 DEBUG [CoreCache.java:74] - load Request : MESSAGER
-2015-01-28 10:10:45.723 DEBUG [CoreCache.java:74] - load Request : TEST
-2015-01-28 10:10:45.743 DEBUG [CoreCache.java:74] - load Response : MESSAGER
-2015-01-28 10:10:45.744 DEBUG [CoreCache.java:74] - load Response : TEST
-2015-01-28 10:10:46.044  INFO [NettyServer.java:80] - server started on 8080
-2015-01-28 17:11:19.164 DEBUG [CoreCache.java:37] - begain load actions and parsers
-2015-01-28 17:11:21.872 DEBUG [CoreCache.java:52] - load action : Test
-2015-01-28 17:11:21.938 DEBUG [CoreCache.java:74] - load Request : MESSAGER
-2015-01-28 17:11:21.945 DEBUG [CoreCache.java:74] - load Request : TEST
-2015-01-28 17:11:21.965 DEBUG [CoreCache.java:74] - load Response : MESSAGER
-2015-01-28 17:11:21.966 DEBUG [CoreCache.java:74] - load Response : TEST
-2015-01-28 17:11:22.050  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:14:05.953 DEBUG [CoreCache.java:37] - begain load actions and parsers
-2015-01-28 17:14:08.675 DEBUG [CoreCache.java:52] - load action : Test
-2015-01-28 17:14:08.745 DEBUG [CoreCache.java:74] - load Request : MESSAGER
-2015-01-28 17:14:08.752 DEBUG [CoreCache.java:74] - load Request : TEST
-2015-01-28 17:14:08.772 DEBUG [CoreCache.java:74] - load Response : MESSAGER
-2015-01-28 17:14:08.773 DEBUG [CoreCache.java:74] - load Response : TEST
-2015-01-28 17:14:08.858  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:15:48.578 DEBUG [CoreCache.java:37] - begain load actions and parsers
-2015-01-28 17:15:51.285 DEBUG [CoreCache.java:52] - load action : Test
-2015-01-28 17:15:51.351 DEBUG [CoreCache.java:74] - load Request : MESSAGER
-2015-01-28 17:15:51.358 DEBUG [CoreCache.java:74] - load Request : TEST
-2015-01-28 17:15:51.378 DEBUG [CoreCache.java:74] - load Response : MESSAGER
-2015-01-28 17:15:51.379 DEBUG [CoreCache.java:74] - load Response : TEST
-2015-01-28 17:15:51.464  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:17:34.300 DEBUG [CoreCache.java:37] - begain load actions and parsers
-2015-01-28 17:17:37.008 DEBUG [CoreCache.java:52] - load action : Test
-2015-01-28 17:17:37.074 DEBUG [CoreCache.java:74] - load Request : MESSAGER
-2015-01-28 17:17:37.081 DEBUG [CoreCache.java:74] - load Request : TEST
-2015-01-28 17:17:37.101 DEBUG [CoreCache.java:74] - load Response : MESSAGER
-2015-01-28 17:17:37.103 DEBUG [CoreCache.java:74] - load Response : TEST
-2015-01-28 17:17:37.188  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:17:37.244  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 17:17:56.321 DEBUG [HttpServerHandler.java:126] - http : /
-2015-01-28 17:17:56.475 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
-2015-01-28 17:19:13.425 DEBUG [HttpServerHandler.java:126] - http : /test
-2015-01-28 17:19:13.608 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
-2015-01-28 17:33:27.671 DEBUG [HttpServerHandler.java:126] - http : /test?command=demo
-2015-01-28 17:33:27.795 DEBUG [HttpServerHandler.java:126] - http : /favicon.ico
-2015-01-28 17:36:47.422 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 17:36:50.139 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 17:36:50.222 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 17:36:50.250 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 17:36:50.257 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 17:36:50.279 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 17:36:50.280 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 17:36:50.361  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:36:50.419  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 17:37:59.994 DEBUG [HttpServerHandler.java:133] - http : /test?command=demo
-2015-01-28 17:38:00.124 DEBUG [HttpServerHandler.java:133] - http : /favicon.ico
-2015-01-28 17:38:39.080 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 17:38:41.798 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 17:38:41.893 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 17:38:41.922 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 17:38:41.929 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 17:38:41.953 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 17:38:41.954 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 17:38:42.036  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:38:42.095  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 17:42:43.838 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 17:42:46.607 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 17:42:46.695 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 17:42:46.726 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 17:42:46.734 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 17:42:46.758 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 17:42:46.759 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 17:42:46.846  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:42:46.910  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 17:42:52.680 DEBUG [HttpServerHandler.java:130] - http : D:\public\NioServers\netty_protobuf\server
-2015-01-28 17:42:52.816 DEBUG [HttpServerHandler.java:130] - http : D:\public\NioServers\netty_protobuf\server
-2015-01-28 17:43:51.811 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 17:43:54.540 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 17:43:54.635 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 17:43:54.664 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 17:43:54.671 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 17:43:54.696 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 17:43:54.696 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 17:43:54.780  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 17:43:54.840  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 17:43:58.444 DEBUG [HttpServerHandler.java:130] - http : /test?command=demo
-2015-01-28 17:43:58.584 DEBUG [HttpServerHandler.java:130] - http : /favicon.ico
-2015-01-28 18:05:38.318 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:05:41.025 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:05:41.109 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:05:41.138 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:05:41.146 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:05:41.168 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:05:41.169 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:05:41.249  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:05:41.307  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:07:27.106 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:07:29.841 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:07:29.930 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:07:29.958 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:07:29.966 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:07:29.989 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:07:29.990 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:07:30.072  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:07:30.127  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:08:24.947  INFO [HttpServerHandler.java:150] - /test?command=demo
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "demo"
-  }
-}
-2015-01-28 18:08:25.098  INFO [HttpServerHandler.java:150] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:09:02.239  INFO [HttpServerHandler.java:150] - /test?command=demo
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "demo"
-  }
-}
-2015-01-28 18:09:02.430  INFO [HttpServerHandler.java:150] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:11:03.508 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:11:06.231 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:11:06.318 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:11:06.347 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:11:06.354 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:11:06.377 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:11:06.378 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:11:06.459  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:11:06.515  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:11:53.034  INFO [HttpServerHandler.java:82] - /test?command=demo
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "demo"
-  }
-}
-2015-01-28 18:11:53.258  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:12:17.536  INFO [HttpServerHandler.java:82] - /test?command=test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "test"
-  }
-}
-2015-01-28 18:12:17.753  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:12:31.893  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:12:32.070  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:13:27.021 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:13:29.755 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:13:29.860 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:13:29.890 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:13:29.898 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:13:29.921 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:13:29.922 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:13:30.007  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:13:30.072  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:13:55.570  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:17:46.504 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:17:49.232 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:17:49.334 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:17:49.366 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:17:49.374 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:17:49.399 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:17:49.400 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:17:49.486  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:17:49.547  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:18:03.324  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:18:03.516  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:19:33.010 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:19:35.741 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:19:35.832 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:19:35.858 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:19:35.866 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:19:35.887 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:19:35.888 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:19:35.970  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:19:36.025  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:20:12.203  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:20:12.402  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:21:03.676 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:21:06.405 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:21:06.508 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:21:06.540 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:21:06.548 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:21:06.572 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:21:06.573 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:21:06.660  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:21:06.737  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:21:08.945  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:21:59.452 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:22:02.185 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:22:02.285 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:22:02.315 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:22:02.323 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:22:02.346 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:22:02.347 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:22:02.431  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:22:02.492  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:22:16.390  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:22:30.258  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:23:03.056  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:23:51.418 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:23:54.153 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:23:54.258 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:23:54.290 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:23:54.298 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:23:54.321 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:23:54.322 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:23:54.405  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:23:54.464  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:23:56.360  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:24:09.833  INFO [HttpServerHandler.java:91] - 
-"test response"
-2015-01-28 18:24:27.178  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:24:32.690  INFO [HttpServerHandler.java:91] - 
-"test response"
-2015-01-28 18:26:32.483 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-01-28 18:26:35.200 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-01-28 18:26:35.285 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-01-28 18:26:35.316 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-01-28 18:26:35.324 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-01-28 18:26:35.347 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-01-28 18:26:35.348 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-01-28 18:26:35.430  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 18:26:35.486  INFO [HttpServerFactory.java:68] - test HTTP Server(based Netty) Started at 9090
-2015-01-28 18:27:03.753  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:27:03.755  INFO [HttpServerHandler.java:91] - 
-"test response"
-2015-01-28 18:27:03.968  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 18:27:06.129  INFO [HttpServerHandler.java:82] - /test?command=Test
-{
-  "scheme": "/test",
-  "parameters": {
-    "command": "Test"
-  }
-}
-2015-01-28 18:27:06.130  INFO [HttpServerHandler.java:91] - 
-"test response"
-2015-01-28 18:27:06.335  INFO [HttpServerHandler.java:82] - /favicon.ico
-{
-  "scheme": "/favicon.ico",
-  "parameters": {}
-}
-2015-01-28 20:01:08.756  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 20:01:32.172 DEBUG [NettyClientHandler.java:34] - Client : channelActive
-2015-01-28 20:01:32.175 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50537  1422446492175
-2015-01-28 20:01:32.193 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50537
-2015-01-28 20:01:32.507 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50537 发生exception, 关闭连接
-2015-01-28 20:02:16.699 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50587
-2015-01-28 20:02:16.701 DEBUG [NettyClientHandler.java:34] - Client : channelActive
-2015-01-28 20:02:16.707 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50587  1422446536707
-2015-01-28 20:02:20.186 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50587 发生exception, 关闭连接
-2015-01-28 20:04:11.271 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50673
-2015-01-28 20:04:11.273 DEBUG [NettyClient.java:88] - start countDown
-2015-01-28 20:04:11.273 DEBUG [NettyClientHandler.java:34] - Client : channelActive
-2015-01-28 20:04:11.275 DEBUG [NettyClient.java:90] - end countDown
-2015-01-28 20:04:11.277 DEBUG [NettyClientHandler.java:41] - Client : add session : /127.0.0.1:50673  1422446651277
-2015-01-28 20:04:11.593 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50673 发生exception, 关闭连接
-2015-01-28 20:21:47.784 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51137
-2015-01-28 20:21:47.787 DEBUG [NettyClient.java:91] - end countDown
-2015-01-28 20:21:47.787 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 20:21:47.807 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51137  1422447707807
-2015-01-28 20:21:48.123 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51137 发生exception, 关闭连接
-2015-01-28 20:24:47.009 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51200
-2015-01-28 20:24:47.011 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 20:24:47.011 DEBUG [NettyClient.java:91] - end countDown
-2015-01-28 20:24:47.018 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51200  1422447887018
-2015-01-28 20:24:47.333 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51200 发生exception, 关闭连接
-2015-01-28 20:30:28.240 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51294
-2015-01-28 20:30:28.243 DEBUG [NettyClient.java:91] - end countDown
-2015-01-28 20:30:28.243 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 20:30:28.250 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:51294  1422448228250
-2015-01-28 20:30:28.566 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51294 发生exception, 关闭连接
-2015-01-28 21:12:11.181  INFO [NettyServer.java:91] - server started at 8080
-2015-01-28 21:12:17.650 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 21:12:17.650 DEBUG [NettyClient.java:91] - end countDown
-2015-01-28 21:12:17.658 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:53025  1422450737658
-2015-01-28 21:12:17.670 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:53025
-2015-01-28 21:12:17.991 ERROR [NettyServerHandler.java:134] - /127.0.0.1:53025 发生exception, 关闭连接
-2015-01-28 21:12:37.094 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:53070
-2015-01-28 21:12:37.095 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 21:12:37.096 DEBUG [NettyClient.java:91] - end countDown
-2015-01-28 21:12:37.103 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:53070  1422450757103
-2015-01-28 21:12:37.419 ERROR [NettyServerHandler.java:134] - /127.0.0.1:53070 发生exception, 关闭连接
-2015-01-28 21:13:33.263 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:53123
-2015-01-28 21:13:33.266 DEBUG [NettyClient.java:94] - end countDown
-2015-01-28 21:13:33.266 DEBUG [NettyClientHandler.java:36] - Client : channelActive
-2015-01-28 21:13:33.273 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:53123  1422450813273
-2015-01-28 21:13:33.595 ERROR [NettyServerHandler.java:134] - /127.0.0.1:53123 发生exception, 关闭连接
+2015-01-29 14:47:45.467 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 14:47:48.233 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 14:47:48.390 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 14:47:48.390 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 14:47:48.419 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 14:47:48.427 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 14:47:48.448 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 14:47:48.449 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 14:47:48.529  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 14:47:48.585  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 14:48:21.125 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 14:48:21.126 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 14:48:21.179 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:49894
+2015-01-29 14:48:21.205 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:49894  1422514101205
+2015-01-29 14:48:21.536 ERROR [NettyServerHandler.java:134] - /127.0.0.1:49894 发生exception, 关闭连接
+2015-01-29 14:51:07.492 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 14:51:10.219 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 14:51:10.305 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 14:51:10.306 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 14:51:10.333 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 14:51:10.341 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 14:51:10.362 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 14:51:10.363 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 14:51:10.442  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 14:51:10.498  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 14:51:18.389 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 14:51:18.389 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 14:51:18.397 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:50109  1422514278397
+2015-01-29 14:51:18.398 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50109
+2015-01-29 14:51:18.725 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50109 -- 远程主机强迫关闭了一个现有的连接。 关闭连接
+2015-01-29 14:52:10.452 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 14:52:13.179 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 14:52:13.268 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 14:52:13.269 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 14:52:13.296 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 14:52:13.304 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 14:52:13.326 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 14:52:13.327 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 14:52:13.405  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 14:52:13.464  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 14:52:15.119 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 14:52:15.119 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 14:52:15.126 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:50290  1422514335126
+2015-01-29 14:52:15.127 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50290
+2015-01-29 14:52:15.456 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50290 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 14:53:52.719 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 14:53:55.430 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 14:53:55.513 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 14:53:55.514 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 14:53:55.545 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 14:53:55.553 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 14:53:55.574 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 14:53:55.575 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 14:53:55.653  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 14:53:55.711  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 14:53:59.236 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 14:53:59.236 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 14:53:59.243 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:50484  1422514439243
+2015-01-29 14:53:59.244 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50484
+2015-01-29 14:53:59.574 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50484 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 14:57:06.871 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 14:57:09.590 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 14:57:09.678 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 14:57:09.678 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 14:57:09.707 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 14:57:09.715 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 14:57:10.024 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 14:57:10.026 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 14:57:10.120  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 14:57:10.176  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 14:57:24.193 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 14:57:24.193 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 14:57:24.201 DEBUG [NettyClientHandler.java:46] - Client : add session : /127.0.0.1:50692  1422514644201
+2015-01-29 14:57:24.201 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:50692
+2015-01-29 14:57:24.529 ERROR [NettyServerHandler.java:134] - /127.0.0.1:50692 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 15:03:44.385 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:03:47.119 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:03:47.204 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:03:47.205 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:03:47.233 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:03:47.240 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:03:47.262 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:03:47.263 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:03:47.341  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 15:03:47.409  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:03:58.911 DEBUG [NettyClient.java:91] - end countDown
+2015-01-29 15:03:58.911 DEBUG [NettyClientHandler.java:36] - Client : channelActive
+2015-01-29 15:03:58.919 DEBUG [NettyClientHandler.java:46] - add server session : 127.0.0.1:8080
+2015-01-29 15:03:58.919 DEBUG [NettyServerHandler.java:55] - Server : addSession :/127.0.0.1:51263
+2015-01-29 15:03:59.249 ERROR [NettyServerHandler.java:134] - /127.0.0.1:51263 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-29 15:09:28.336 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:09:31.061 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:09:31.150 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:09:31.150 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:09:31.178 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:09:31.186 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:09:31.207 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:09:31.208 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:09:31.287  INFO [NettyServer.java:91] - server started at 8080
+2015-01-29 15:09:31.344  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:09:37.320 DEBUG [NettyClient.java:43] - connect : 127.0.0.1:8080
+2015-01-29 15:10:54.373 DEBUG [NettyClient.java:43] - connect : 127.0.0.1:8080
+2015-01-29 15:20:13.420 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:20:16.140 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:20:16.233 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:20:16.233 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:20:16.260 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:20:16.267 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:20:16.289 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:20:16.290 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:20:16.370  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:20:16.424  INFO [HttpServerFactory.java:76] - test http server shut down!
+2015-01-29 15:24:39.180 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:24:41.906 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:24:41.997 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:24:41.998 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:24:42.031 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:24:42.041 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:24:42.064 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:24:42.065 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:24:42.162  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:24:42.227  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:25:43.595 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:25:46.317 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:25:46.419 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:25:46.419 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:25:46.453 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:25:46.463 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:25:46.486 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:25:46.487 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:25:46.582  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:25:46.646  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:26:56.651 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:26:56.743 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:26:56.940 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:26:57.028 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:26:59.748 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:26:59.834 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:26:59.835 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:26:59.863 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:26:59.871 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:26:59.892 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:26:59.893 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:26:59.971  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:27:00.029  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:27:39.840 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:27:42.562 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:27:42.649 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:27:42.649 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:27:42.677 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:27:42.684 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:27:42.706 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:27:42.707 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:27:42.785  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:27:42.841  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:28:03.813 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:28:04.015 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:28:04.104 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:28:06.818 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:28:06.904 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:28:06.904 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:28:06.934 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:28:06.942 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:28:06.964 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:28:06.965 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:28:07.043  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:28:07.100  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:28:49.464 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:28:49.553 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:28:49.751 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:28:49.839 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:28:52.570 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:28:52.654 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:28:52.655 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:28:52.685 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:28:52.692 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:28:52.713 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:28:52.714 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:28:52.792  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:28:52.849  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:33:17.423 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:33:22.483 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:33:25.206 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:33:25.295 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:33:25.295 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:33:25.322 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:33:25.329 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:33:25.351 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:33:25.352 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:33:25.431  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:33:25.490  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:34:03.725 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:34:03.728 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:34:03.729 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2015-01-29 15:34:03.744 DEBUG [JakartaCommonsLoggingImpl.java:46] - Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2015-01-29 15:34:05.584 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:34:08.299 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:34:08.386 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:34:08.386 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:34:08.414 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:34:08.421 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:34:08.442 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:34:08.444 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:34:08.525  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:34:08.583  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:35:35.823 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:35:35.924 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:35:36.136 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:35:36.234 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:35:38.963 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:35:39.064 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:35:39.064 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:35:39.093 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:35:39.102 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:35:39.129 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:35:39.130 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:35:39.220  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:35:39.277  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:47:44.093 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:47:44.177 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:47:44.362 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:47:44.452 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:47:47.180 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:47:47.276 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:47:47.276 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:47:47.306 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:47:47.313 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:47:47.337 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:47:47.338 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:47:47.388 DEBUG [SqlSessionUtils.java:106] - Creating a new SqlSession
+2015-01-29 15:47:47.399 DEBUG [SqlSessionUtils.java:142] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5999e39] was not registered for synchronization because synchronization is not active
+2015-01-29 15:47:47.520 DEBUG [SpringManagedTransaction.java:85] - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4655af22] will not be managed by Spring
+2015-01-29 15:47:47.521 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4655af22]
+2015-01-29 15:47:47.527 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:47:47.566  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:47:47.571 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:47:47.589 DEBUG [SqlSessionUtils.java:170] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5999e39]
+2015-01-29 15:48:15.883 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:48:15.973 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:48:16.176 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:48:16.279 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:48:19.014 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:48:19.087 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:48:19.087 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:48:19.120 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:48:19.128 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:48:19.153 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:48:19.154 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:48:19.244  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:48:27.267 DEBUG [SqlSessionUtils.java:106] - Creating a new SqlSession
+2015-01-29 15:48:27.277 DEBUG [SqlSessionUtils.java:142] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4473e7ae] was not registered for synchronization because synchronization is not active
+2015-01-29 15:48:27.315 DEBUG [SpringManagedTransaction.java:85] - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7650cc27] will not be managed by Spring
+2015-01-29 15:48:27.316 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7650cc27]
+2015-01-29 15:48:27.323 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:48:27.346 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:48:27.362 DEBUG [SqlSessionUtils.java:170] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4473e7ae]
+2015-01-29 15:50:16.057 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:50:16.139 DEBUG [SqlSessionFactoryBean.java:427] - Parsed configuration file: 'class path resource [resource/mybatis/config-sqlmap.xml]'
+2015-01-29 15:50:16.327 DEBUG [SqlSessionFactoryBean.java:473] - Property 'mapperLocations' was not specified or no matching resources found
+2015-01-29 15:50:16.417 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:50:19.134 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:50:19.224 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:50:19.224 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:50:19.256 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:50:19.264 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:50:19.286 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:50:19.287 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:50:19.295 DEBUG [SqlSessionUtils.java:106] - Creating a new SqlSession
+2015-01-29 15:50:19.299 DEBUG [SqlSessionUtils.java:142] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24ebb33] was not registered for synchronization because synchronization is not active
+2015-01-29 15:50:19.320 DEBUG [SpringManagedTransaction.java:85] - JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@30e7534] will not be managed by Spring
+2015-01-29 15:50:19.321 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@30e7534]
+2015-01-29 15:50:19.326 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:50:19.359 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:50:19.376  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:50:19.378 DEBUG [SqlSessionUtils.java:170] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24ebb33]
+2015-01-29 15:50:28.378 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:50:28.732 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:50:31.454 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:50:31.519 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:50:31.519 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:50:31.549 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:50:31.556 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:50:31.580 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:50:31.581 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:50:31.621 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7ac03fdb]
+2015-01-29 15:50:31.626 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:50:31.647 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:50:31.663  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:52:10.686 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:52:11.024  INFO [StdSchedulerFactory.java:1179] - Using default implementation for ThreadExecutor
+2015-01-29 15:52:11.035  INFO [SchedulerSignalerImpl.java:60] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-01-29 15:52:11.036  INFO [QuartzScheduler.java:229] - Quartz Scheduler v.1.8.6 created.
+2015-01-29 15:52:11.037  INFO [RAMJobStore.java:139] - RAMJobStore initialized.
+2015-01-29 15:52:11.038  INFO [QuartzScheduler.java:255] - Scheduler meta-data: Quartz Scheduler (v1.8.6) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2015-01-29 15:52:11.038  INFO [StdSchedulerFactory.java:1324] - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2015-01-29 15:52:11.038  INFO [StdSchedulerFactory.java:1328] - Quartz scheduler version: 1.8.6
+2015-01-29 15:52:11.039  INFO [QuartzScheduler.java:2267] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@42d38409
+2015-01-29 15:52:11.044  INFO [QuartzScheduler.java:519] - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2015-01-29 15:52:11.050 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:52:12.036 DEBUG [UpdateChecker.java:54] - Checking for available updated version of Quartz...
+2015-01-29 15:52:13.782 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:52:13.873 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:52:13.873 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:52:13.903 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:52:13.911 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:52:13.935 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:52:13.936 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:52:13.968 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@14a38d02]
+2015-01-29 15:52:13.974 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:52:14.002 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:52:14.017  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:55:19.949 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:55:20.323 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:55:23.038 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:55:23.123 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:55:23.123 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:55:23.150 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:55:23.157 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:55:23.179 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:55:23.180 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:55:23.258  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-29 15:55:23.316  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-29 15:55:40.658 DEBUG [LogFactory.java:115] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2015-01-29 15:55:41.017 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:55:43.737 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:55:43.830 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:55:43.830 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:55:43.860 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:55:43.867 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:55:43.891 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:55:43.892 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:55:43.924 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4336962d]
+2015-01-29 15:55:43.930 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:55:43.966 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:55:43.982  INFO [ProtobufServer.java:85] - server started at 9898
+2015-01-29 15:55:58.195 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-29 15:56:00.919 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-29 15:56:01.009 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-29 15:56:01.009 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-29 15:56:01.041 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-29 15:56:01.049 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-29 15:56:01.072 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-29 15:56:01.073 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-29 15:56:01.106 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@33ca8b9d]
+2015-01-29 15:56:01.112 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: select * from test; 
+2015-01-29 15:56:01.146 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
+2015-01-29 15:56:01.155  INFO [ProtobufServer.java:85] - server started at 9898

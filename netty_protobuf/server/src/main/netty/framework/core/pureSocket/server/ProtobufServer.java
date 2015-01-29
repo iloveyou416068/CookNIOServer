@@ -24,21 +24,15 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-public enum NettyServer {
+public enum ProtobufServer {
 
 	INSTANCE;
 
-	private final static Logger logger = Logger.getLogger(NettyServer.class);
+	private final static Logger logger = Logger.getLogger(ProtobufServer.class);
 	
-	private boolean isStart = false;
-
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 	
 	public void start(int serverPort) {
-
-		if(isStart)
-			throw new RuntimeException("Server Had Started!");
-		isStart = true;
 
 		executor.execute(new NettyRunnable(serverPort));
 	}
@@ -81,7 +75,7 @@ public enum NettyServer {
 								addProtobuf(pipeline);
 								addThreadpool(pipeline);
 								
-								pipeline.addLast(new NettyServerHandler());
+								pipeline.addLast(new ProtobufServerHandler());
 							}
 						});
 

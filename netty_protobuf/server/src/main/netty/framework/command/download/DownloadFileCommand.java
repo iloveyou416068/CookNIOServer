@@ -1,5 +1,6 @@
 package netty.framework.command.download;
 
+import io.netty.channel.ChannelHandlerContext;
 import netty.framework.command.AbstractCommand;
 import netty.framework.core.HttpParamaters;
 
@@ -7,7 +8,9 @@ public class DownloadFileCommand extends AbstractCommand {
 
 	@Override
 	public String execute(HttpParamaters param) {
-		return null;
+		final ChannelHandlerContext out = param.ctx;
+		
+		return "";
 	}
 
 }

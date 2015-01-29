@@ -1,5 +1,8 @@
 package netty.framework.dao;
 
+import java.util.List;
+
+import netty.framework.bean.Test;
 import netty.framework.core.spring.SpringContext;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
@@ -19,4 +22,9 @@ public class TestDAO  extends SqlSessionDaoSupport {
 
 		return INSTANCE;
 	}
+	
+	public List<Test> select() {
+		return getSqlSession().selectList(NAMESPACE + ".selectAll");
+	}
+	
 }

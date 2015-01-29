@@ -2,7 +2,6 @@ package netty.framework.core.pureSocket.client;
 
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
-import java.util.concurrent.CountDownLatch;
 
 import netty.framework.core.pureSocket.ProtobufParser;
 import netty.framework.core.pureSocket.Session;
@@ -12,17 +11,14 @@ import org.apache.log4j.Logger;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class NettyClientHandler extends ChannelInboundHandlerAdapter {
+public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 
-	private final static Logger logger = Logger.getLogger(NettyClientHandler.class);
+	private final static Logger logger = Logger.getLogger(ProtobufClientHandler.class);
 
 	private final static boolean isDebug = false;
 	
-	// TODO 考虑并发
-	private final CountDownLatch latch;
 	
-	public NettyClientHandler(CountDownLatch latch) {
-		this.latch = latch;
+	public ProtobufClientHandler() {
 	}
 	
 	@Override
@@ -42,8 +38,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
 			InetSocketAddress in = (InetSocketAddress)address;
 			String key = in.getHostName() + ":" + in.getPort();
 			ClientSessionCache.INSTANCE.put(key, session);
-			latch.countDown();
-			logger.debug("Client : add session : " + ctx.channel().localAddress().toString() + "  " + System.currentTimeMillis());
+			logger.debug("add server session : " + key);
 		}
 		
 		ctx.fireChannelActive();

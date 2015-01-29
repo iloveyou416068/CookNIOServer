@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import netty.framework.core.pureSocket.Session;
 import netty.framework.core.pureSocket.client.ClientSessionCache;
-import netty.framework.core.pureSocket.client.NettyClient;
+import netty.framework.core.pureSocket.client.ProtobufClient;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
 import netty.framework.messages.TestMessage.TestRequest;
@@ -16,10 +16,10 @@ import netty.framework.messages.TestMessage.TestRequest;
 public class TestClient {
 
 	@Test
-//	@Ignore
+	@Ignore
 	public void test_once() {
 		try {
-			NettyClient.INSTANCE.connect("127.0.0.1", 8080);
+			ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -27,10 +27,10 @@ public class TestClient {
 	}
 	
 	@Test
-	@Ignore
+//	@Ignore
 	public void sendMessage() {
 		try {
-			NettyClient.INSTANCE.connect("127.0.0.1", 8080);
+			ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
 			
 			Session session = ClientSessionCache.INSTANCE.get("");
 
@@ -66,7 +66,7 @@ public class TestClient {
 		@Override
 		public void run() {
 			try {
-				NettyClient.INSTANCE.connect("127.0.0.1", 8080);
+				ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

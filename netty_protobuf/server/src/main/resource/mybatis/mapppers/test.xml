@@ -6,7 +6,7 @@
 <!-- namespace.id 组合在一起可以作为在SqlSession 里SelectOne这些方法 的参数调用-->
 <mapper namespace="netty.framework.dao.TestDAO">
 
-	<select id="select" resultType="Test">
+	<select id="selectAll" resultType="Test">
 		select * from test;
 	</select>
 

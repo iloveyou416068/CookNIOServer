@@ -2,7 +2,7 @@ package netty.framework;
 
 import netty.framework.core.CoreCache;
 import netty.framework.core.http.server.HttpServerFactory;
-import netty.framework.core.pureSocket.server.NettyServer;
+import netty.framework.core.pureSocket.server.ProtobufServer;
 import netty.framework.core.spring.SpringContext;
 import netty.framework.monitors.C3P0Monitor;
 
@@ -18,6 +18,6 @@ public class Server {
 
 		HttpServerFactory.INSTANCE.newHttpServer("test", 9090);
 		
-		NettyServer.INSTANCE.start(8080);
+		ProtobufServer.INSTANCE.start(8080);
 	}
 }

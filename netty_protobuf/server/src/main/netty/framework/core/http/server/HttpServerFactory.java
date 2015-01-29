@@ -53,24 +53,27 @@ public enum HttpServerFactory {
 							protected void initChannel(SocketChannel ch)
 									throws Exception {
 								ch.pipeline().addLast("http-decoder",
-										new HttpRequestDecoder());
+										new HttpRequestDecoder());			// TODO
 								ch.pipeline().addLast("http-aggregator",
-										new HttpObjectAggregator(65536));
+										new HttpObjectAggregator(65536));	// TODO
 								ch.pipeline().addLast("http-encoder",
-										new HttpResponseEncoder());
+										new HttpResponseEncoder());			// TODO
 								ch.pipeline().addLast("http-chunked",
-										new ChunkedWriteHandler());
+										new ChunkedWriteHandler());			// TODO
 								ch.pipeline().addLast("ServerHandler",
 										new HttpServerHandler());
 							}
 						});
+				
 				ChannelFuture future = b.bind(port).sync();
 				logger.info(shcame + " HTTP Server(based Netty) Started at " + port);
 
 				future.channel().closeFuture().sync();
+				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			} finally {
+				logger.info(shcame + " http server shut down!");
 				bossGroup.shutdownGracefully();
 				workerGroup.shutdownGracefully();
 			}

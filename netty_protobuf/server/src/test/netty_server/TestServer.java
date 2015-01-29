@@ -1,10 +1,10 @@
 package netty_server;
 
-import netty.framework.core.pureSocket.server.NettyServer;
+import netty.framework.core.pureSocket.server.ProtobufServer;
 
 public class TestServer {
 
 	public static void main(String[] args) {
-		NettyServer.INSTANCE.start(8080);
+		ProtobufServer.INSTANCE.start(8080);
 	}
 }
