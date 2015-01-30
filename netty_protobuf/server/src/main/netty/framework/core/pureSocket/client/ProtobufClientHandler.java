@@ -4,8 +4,8 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.concurrent.CountDownLatch;
 
-import netty.framework.core.pureSocket.ProtobufParser;
 import netty.framework.core.pureSocket.Session;
+import netty.framework.core.pureSocket.router.RouterFacoty;
 
 import org.apache.log4j.Logger;
 
@@ -55,7 +55,7 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		
 		logger.debug("Client : channelRead");
 
-		ProtobufParser.parer(ctx, msg);
+		RouterFacoty.getSinglethreadRouter().syncRoute(ctx, msg);
 		
 		ctx.fireChannelRead(msg);
 		

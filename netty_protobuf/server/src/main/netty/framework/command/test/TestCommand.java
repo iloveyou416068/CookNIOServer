@@ -1,7 +1,7 @@
 package netty.framework.command.test;
 
 import netty.framework.command.AbstractCommand;
-import netty.framework.core.HttpParamaters;
+import netty.framework.core.http.HttpParamaters;
 
 public class TestCommand extends AbstractCommand {
 

@@ -17,13 +17,13 @@
 package io.netty.handler.ssl.util;
 
 import org.bouncycastle.asn1.x500.X500Name;
-import org.bouncycastle.cert.X509CertificateHolder;
-import org.bouncycastle.cert.X509v3CertificateBuilder;
-import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
-import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
+//import org.bouncycastle.cert.X509CertificateHolder;
+//import org.bouncycastle.cert.X509v3CertificateBuilder;
+//import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
+//import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.operator.ContentSigner;
-import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
+//import org.bouncycastle.operator.ContentSigner;
+//import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 
 import java.math.BigInteger;
 import java.security.KeyPair;
@@ -42,19 +42,21 @@ final class BouncyCastleSelfSignedCertGenerator {
     private static final Provider PROVIDER = new BouncyCastleProvider();
 
     static String[] generate(String fqdn, KeyPair keypair, SecureRandom random) throws Exception {
-        PrivateKey key = keypair.getPrivate();
-
-        // Prepare the information required for generating an X.509 certificate.
-        X500Name owner = new X500Name("CN=" + fqdn);
-        X509v3CertificateBuilder builder = new JcaX509v3CertificateBuilder(
-                owner, new BigInteger(64, random), NOT_BEFORE, NOT_AFTER, owner, keypair.getPublic());
-
-        ContentSigner signer = new JcaContentSignerBuilder("SHA256WithRSAEncryption").build(key);
-        X509CertificateHolder certHolder = builder.build(signer);
-        X509Certificate cert = new JcaX509CertificateConverter().setProvider(PROVIDER).getCertificate(certHolder);
-        cert.verify(keypair.getPublic());
-
-        return newSelfSignedCertificate(fqdn, key, cert);
+//        PrivateKey key = keypair.getPrivate();
+//
+//        // Prepare the information required for generating an X.509 certificate.
+//        X500Name owner = new X500Name("CN=" + fqdn);
+//        X509v3CertificateBuilder builder = new JcaX509v3CertificateBuilder(
+//                owner, new BigInteger(64, random), NOT_BEFORE, NOT_AFTER, owner, keypair.getPublic());
+//
+//        ContentSigner signer = new JcaContentSignerBuilder("SHA256WithRSAEncryption").build(key);
+//        X509CertificateHolder certHolder = builder.build(signer);
+//        X509Certificate cert = new JcaX509CertificateConverter().setProvider(PROVIDER).getCertificate(certHolder);
+//        cert.verify(keypair.getPublic());
+//
+//        return newSelfSignedCertificate(fqdn, key, cert);
+    	
+    	return null;
     }
 
     private BouncyCastleSelfSignedCertGenerator() { }
