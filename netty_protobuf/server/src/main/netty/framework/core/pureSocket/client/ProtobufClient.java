@@ -85,6 +85,7 @@ public enum ProtobufClient {
 
 				// 发起异步连接操作
 				ChannelFuture f = b.connect(host, port).sync();
+				while(!f.isSuccess()){}
 				
 				logger.debug("start connect " + host + ":" + port);
 				// 阻塞, 等待客户端链路关闭

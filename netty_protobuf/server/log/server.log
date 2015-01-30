@@ -37,3 +37,62 @@
 2015-01-30 10:56:30.350 DEBUG [CoreCache.java:103] - load Response : TEST
 2015-01-30 10:56:30.427  INFO [ProtobufServer.java:85] - server started at 8080
 2015-01-30 10:56:30.483  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:32:53.864 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-30 12:32:56.671 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-30 12:32:56.768 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-30 12:32:56.768 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-30 12:32:56.841 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-30 12:32:56.848 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-30 12:32:56.920 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-30 12:32:56.921 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-30 12:32:57.303  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-30 12:32:57.489  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:33:51.725 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-30 12:33:54.530 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-30 12:33:54.623 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-30 12:33:54.623 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-30 12:33:54.692 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-30 12:33:54.699 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-30 12:33:54.766 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-30 12:33:54.767 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-30 12:33:54.912  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-30 12:33:54.967  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:36:24.174 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-30 12:36:26.970 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-30 12:36:27.062 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-30 12:36:27.062 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-30 12:36:27.130 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-30 12:36:27.137 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-30 12:36:27.202 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-30 12:36:27.203 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-30 12:36:27.347  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-30 12:36:27.403  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:41:17.107 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-30 12:41:19.897 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-30 12:41:19.990 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-30 12:41:19.990 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-30 12:41:20.059 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-30 12:41:20.068 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-30 12:41:20.137 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-30 12:41:20.138 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-30 12:41:20.291  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-30 12:41:20.347  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:41:34.811 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-01-30 12:41:37.530 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-01-30 12:41:37.601 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-01-30 12:41:37.601 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-01-30 12:41:37.628 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-01-30 12:41:37.636 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-01-30 12:41:37.658 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-01-30 12:41:37.659 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-01-30 12:41:37.736  INFO [ProtobufServer.java:85] - server started at 8080
+2015-01-30 12:41:37.793  INFO [HttpServerFactory.java:69] - test HTTP Server(based Netty) Started at 9090
+2015-01-30 12:43:44.003 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-30 12:43:44.003 DEBUG [ProtobufClient.java:90] - start connect 127.0.0.1:8080
+2015-01-30 12:43:44.010 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-30 12:43:44.010 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:61932
+2015-01-30 12:43:44.030 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:61932 -- 远程主机强迫关闭了一个现有的连接。
+2015-01-30 12:45:23.466 DEBUG [ProtobufServerHandler.java:55] - Server : addSession :/127.0.0.1:62035
+2015-01-30 12:45:23.472 DEBUG [ProtobufClientHandler.java:35] - Client : channelActive
+2015-01-30 12:45:23.483 DEBUG [ProtobufClientHandler.java:44] - add server session : 127.0.0.1:8080
+2015-01-30 12:45:23.518 ERROR [ProtobufServerHandler.java:134] - /127.0.0.1:62035 -- 远程主机强迫关闭了一个现有的连接。

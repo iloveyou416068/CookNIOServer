@@ -104,6 +104,12 @@ final class JdkAlpnSslEngine extends JdkSslEngine {
                 public void unsupported() {
                     protocolListener.unsupported();
                 }
+
+				@Override
+				public boolean supports() {
+					// TODO Auto-generated method stub
+					return false;
+				}
             });
         }
     }
