@@ -5,7 +5,9 @@ import java.net.SocketAddress;
 import org.apache.log4j.Logger;
 
 import netty.framework.core.pureSocket.Session;
-import netty.framework.core.pureSocket.router.RouterFacoty;
+import netty.framework.core.router.Router;
+import netty.framework.core.router.RouterFacoty;
+import netty.framework.core.router.spec.EvevntMessage;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -19,6 +21,12 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 	/*
 	 * 当客户端连接之后 Handler依次执行的是  isSharable(), handlerAdded(), channelRegistered(), channelActive()
 	 */
+	
+	private final Router router;
+	
+	public ProtobufServerHandler() {
+		router = RouterFacoty.newSinglethreadRouter();
+	}
 	
 	@Override
 	public boolean isSharable() {
@@ -68,8 +76,10 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		
 		if(isDebug)
 			logger.debug("Server : channelRead");
-
-		RouterFacoty.getSinglethreadRouter().syncRoute(ctx, msg);
+		
+		EvevntMessage message = EvevntMessage.newProtobufMessage(ctx, msg);
+		
+		router.router(message);
 		
 		ctx.fireChannelRead(msg);
 	}

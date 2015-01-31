@@ -5,7 +5,8 @@ import java.net.SocketAddress;
 import java.util.concurrent.CountDownLatch;
 
 import netty.framework.core.pureSocket.Session;
-import netty.framework.core.pureSocket.router.RouterFacoty;
+import netty.framework.core.router.RouterFacoty;
+import netty.framework.core.router.spec.EvevntMessage;
 
 import org.apache.log4j.Logger;
 
@@ -55,7 +56,9 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		
 		logger.debug("Client : channelRead");
 
-		RouterFacoty.getSinglethreadRouter().syncRoute(ctx, msg);
+		EvevntMessage message = EvevntMessage.newProtobufMessage(ctx, msg);
+		
+		RouterFacoty.newSinglethreadRouter().router(message);
 		
 		ctx.fireChannelRead(msg);
 		
