@@ -47,7 +47,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : channelRegistered");
 		
-		ctx.fireChannelRegistered();
 	}
 	
 	@Override
@@ -63,7 +62,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 			logger.debug("Server : addSession :" + remote);
 		}
 		
-		ctx.fireChannelActive();
 	}
 	
 	/*
@@ -81,7 +79,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		
 		router.router(message);
 		
-		ctx.fireChannelRead(msg);
 	}
 
 	@Override
@@ -91,7 +88,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : channelReadComplete");
 		
-		ctx.fireChannelReadComplete();
 	}
 	
 	/*
@@ -108,7 +104,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : channelInactive");
 		
-		ctx.fireChannelInactive();
 	}
 
 	@Override
@@ -116,7 +111,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : channelUnregistered");
 		
-		ctx.fireChannelUnregistered();
 	}
 
 	@Override
@@ -125,7 +119,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : channelWritabilityChanged");
 		
-		ctx.fireChannelWritabilityChanged();
 	}
 
 	@Override
@@ -134,7 +127,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Server : userEventTriggered");
 		
-		ctx.fireUserEventTriggered(evt);
 	}
 
 	@Override
@@ -145,7 +137,6 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 		if(logger.isDebugEnabled())
 			cause.printStackTrace();
 		
-		ctx.fireExceptionCaught(cause);
 		ctx.close();// 发生异常，关闭链路
 	}
 }

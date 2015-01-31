@@ -1,6 +1,5 @@
 package netty.framework.core.pureSocket.client;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -38,34 +37,21 @@ public enum ProtobufClient {
 	public void connect(String host, int port) {
 
 		// 等待与远端创建完连接之后,才完成阻塞,进行消息通信
-		final CountDownLatch latch = new CountDownLatch(1);
 		
 		// XXX NettyRunnable 在新的线程中启动，有问题,目前只要连接完毕,就会断开连接
-		executor.execute(new NettyRunnable(latch, host, port));
+		executor.execute(new NettyRunnable(host, port));
 		
-		try {
-			latch.await();
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		}
-		
-		try {
-			latch.await();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		logger.debug("connect over!");
 	}
 
 	private static class NettyRunnable implements Runnable {
 
 		private final int port;
 		private final String host;
-		private final CountDownLatch latch;
 
-		protected NettyRunnable(CountDownLatch latch, String host, int port) {
+		protected NettyRunnable(String host, int port) {
 			this.host = host;
 			this.port = port;
-			this.latch = latch;
 		}
 
 		@Override
@@ -85,17 +71,16 @@ public enum ProtobufClient {
 						MessagerRequest req = MessagerRequest.getDefaultInstance();
 						ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 						ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-						ch.pipeline().addLast(new ProtobufClientHandler(latch));
+						ch.pipeline().addLast(new ProtobufClientHandler());
 					}
 				});
 
 				// 发起异步连接操作
 				ChannelFuture f = b.connect(host, port).sync();
-				
 				logger.debug("start connect " + host + ":" + port);
+				
 				// 阻塞, 等待客户端链路关闭
 				f.channel().closeFuture().sync();
-				logger.debug("closeFuture");
 
 			} catch(final Exception e) {
 				e.printStackTrace();
@@ -109,5 +94,5 @@ public enum ProtobufClient {
 		}
 
 	}
-
+	
 }

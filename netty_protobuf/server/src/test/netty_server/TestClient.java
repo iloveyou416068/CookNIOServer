@@ -2,6 +2,7 @@ package netty_server;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -18,49 +19,44 @@ public class TestClient {
 	@Test
 	@Ignore
 	public void test_once() {
-		try {
-			ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
+		
+		while(true){}
 	}
-	
+
 	@Test
 //	@Ignore
-	public void sendMessage() {
-		try {
-			ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
-			
-			Session session = ClientSessionCache.INSTANCE.get("127.0.0.1:8080");
+	public void sendMessage() throws InterruptedException {
+		ProtobufClient.INSTANCE.connect("127.0.0.1", 8080);
 
-			TestRequest test = TestRequest.newBuilder()
-			.setMsgID(MsgID.TEST)
-			.build();
-			
-			MessagerRequest message = MessagerRequest.newBuilder()
-			.setMsgID(MsgID.TEST)
-			.setContent(test.toByteString())
-			.build();
-			
-			session.write(message);
+		TimeUnit.SECONDS.sleep(5);
+		
+		Session session = ClientSessionCache.INSTANCE.get("127.0.0.1:8080");
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		TestRequest test = TestRequest.newBuilder()
+				.setMsgID(MsgID.TEST)
+				.build();
+
+		MessagerRequest message = MessagerRequest.newBuilder()
+				.setMsgID(MsgID.TEST)
+				.setContent(test.toByteString())
+				.build();
+
+		session.write(message);
+
 	}
-	
+
 	@Test
 	@Ignore
 	public void test_1000() {
 		ExecutorService pool = Executors.newCachedThreadPool();
-		for(int i = 0; i < 5000; i++) {
-//			pool.execute(new ClientConnect());
+		for (int i = 0; i < 5000; i++) {
+			// pool.execute(new ClientConnect());
 			Thread t = new Thread(new ClientConnect());
 			t.start();
 		}
 	}
-	
+
 	class ClientConnect implements Runnable {
 
 		@Override
@@ -71,6 +67,6 @@ public class TestClient {
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 }

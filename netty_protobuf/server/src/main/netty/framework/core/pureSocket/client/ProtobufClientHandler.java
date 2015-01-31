@@ -2,7 +2,6 @@ package netty.framework.core.pureSocket.client;
 
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
-import java.util.concurrent.CountDownLatch;
 
 import netty.framework.core.pureSocket.Session;
 import netty.framework.core.router.RouterFacoty;
@@ -18,12 +17,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 	private final static Logger logger = Logger.getLogger(ProtobufClientHandler.class);
 
 	private final static boolean isDebug = false;
-	
-	private final CountDownLatch latch;
-	
-	public ProtobufClientHandler(CountDownLatch latch) {
-		this.latch = latch;
-	}
 	
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -42,11 +35,9 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 			InetSocketAddress in = (InetSocketAddress)address;
 			String key = in.getHostName() + ":" + in.getPort();
 			ClientSessionCache.INSTANCE.put(key, session);
-			logger.debug("add server session : " + key);
+//			logger.debug("add server session : " + key);
 		}
 		
-		ctx.fireChannelActive();
-		latch.countDown();
 	}
 
 
@@ -60,7 +51,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		
 		RouterFacoty.newSinglethreadRouter().router(message);
 		
-		ctx.fireChannelRead(msg);
 		
 	}
 
@@ -71,7 +61,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : channelReadComplete");
 		
-		ctx.fireChannelReadComplete();
 	}
 	
 	@Override
@@ -86,7 +75,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : channelInactive");
 		
-		ctx.fireChannelInactive();
 	}
 
 	@Override
@@ -94,7 +82,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : channelRegistered");
 		
-		ctx.fireChannelRegistered();
 	}
 
 	@Override
@@ -102,7 +89,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : channelUnregistered");
 		
-		ctx.fireChannelUnregistered();
 	}
 
 	@Override
@@ -111,7 +97,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : channelWritabilityChanged");
 		
-		ctx.fireChannelWritabilityChanged();
 	}
 
 	@Override
@@ -120,7 +105,6 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : userEventTriggered");
 		
-		ctx.fireUserEventTriggered(evt);
 	}
 
 	@Override
@@ -138,6 +122,5 @@ public class ProtobufClientHandler extends ChannelInboundHandlerAdapter {
 		if(isDebug)
 			logger.debug("Client : exceptionCaught");
 		
-		ctx.fireExceptionCaught(cause);
 	}
 }
