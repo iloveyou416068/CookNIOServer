@@ -4,7 +4,7 @@ import com.google.protobuf.MessageLite;
 
 /**
  * 执行Protobuf转发过来的消息处理
- * @author Administrator
+ * @author wangming
  *
  * @param <T>
  */

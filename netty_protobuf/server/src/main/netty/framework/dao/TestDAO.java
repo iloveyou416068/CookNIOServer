@@ -7,6 +7,11 @@ import netty.framework.core.spring.SpringContext;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
+/**
+ * 通过mybatis执行到dao操作
+ * @author Administrator
+ *
+ */
 public class TestDAO  extends SqlSessionDaoSupport {
 
 	private static final String NAMESPACE = TestDAO.class.getCanonicalName();
