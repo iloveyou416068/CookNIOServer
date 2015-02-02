@@ -17,42 +17,30 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 
 	private final static Logger logger = Logger.getLogger(ProtobufServerHandler.class);
 	
-	private final static boolean isDebug = false;
+	private final Router router;
+	
+	public ProtobufServerHandler() {
+		router = RouterFacoty.newMultithreadRouter();
+	}
+	
 	/*
 	 * 当客户端连接之后 Handler依次执行的是  isSharable(), handlerAdded(), channelRegistered(), channelActive()
 	 */
 	
-	private final Router router;
-	
-	public ProtobufServerHandler() {
-		router = RouterFacoty.newSinglethreadRouter();
-	}
-	
-	@Override
-	public boolean isSharable() {
-		if(isDebug)
-			logger.debug("Server : isSharable");
-		return super.isSharable();
-	}
-	
 	@Override
 	public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-		if(isDebug)
-			logger.debug("Server : handlerAdded ");
-		// TODO
+		logger.debug("Server : handlerAdded ");
 	}
 
 	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-		if(isDebug)
-			logger.debug("Server : channelRegistered");
+		logger.debug("Server : channelRegistered");
 		
 	}
 	
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {
-		if(isDebug)
-			logger.debug("Server : channelActive");
+		logger.debug("Server : channelActive");
 		
 		String remote = ctx.channel().remoteAddress().toString();
 		if(!ServerSessionCache.INSTANCE.contains(remote)) {
@@ -72,8 +60,7 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelRead(ChannelHandlerContext ctx, Object msg)
 			throws Exception {
 		
-		if(isDebug)
-			logger.debug("Server : channelRead");
+		logger.debug("Server : channelRead");
 		
 		EvevntMessage message = EvevntMessage.newProtobufMessage(ctx, msg);
 		
@@ -85,47 +72,46 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
 		ctx.flush();
 		
-		if(isDebug)
-			logger.debug("Server : channelReadComplete");
-		
 	}
 	
 	/*
 	 */
 	@Override
 	public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-		if(isDebug)
-			logger.debug("Server : handlerRemoved");
+		logger.debug("Server : handlerRemoved");
 		// TODO
 	}
 	
+	/**
+	 * TODO ? 超时多长时间,会调用这个方法？
+	 */
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-		if(isDebug)
-			logger.debug("Server : channelInactive");
+		logger.debug("Server : channelInactive");
 		
 	}
 
 	@Override
 	public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-		if(isDebug)
-			logger.debug("Server : channelUnregistered");
+		logger.debug("Server : channelUnregistered");
 		
 	}
 
 	@Override
 	public void channelWritabilityChanged(ChannelHandlerContext ctx)
 			throws Exception {
-		if(isDebug)
-			logger.debug("Server : channelWritabilityChanged");
+		logger.debug("Server : channelWritabilityChanged");
 		
 	}
 
+	/**
+	 * TODO 
+	 * 添加了IdleStateHandler 之后,该方法就会触发,弄明白是为什么？
+	 */
 	@Override
 	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
 			throws Exception {
-		if(isDebug)
-			logger.debug("Server : userEventTriggered");
+		logger.debug("Server : userEventTriggered");
 		
 	}
 

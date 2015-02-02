@@ -87,7 +87,7 @@ public enum ProtobufClient {
 				
 			} finally {
 				// 释放NIO线程组
-				logger.info(host + ":" + port + " shutdownGracefully");
+				logger.info("client shutdownGracefully");
 				group.shutdownGracefully();
 			}
 

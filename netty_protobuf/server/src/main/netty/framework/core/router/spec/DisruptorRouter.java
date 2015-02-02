@@ -5,11 +5,8 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.parser.Parse;
 import netty.framework.core.parser.ParseFactory;
-import netty.framework.core.parser.ProtobufParse;
 import netty.framework.core.router.Router;
-import netty.framework.core.router.spec.EvevntMessage.MessageType;
 
 import com.lmax.disruptor.EventFactory;
 import com.lmax.disruptor.EventHandler;
@@ -21,13 +18,12 @@ public class DisruptorRouter extends Router{
 	private static final Logger logger = Logger.getLogger(DisruptorRouter.class);
 	
 	private final static int POOL_SIZE = 100;
-	private final Executor executor = Executors.newCachedThreadPool();
-	private final Disruptor<EvevntMessage> disruptor;
 	private final RingBuffer<EvevntMessage> ringBuffer;
 	
 	public DisruptorRouter() {
 		
-		disruptor = new Disruptor<>(new Factory(), POOL_SIZE, executor);
+		final Executor executor = Executors.newCachedThreadPool();
+		final Disruptor<EvevntMessage> disruptor = new Disruptor<>(new Factory(), POOL_SIZE, executor);
 		disruptor.handleEventsWith(new EvevntMessageHandler());
 		disruptor.start();
 		ringBuffer = disruptor.getRingBuffer();
