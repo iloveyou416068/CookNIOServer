@@ -1,6 +1,8 @@
 
 package netty.framework.core.pureSocket.server;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -24,16 +26,21 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-public enum ProtobufServer {
+public enum ProtobufServerFactory {
 
 	INSTANCE;
 
-	private final static Logger logger = Logger.getLogger(ProtobufServer.class);
+	private final static Logger logger = Logger.getLogger(ProtobufServerFactory.class);
 	
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 	
+	private final List<Integer> ports = new ArrayList<>();
+	
 	public void start(int serverPort) {
-
+		
+		if(ports.contains(serverPort))
+			throw new RuntimeException(serverPort + " has started!! ");
+		
 		executor.execute(new NettyRunnable(serverPort));
 	}
 

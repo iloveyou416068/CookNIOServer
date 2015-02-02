@@ -1,5 +1,7 @@
 package netty.framework.core.http.server;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,7 +27,13 @@ public enum HttpServerFactory {
 	
 	private final ExecutorService executor = Executors.newCachedThreadPool();
 
-	public void newHttpServer(String shcame, int serverPort) {
+	private final List<Integer> ports = new ArrayList<>();
+	
+	public void start(String shcame, int serverPort) {
+		
+		if(ports.contains(serverPort))
+			throw new RuntimeException(serverPort + " has started!! ");
+		
 		executor.execute(new NettyHttpServer(shcame, serverPort));
 	}
 

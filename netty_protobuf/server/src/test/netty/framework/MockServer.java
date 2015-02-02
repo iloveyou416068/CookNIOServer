@@ -6,7 +6,7 @@ import netty.framework.core.CoreCache;
 import netty.framework.core.pureSocket.Session;
 import netty.framework.core.pureSocket.client.ClientSessionCache;
 import netty.framework.core.pureSocket.client.ProtobufClient;
-import netty.framework.core.pureSocket.server.ProtobufServer;
+import netty.framework.core.pureSocket.server.ProtobufServerFactory;
 import netty.framework.core.spring.SpringContext;
 
 public class MockServer {
@@ -17,7 +17,7 @@ public class MockServer {
 		
 		CoreCache.INSTANCE.init();
 		
-		ProtobufServer.INSTANCE.start(9898);
+		ProtobufServerFactory.INSTANCE.start(9898);
 		
 		ProtobufClient.INSTANCE.connect("127.0.0.1", 9898);
 		
