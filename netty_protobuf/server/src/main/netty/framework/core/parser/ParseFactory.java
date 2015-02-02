@@ -1,7 +1,7 @@
 package netty.framework.core.parser;
 
-import netty.framework.core.router.spec.EvevntMessage;
-import netty.framework.core.router.spec.EvevntMessage.MessageType;
+import netty.framework.EvevntMessage;
+import netty.framework.EvevntMessage.MessageType;
 
 public class ParseFactory {
 

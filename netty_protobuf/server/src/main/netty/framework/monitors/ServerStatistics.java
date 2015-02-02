@@ -1,5 +1,7 @@
 package netty.framework.monitors;
 
+import netty.framework.EvevntMessage;
+
 /**
  * 服务器统计
  * 1.protobuf消息执行时长
@@ -10,6 +12,11 @@ package netty.framework.monitors;
  * @author wangming
  *
  */
-public class ServerStatistics {
+public enum ServerStatistics {
 
+	ISNTANCE;
+	
+	public void statisticsNettyChannel(EvevntMessage channel) {
+		
+	}
 }

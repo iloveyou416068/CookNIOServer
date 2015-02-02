@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
+import netty.framework.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 import netty.framework.core.router.Router;
 
@@ -31,7 +32,7 @@ public class DisruptorRouter extends Router{
 	}
 	
 	@Override
-	public void router(EvevntMessage message) {
+	public void route(EvevntMessage message) {
 		long sequence = ringBuffer.next();
 		
 		try {

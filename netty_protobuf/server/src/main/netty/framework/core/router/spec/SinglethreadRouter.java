@@ -2,6 +2,7 @@ package netty.framework.core.router.spec;
 
 import org.apache.log4j.Logger;
 
+import netty.framework.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 import netty.framework.core.router.Router;
 
@@ -11,7 +12,7 @@ public class SinglethreadRouter extends Router {
 			.getLogger(SinglethreadRouter.class);
 
 	@Override
-	public void router(EvevntMessage message) {
+	public void route (EvevntMessage message) {
 		ParseFactory.getParse(message).parse(message);
 	}
 

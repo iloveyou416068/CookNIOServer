@@ -1,4 +1,4 @@
-package netty.framework.core.router.spec;
+package netty.framework;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;

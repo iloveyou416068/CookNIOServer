@@ -3,9 +3,9 @@ package netty.framework.core.pureSocket.client;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 
+import netty.framework.EvevntMessage;
 import netty.framework.core.pureSocket.Session;
 import netty.framework.core.router.RouterFacoty;
-import netty.framework.core.router.spec.EvevntMessage;
 
 import org.apache.log4j.Logger;
 

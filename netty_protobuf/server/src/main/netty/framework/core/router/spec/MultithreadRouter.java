@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedTransferQueue;
 
+import netty.framework.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 import netty.framework.core.router.Router;
 
@@ -53,7 +54,7 @@ public class MultithreadRouter extends Router {
 	}
 	
 	@Override
-	public void router(EvevntMessage message) {
+	public void route (EvevntMessage message) {
 		try {
 			
 			msgs.put(message);

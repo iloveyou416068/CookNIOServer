@@ -4,10 +4,10 @@ import java.net.SocketAddress;
 
 import org.apache.log4j.Logger;
 
+import netty.framework.EvevntMessage;
 import netty.framework.core.pureSocket.Session;
 import netty.framework.core.router.Router;
 import netty.framework.core.router.RouterFacoty;
-import netty.framework.core.router.spec.EvevntMessage;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -83,7 +83,7 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 	}
 	
 	/**
-	 * TODO ? 超时多长时间,会调用这个方法？
+	 * TCP连接在关闭前的调用方法
 	 */
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
@@ -106,7 +106,10 @@ public class ProtobufServerHandler extends ChannelInboundHandlerAdapter {
 
 	/**
 	 * TODO 
-	 * 添加了IdleStateHandler 之后,该方法就会触发,弄明白是为什么？
+	 * userEventTriggered通常用于自定义事件的处理，其中IdleState就是一种。
+	 * 
+	 * 除了常见的Channel事件外，如果要扩展出自己的事件处理，就是调用这个方法的。
+	 * 要触发，就调用这个方法就好：fireUserEventTriggered(Object)
 	 */
 	@Override
 	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
