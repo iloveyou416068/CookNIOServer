@@ -118,3 +118,66 @@
 2015-02-02 10:10:57.574 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
 2015-02-02 10:10:57.574 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
 2015-02-02 10:10:57.590 DEBUG [ProtobufServerHandler.java:62] - Server : addSession :/127.0.0.1:51948
+2015-02-02 10:39:33.078 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-02 10:39:35.815 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-02 10:39:35.894 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-02 10:39:35.894 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-02 10:39:35.925 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-02 10:39:35.925 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-02 10:39:35.956 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-02 10:39:35.956 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-02 10:39:35.956 DEBUG [ProtobufClient.java:44] - connect over!
+2015-02-02 10:39:36.019  INFO [ProtobufServer.java:85] - server started at 9898
+2015-02-02 10:39:36.580 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
+2015-02-02 10:39:36.580 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
+2015-02-02 10:39:36.580 DEBUG [ProtobufServerHandler.java:62] - Server : addSession :/127.0.0.1:53096
+2015-02-02 10:39:41.200  INFO [ProtobufParse.java:46] - execute start -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 10:39:41.200  INFO [ProtobufParse.java:51] - execute finshed -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 10:43:18.750 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-02 10:43:21.527 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-02 10:43:21.594 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-02 10:43:21.594 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-02 10:43:21.625 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-02 10:43:21.625 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-02 10:43:21.656 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-02 10:43:21.656 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-02 10:43:21.656 DEBUG [ProtobufClient.java:44] - connect over!
+2015-02-02 10:43:21.719  INFO [ProtobufServer.java:85] - server started at 9898
+2015-02-02 10:43:22.280 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
+2015-02-02 10:43:22.280 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
+2015-02-02 10:43:22.280 DEBUG [ProtobufServerHandler.java:62] - Server : addSession :/127.0.0.1:53279
+2015-02-02 10:43:26.726  INFO [ProtobufParse.java:46] - execute start -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 10:43:26.726  INFO [ProtobufParse.java:51] - execute finshed -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 10:43:48.660 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-02 10:43:51.422 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-02 10:43:51.485 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-02 10:43:51.485 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-02 10:43:51.517 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-02 10:43:51.532 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-02 10:43:51.548 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-02 10:43:51.548 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-02 10:43:51.563 DEBUG [ProtobufClient.java:44] - connect over!
+2015-02-02 10:43:51.626  INFO [ProtobufServer.java:85] - server started at 9898
+2015-02-02 10:43:52.172 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
+2015-02-02 10:43:52.172 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
+2015-02-02 10:43:52.172 DEBUG [ProtobufServerHandler.java:62] - Server : addSession :/127.0.0.1:53385
+2015-02-02 10:43:53.654  INFO [ProtobufParse.java:46] - execute start -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 10:43:53.654  INFO [ProtobufParse.java:51] - execute finshed -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}

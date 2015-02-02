@@ -22,7 +22,8 @@ public class MockServer {
 		ProtobufClient.INSTANCE.connect("127.0.0.1", 9898);
 		
 		try {
-			TimeUnit.SECONDS.sleep(5);
+			// TODO 找到Junit中 线程中断的原因，不使用sleep
+			TimeUnit.SECONDS.sleep(2);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
