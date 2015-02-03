@@ -461,3 +461,53 @@
 2015-02-02 20:16:30.752 DEBUG [ProtobufServerHandler.java:110] - Server : userEventTriggered
 2015-02-02 20:16:35.750 DEBUG [ProtobufServerHandler.java:110] - Server : userEventTriggered
 2015-02-02 20:16:35.752 DEBUG [ProtobufServerHandler.java:110] - Server : userEventTriggered
+2015-02-02 21:29:03.749 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-02 21:29:06.508 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-02 21:29:06.579 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-02 21:29:06.579 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-02 21:29:06.622 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-02 21:29:06.630 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-02 21:29:06.665 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-02 21:29:06.666 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-02 21:29:06.671 DEBUG [ProtobufClient.java:44] - connect over!
+2015-02-02 21:29:06.738  INFO [ProtobufServerFactory.java:93] - server started at 9898
+2015-02-02 21:29:07.272 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
+2015-02-02 21:29:07.272 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
+2015-02-02 21:29:07.283 DEBUG [ProtobufServerHandler.java:32] - Server : handlerAdded 
+2015-02-02 21:29:07.283 DEBUG [ProtobufServerHandler.java:37] - Server : channelRegistered
+2015-02-02 21:29:07.283 DEBUG [ProtobufServerHandler.java:43] - Server : channelActive
+2015-02-02 21:29:07.284 DEBUG [ProtobufServerHandler.java:50] - Server : addSession :/127.0.0.1:56098
+2015-02-02 21:29:08.709 DEBUG [ProtobufServerHandler.java:63] - Server : channelRead
+2015-02-02 21:29:08.785  INFO [ProtobufParse.java:46] - execute start -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 21:29:08.785  INFO [ProtobufParse.java:51] - execute finshed -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 21:33:54.620 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-02 21:33:57.376 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-02 21:33:57.467 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-02 21:33:57.467 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-02 21:33:57.513 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-02 21:33:57.520 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-02 21:33:57.555 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-02 21:33:57.556 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-02 21:33:57.561 DEBUG [ProtobufClient.java:44] - connect over!
+2015-02-02 21:33:57.628  INFO [ProtobufServerFactory.java:93] - server started at 9898
+2015-02-02 21:33:58.161 DEBUG [ProtobufClientHandler.java:29] - Client : channelActive
+2015-02-02 21:33:58.161 DEBUG [ProtobufClient.java:80] - start connect 127.0.0.1:9898
+2015-02-02 21:33:58.173 DEBUG [ProtobufServerHandler.java:32] - Server : handlerAdded 
+2015-02-02 21:33:58.173 DEBUG [ProtobufServerHandler.java:37] - Server : channelRegistered
+2015-02-02 21:33:58.173 DEBUG [ProtobufServerHandler.java:43] - Server : channelActive
+2015-02-02 21:33:58.174 DEBUG [ProtobufServerHandler.java:50] - Server : addSession :/127.0.0.1:56383
+2015-02-02 21:33:59.601 DEBUG [ProtobufServerHandler.java:63] - Server : channelRead
+2015-02-02 21:33:59.650  INFO [ProtobufParse.java:46] - execute start -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}
+2015-02-02 21:33:59.650  INFO [ProtobufParse.java:51] - execute finshed -- TEST(msgId:2)
+{
+  "msgID_": "TEST"
+}

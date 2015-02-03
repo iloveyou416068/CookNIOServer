@@ -49,6 +49,15 @@ import java.util.NoSuchElementException;
  * {@link ChannelHandlerContext}, such as {@link ChannelHandlerContext#fireChannelRead(Object)} and
  * {@link ChannelHandlerContext#write(Object)}.
  *
+ * ChannelPipeline 维持的是一个{@link ChannelHandler}列表, {@link ChannelHandler} 会处理或者拦截每个{@link Channel}的 inbound事件 以及 outbound操作
+ * 创建pipeline ：
+ * 		每个channel都有自己的pipeline, 当生成一个新的channel的时候, 那么这个channel也会自动创建一个新的pipeline
+ * event在pipeline里的执行顺序：
+ * 		下图展示了{@link ChannelHandler}中的I/O事件是如何在 {@link ChannelPipeline} 中执行的. 一个I/O事件是通过 只能在
+ * 		{@link ChannelInboundHandler} 类型(以及子类型) 或者 {@link ChannelOutboundHandler} 类型(以及子类型) 中被处理,
+ * 		 当一个Handler里处理完之后, 会通过调用  {@link ChannelHandlerContext} 里定义的事件传播方法 将event传递给下一个Handler. 
+ * 		事件传播方法举例：{@link ChannelHandlerContext#fireChannelRead(Object)} 和  {@link ChannelHandlerContext#write(Object)}
+ * 
  * <pre>
  *                                                 I/O Request
  *                                            via {@link Channel} or
@@ -94,12 +103,18 @@ import java.util.NoSuchElementException;
  * diagram.  The inbound data is often read from a remote peer via the actual input operation such as
  * {@link SocketChannel#read(ByteBuffer)}.  If an inbound event goes beyond the top inbound handler, it is discarded
  * silently, or logged if it needs your attention.
+ * 
+ * 
+ * 
  * <p>
  * An outbound event is handled by the outbound handler in the top-down direction as shown on the right side of the
  * diagram.  An outbound handler usually generates or transforms the outbound traffic such as write requests.
  * If an outbound event goes beyond the bottom outbound handler, it is handled by an I/O thread associated with the
  * {@link Channel}. The I/O thread often performs the actual output operation such as
  * {@link SocketChannel#write(ByteBuffer)}.
+ * 
+ * 
+ * 
  * <p>
  * For example, let us assume that we created the following pipeline:
  * <pre>
@@ -112,6 +127,9 @@ import java.util.NoSuchElementException;
  * </pre>
  * In the example above, the class whose name starts with {@code Inbound} means it is an inbound handler.
  * The class whose name starts with {@code Outbound} means it is a outbound handler.
+ * 
+ * 上面的示例中, 以{@code Inbound} 开头的类名的类意味着这个类是一个inbound Handler. 以{@code Outbound} 开头的类名的类意味着这个类是一个outbound Handler. 
+ * 
  * <p>
  * In the given example configuration, the handler evaluation order is 1, 2, 3, 4, 5 when an event goes inbound.
  * When an event goes outbound, the order is 5, 4, 3, 2, 1.  On top of this principle, {@link ChannelPipeline} skips
@@ -125,10 +143,20 @@ import java.util.NoSuchElementException;
  *     an inbound and a outbound event could be 125 and 543 respectively.</li>
  * </ul>
  *
+ * 当一个事件入站的时候, Handler执行的顺序是 1, 2, 3, 4, 5.  当事件出站的时候, handler的执行顺序是  5, 4, 3, 2, 1. 在此原则之上,  {@link ChannelPipeline}
+ * 会跳过某些handler的处理,以便减少栈的深度. 例如：
+ * 3 4 没有实现{@link ChannelInboundHandler} 接口, 因此 一个indbound 事件 实际会执行的handler顺序是 1 2 5
+ * 1 2 没有实现{@link ChannelOutboundHandler} 接口, 因此 一个outbound 事件 实际会执行的handler顺序是  5 4 3
+ * 如果5 实现了 {@link ChannelInboundHandler} 和 {@link ChannelOutboundHandler} 接口, 那么  inbound and outbound 事件的执行handler 顺序
+ * 分别是  125 和 543
+ * 
  * <h3>Forwarding an event to the next handler</h3>
  *
  * As you might noticed in the diagram shows, a handler has to invoke the event propagation methods in
  * {@link ChannelHandlerContext} to forward an event to its next handler.  Those methods include:
+ * 
+ * 当调用了 下列 {@link ChannelHandlerContext} 的event 传播方法后, 会激活下个handler继续处理 event
+ * 这意味着, 当前handler 处理到此, 不再调用该handler里的其他方法
  * <ul>
  * <li>Inbound event propagation methods:
  *     <ul>

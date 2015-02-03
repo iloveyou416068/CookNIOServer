@@ -305,6 +305,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
     }
 
     final ChannelFuture initAndRegister() {
+    	
         final Channel channel = channelFactory().newChannel();
         try {
             init(channel);
