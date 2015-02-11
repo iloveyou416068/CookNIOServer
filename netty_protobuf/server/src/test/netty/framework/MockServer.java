@@ -1,38 +1,46 @@
 package netty.framework;
 
-import java.util.concurrent.TimeUnit;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.MessageLite;
+import com.google.protobuf.Parser;
 
+import netty.framework.action.AbstractAction;
 import netty.framework.core.CoreCache;
-import netty.framework.core.pureSocket.Session;
-import netty.framework.core.pureSocket.client.ClientSessionCache;
-import netty.framework.core.pureSocket.client.ProtobufClient;
-import netty.framework.core.pureSocket.server.ProtobufServerFactory;
 import netty.framework.core.spring.SpringContext;
+import netty.framework.messages.MessagerMessage.MessagerRequest;
+import netty.framework.messages.MsgId.MsgID;
 
 public class MockServer {
 
-	public static MockSession start() {
-		
+	public static MockServer start() {
+
 		SpringContext.INSTANCE.getApplicationContext();
-		
+
 		CoreCache.INSTANCE.init();
-		
-		ProtobufServerFactory.INSTANCE.start(9898);
-		
-		ProtobufClient.INSTANCE.connect("127.0.0.1", 9898);
-		
+
+		return new MockServer();
+
+	}
+
+	public MessageLite execute(MsgID msgId, MessageLite request) {
+		// 获取业务层消息号和消息内容
+
+		byte[] bytes = request.toByteArray();
+
+		// 根据消息号找到解析器,然后解析消息内容
+		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId
+				.getNumber());
+		MessageLite message = null;
 		try {
-			// TODO 找到Junit中 线程中断的原因，不使用sleep
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
+			message = (MessageLite) requestParser.parseFrom(bytes);
+		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
-		
-		Session session = ClientSessionCache.INSTANCE.get("127.0.0.1:9898");
-		if(session == null)
-			throw new RuntimeException("session is null");
-		
-		return new MockSession(session);
-		
+
+		// 执行业务逻辑
+		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
+
+		return action.execute(message);
+
 	}
 }

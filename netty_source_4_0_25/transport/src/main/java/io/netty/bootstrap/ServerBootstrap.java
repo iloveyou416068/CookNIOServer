@@ -146,10 +146,22 @@ public class ServerBootstrap extends AbstractBootstrap<ServerBootstrap, ServerCh
         return childGroup;
     }
 
+    /**
+     * 对Channel进行初始化设置.
+     * 1. 将{@link AbstractBootstrap#options()} 设置到Channel里
+     * 2. 将{@link AbstractBootstrap#attrs()} 设置到Channel里
+     * 3. 将{@link AbstractBootstrap#handler()} 设置到Channel的pipeline里
+     * 		这个设置是直接将handler添加到Channel的pipeline里
+     * 4. 将{@link ServerBootstrap#childHandler} 设置到Channel的pipeline里
+     * 		childHandler是每次在read的时候,动态的添加到pipeline里
+     * 
+     * childHandler 是在外部实例化的  ChannelInitializer
+     * 
+     */
     @Override
     void init(Channel channel) throws Exception {
         final Map<ChannelOption<?>, Object> options = options();
-        synchronized (options) {
+        synchronized (options) {	// 设置channel的参数,例如SO_BACKLOG 等等
             channel.config().setOptions(options);
         }
 
@@ -162,6 +174,7 @@ public class ServerBootstrap extends AbstractBootstrap<ServerBootstrap, ServerCh
             }
         }
 
+        // 向 ChannelPipeline 里添加 AbstractBootstrap 里的handler
         ChannelPipeline p = channel.pipeline();
         if (handler() != null) {
             p.addLast(handler());
@@ -226,6 +239,7 @@ public class ServerBootstrap extends AbstractBootstrap<ServerBootstrap, ServerCh
             this.childAttrs = childAttrs;
         }
 
+        // TODO 
         @Override
         @SuppressWarnings("unchecked")
         public void channelRead(ChannelHandlerContext ctx, Object msg) {

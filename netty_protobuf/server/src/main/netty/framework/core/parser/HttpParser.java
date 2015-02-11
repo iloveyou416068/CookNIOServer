@@ -32,7 +32,7 @@ public class HttpParser implements Parse{
 
 	private static final Logger logger = Logger.getLogger(HttpParser.class);
 
-	public void parse(EvevntMessage event) {
+	public Object parse(EvevntMessage event) {
 		FullHttpRequest request = event.getRequest();
 		ChannelHandlerContext ctx = event.getCtx();
 
@@ -40,11 +40,11 @@ public class HttpParser implements Parse{
 		//
 		if (!request.getDecoderResult().isSuccess()) {
 			sendError(ctx, BAD_REQUEST, uri);
-			return;
+			return "BAD_REQUEST";
 		}
 		if (request.getMethod() != GET) {
 			sendError(ctx, METHOD_NOT_ALLOWED, uri);
-			return;
+			return "METHOD_NOT_ALLOWED";
 		}
 
 		final HttpParamaters param = parseUri(ctx, uri);
@@ -54,13 +54,15 @@ public class HttpParser implements Parse{
 				param.parameters.get("command"));
 		if (command == null) {
 			sendError(ctx, FORBIDDEN, uri);
-			return;
+			return "FORBIDDEN";
 		}
 
 		Object result = command.execute(param);
 		logger.info("\n" + JsonTool.toJson(result));
 
 		send(ctx, result);
+		
+		return "OK";
 	}
 
 	private HttpParamaters parseUri(ChannelHandlerContext ctx, String uri) {

@@ -4,5 +4,5 @@ import netty.framework.EvevntMessage;
 
 public interface Parse {
 
-	public void parse(EvevntMessage event);
+	public Object parse(EvevntMessage event);
 }

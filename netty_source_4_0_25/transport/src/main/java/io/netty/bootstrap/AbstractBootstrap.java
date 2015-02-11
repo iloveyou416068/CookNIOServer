@@ -26,6 +26,9 @@ import io.netty.channel.ChannelPromise;
 import io.netty.channel.DefaultChannelPromise;
 import io.netty.channel.EventLoop;
 import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoop;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.util.AttributeKey;
 import io.netty.util.concurrent.EventExecutor;
 import io.netty.util.concurrent.GlobalEventExecutor;
@@ -43,6 +46,13 @@ import java.util.Map;
  *
  * <p>When not used in a {@link ServerBootstrap} context, the {@link #bind()} methods are useful for connectionless
  * transports such as datagram (UDP).</p>
+ * 
+ * {@link AbstractBootstrap} -- 
+ * 从ChannelFactory 里生成一个新的Channel, 然后将该Channel向group 注册(通过{@link NioEventLoopGroup} 向 {@link NioEventLoop} 注册),
+ * 然后将该Channel 进行端口绑定,这就开启了个服务器
+ * 
+ * {@link ServerBootstrap}
+ * 
  */
 public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C extends Channel> implements Cloneable {
 
@@ -270,6 +280,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
     }
 
     private ChannelFuture doBind(final SocketAddress localAddress) {
+    	// regFuture 是Channel向 MainReactor(group)注册的异步结果
         final ChannelFuture regFuture = initAndRegister();
         final Channel channel = regFuture.channel();
         if (regFuture.cause() != null) {
@@ -308,6 +319,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
     	
         final Channel channel = channelFactory().newChannel();
         try {
+        	// 向Channel中添加handler,options,attrs
             init(channel);
         } catch (Throwable t) {
             channel.unsafe().closeForcibly();
@@ -315,6 +327,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
             return new DefaultChannelPromise(channel, GlobalEventExecutor.INSTANCE).setFailure(t);
         }
 
+        // 向 AbstractBootstrap#group 注册Channel. 在mainreactor上注册一个Channel
         ChannelFuture regFuture = group().register(channel);
         if (regFuture.cause() != null) {
             if (channel.isRegistered()) {
@@ -338,6 +351,15 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
 
     abstract void init(Channel channel) throws Exception;
 
+    /**
+     * 异步绑定Channel(通常情况下为{@link NioServerSocketChannel}). 
+     * 接下来客户端就可以连接了
+     * 
+     * @param regFuture
+     * @param channel  {@link NioServerSocketChannel}
+     * @param localAddress
+     * @param promise
+     */
     private static void doBind0(
             final ChannelFuture regFuture, final Channel channel,
             final SocketAddress localAddress, final ChannelPromise promise) {

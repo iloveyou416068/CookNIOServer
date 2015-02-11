@@ -20,33 +20,33 @@ public class ProtobufParse implements Parse {
 	private static final Logger logger = Logger
 			.getLogger(ProtobufParse.class);
 	
-	public void parse(EvevntMessage event) {
+	public MessagerRequest parse(EvevntMessage event) {
 
 		final ChannelHandlerContext ctx = event.getCtx();
 		final Object msg = event.getMsg();
 		
 		// 解析最外层的protobuf
-		MessagerMessage.MessagerRequest req = (MessagerMessage.MessagerRequest) msg;
+		MessagerMessage.MessagerRequest messageRequest = (MessagerMessage.MessagerRequest) msg;
 
 		// 获取业务层消息号和消息内容
-		MsgID msgId = req.getMsgID();
-		byte[] bytes = req.getContent().toByteArray();
+		MsgID msgId = messageRequest.getMsgID();
+		byte[] bytes = messageRequest.getContent().toByteArray();
 
 		// 根据消息号找到解析器,然后解析消息内容
 		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId
 				.getNumber());
-		MessageLite message = null;
+		MessageLite request = null;
 		try {
-			message = (MessageLite) requestParser.parseFrom(bytes);
+			request = (MessageLite) requestParser.parseFrom(bytes);
 		} catch (InvalidProtocolBufferException e) {
 			e.printStackTrace();
 		}
 
 		// 执行业务逻辑
 		logger.info("execute start -- " + msgId.name() + "(msgId:"
-				+ msgId.getNumber() + ")\n" + JsonTool.toJson(message));
+				+ msgId.getNumber() + ")\n" + JsonTool.toJson(request));
 		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
-		MessageLite result = action.execute(message);
+		MessageLite result = action.execute(request);
 
 		logger.info("execute finshed -- " + msgId.name() + "(msgId:"
 				+ msgId.getNumber() + ")\n" + JsonTool.toJson(result));
@@ -54,7 +54,10 @@ public class ProtobufParse implements Parse {
 		MessagerRequest messageResult = MessagerRequest.newBuilder()
 				.setMsgID(msgId).setContent(result.toByteString()).build();
 
-		// 向客户端返回消息
-		ctx.writeAndFlush(messageResult.toByteArray());
+		if(ctx != null)
+			// 向客户端返回消息
+			ctx.writeAndFlush(messageResult.toByteArray());
+		
+		return messageResult;
 	}
 }
