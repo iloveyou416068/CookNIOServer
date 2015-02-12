@@ -1,70 +1,29 @@
-2015-02-11 15:57:52.468 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 15:57:55.277 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 15:57:55.356 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 15:57:55.356 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 15:57:55.387 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 15:57:55.403 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 15:57:55.434 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 15:57:55.434 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 15:57:55.606  INFO [ProtobufServerFactory.java:93] - server started at 8080
-2015-02-11 15:57:55.652  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090
-2015-02-11 16:03:17.927 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 16:03:20.738 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 16:03:20.802 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 16:03:20.802 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 16:03:20.833 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 16:03:20.849 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 16:03:20.880 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 16:03:20.880 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 16:03:21.020  INFO [ProtobufServerFactory.java:105] - server started at /0:0:0:0:0:0:0:0:8080:8080
-2015-02-11 16:03:21.020  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090
-2015-02-11 16:04:14.495 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 16:04:17.288 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 16:04:17.367 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 16:04:17.367 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 16:04:17.398 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 16:04:17.398 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 16:04:17.430 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 16:04:17.445 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 16:04:17.570  INFO [ProtobufServerFactory.java:105] - server started at /0:0:0:0:0:0:0:0:8080
-2015-02-11 16:04:17.570  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090
-2015-02-11 17:40:46.825 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 17:40:49.637 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 17:40:49.717 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 17:40:49.717 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 17:40:49.762 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 17:40:49.770 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 17:40:49.809 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 17:40:49.810 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 17:43:40.986 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 17:43:43.797 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 17:43:43.878 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 17:43:43.878 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 17:43:43.927 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 17:43:43.935 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 17:43:43.976 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 17:43:43.977 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 17:48:11.274 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 17:48:14.044 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 17:48:14.117 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 17:48:14.117 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 17:48:14.158 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 17:48:14.166 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 17:48:14.200 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 17:48:14.202 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 17:50:22.892 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 17:50:25.658 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 17:50:25.733 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 17:50:25.733 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 17:50:25.780 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 17:50:25.788 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 17:50:25.828 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 17:50:25.829 DEBUG [CoreCache.java:103] - load Response : TEST
-2015-02-11 17:52:58.328 DEBUG [CoreCache.java:43] - begain load actions and parsers
-2015-02-11 17:53:01.104 DEBUG [CoreCache.java:88] - Load Action : Test
-2015-02-11 17:53:01.178 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
-2015-02-11 17:53:01.178 DEBUG [CoreCache.java:71] - Load Command : Test
-2015-02-11 17:53:01.222 DEBUG [CoreCache.java:103] - load Request : MESSAGER
-2015-02-11 17:53:01.229 DEBUG [CoreCache.java:103] - load Request : TEST
-2015-02-11 17:53:01.265 DEBUG [CoreCache.java:103] - load Response : MESSAGER
-2015-02-11 17:53:01.267 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-12 10:04:28.638 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-12 10:04:31.447 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-12 10:04:31.604 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-12 10:04:31.604 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-12 10:04:31.651 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-12 10:04:31.682 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-12 10:04:31.713 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-12 10:04:31.729 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-12 10:04:32.243  INFO [ProtobufServerFactory.java:101] - server started at 8080
+2015-02-12 10:04:32.243  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090
+2015-02-12 10:05:21.634 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-12 10:05:24.427 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-12 10:05:24.506 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-12 10:05:24.506 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-12 10:05:24.538 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-12 10:05:24.538 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-12 10:05:24.569 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-12 10:05:24.584 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-12 10:05:24.725  INFO [ProtobufServerFactory.java:105] - server started at 8080
+2015-02-12 10:05:24.725  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090
+2015-02-12 10:05:59.701 DEBUG [CoreCache.java:43] - begain load actions and parsers
+2015-02-12 10:06:02.494 DEBUG [CoreCache.java:88] - Load Action : Test
+2015-02-12 10:06:02.573 DEBUG [CoreCache.java:71] - Load Command : DownloadFile
+2015-02-12 10:06:02.573 DEBUG [CoreCache.java:71] - Load Command : Test
+2015-02-12 10:06:02.605 DEBUG [CoreCache.java:103] - load Request : MESSAGER
+2015-02-12 10:06:02.605 DEBUG [CoreCache.java:103] - load Request : TEST
+2015-02-12 10:06:02.651 DEBUG [CoreCache.java:103] - load Response : MESSAGER
+2015-02-12 10:06:02.651 DEBUG [CoreCache.java:103] - load Response : TEST
+2015-02-12 10:06:02.854  INFO [HttpServerFactory.java:77] - test HTTP Server(based Netty) Started at 9090

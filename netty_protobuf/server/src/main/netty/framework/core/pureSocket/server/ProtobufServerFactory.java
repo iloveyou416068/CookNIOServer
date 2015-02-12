@@ -26,6 +26,7 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
+import io.netty.util.concurrent.Promise;
 
 public enum ProtobufServerFactory {
 
@@ -90,7 +91,6 @@ public enum ProtobufServerFactory {
 				// 绑定端口,同步等待成功
 				ChannelFuture f = null;
 				try {
-					logger.info("server started at " + serverPort);
 					// 配置完成,开始绑定server,通过调用sync同步方法阻塞直到绑定成功
 					/*
 					 * bind() -> AbstractBootstrap#doBind(SocketAddress) -> AbstractBootstrap#initAndRegister() 
@@ -103,13 +103,48 @@ public enum ProtobufServerFactory {
 					e.printStackTrace();
 				}
 
-				// 等待服务端监听端口关闭
+				logger.info("server started at " + serverPort + " and wait channel close!!");
+				// 等待服务端监听端口关闭 应用程序会一直等待,直到channel关闭
 				try {
-					f.channel().closeFuture().sync();// 应用程序会一直等待,直到channel关闭
+					/*
+					 * 从bind方法入手, 顺藤摸瓜到doBind(final SocketAddress localAddress), 然后发现有这个实例化操作
+					 * final PendingRegistrationPromise promise = new PendingRegistrationPromise(channel);
+					 * 其实closeFuture() 就是  PendingRegistrationPromise
+					 * 
+					 * PendingRegistrationPromise -> DefaultChannelPromise -> DefaultPromise
+					 * 然后在DefaultPromise 找到 await()
+					 * 
+					 * @Override
+					    public Promise<V> await() throws InterruptedException {
+					        if (isDone()) {
+					            return this;
+					        }
+
+					        if (Thread.interrupted()) {
+					            throw new InterruptedException(toString());
+					        }
+
+					        synchronized (this) {
+					            while (!isDone()) {
+					                checkDeadLock();
+					                incWaiters();
+					                try {
+					                    wait();
+					                } finally {
+					                    decWaiters();
+					                }
+					            }
+					        }
+					        return this;
+					    }
+					 */
+					
+					f.channel().closeFuture().sync();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 
+				logger.info("server started at " + serverPort);
 			} finally {
 				// 优雅退出,释放线程池资源 
 				//关闭EventLoopGroup,释放掉所有资源包括创建的线程
