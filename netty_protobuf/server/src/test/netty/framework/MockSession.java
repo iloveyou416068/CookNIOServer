@@ -4,15 +4,15 @@ import java.util.concurrent.TimeUnit;
 
 import com.google.protobuf.MessageLite;
 
-import netty.framework.core.pureSocket.Session;
+import netty.framework.core.pureSocket.SocketSession;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
 
 public class MockSession {
 
-	private final Session session;
+	private final SocketSession session;
 	
-	public MockSession(Session session) {
+	public MockSession(SocketSession session) {
 		this.session = session;
 	}
 	

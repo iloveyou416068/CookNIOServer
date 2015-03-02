@@ -1,10 +1,11 @@
-package netty.framework.core.pureSocket.client;
+package netty.framework.core.pureSocket;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
+import netty.framework.core.handlers.SocketHandler;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -71,13 +72,13 @@ public enum ProtobufClient {
 						MessagerRequest req = MessagerRequest.getDefaultInstance();
 						ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 						ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-						ch.pipeline().addLast(new ProtobufClientHandler());
+						ch.pipeline().addLast(new SocketHandler());
 					}
 				});
 
 				// 发起异步连接操作
-				ChannelFuture f = b.connect(host, port).sync();
 				logger.debug("start connect " + host + ":" + port);
+				ChannelFuture f = b.connect(host, port).sync();
 				
 				// 阻塞, 等待客户端链路关闭
 				f.channel().closeFuture().sync();

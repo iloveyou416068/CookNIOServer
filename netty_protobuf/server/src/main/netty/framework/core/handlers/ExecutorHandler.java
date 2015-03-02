@@ -1,4 +1,4 @@
-package netty.framework.core.router.spec;
+package netty.framework.core.handlers;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -7,9 +7,10 @@ import java.util.concurrent.LinkedTransferQueue;
 
 import netty.framework.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
-import netty.framework.core.router.Router;
 
 import org.apache.log4j.Logger;
+
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
  * Netty默认的Reactor模型只有MainReactor和SubReactor.
@@ -24,16 +25,16 @@ import org.apache.log4j.Logger;
  *     这主要是控制事件在异步处 理模式下可能出现的错误的事件顺序,但它并不保证同一Channel中的事件都在一个线程中执行（通常也没必要）
  * 
  */
-public class MultithreadRouter extends Router {
+public class ExecutorHandler extends ChannelInboundHandlerAdapter  {
 
-	private static final Logger logger = Logger.getLogger(MultithreadRouter.class);
+	private static final Logger logger = Logger.getLogger(ExecutorHandler.class);
 	
 	// TODO 考虑使用何种阻塞队列
 	private final BlockingQueue<EvevntMessage> msgs = new LinkedTransferQueue<>();
 	// TODO 考虑使用何种线程池
 	private final ExecutorService pool = Executors.newCachedThreadPool();
 	
-	public MultithreadRouter () {
+	public ExecutorHandler () {
 		
 		Thread thread = new Thread(new Runnable() {
 			
@@ -53,7 +54,6 @@ public class MultithreadRouter extends Router {
 		thread.start();
 	}
 	
-	@Override
 	public void route (EvevntMessage message) {
 		try {
 			
@@ -73,9 +73,8 @@ public class MultithreadRouter extends Router {
 		
 		@Override
 		public void run() {
-			ParseFactory.getParse(event).parse(event);
+			ParseFactory.parse(event);
 		}
 		
 	}
-	
 }

@@ -1,8 +1,8 @@
 package netty.framework;
 
 import netty.framework.core.CoreCache;
-import netty.framework.core.http.server.HttpServerFactory;
-import netty.framework.core.pureSocket.server.ProtobufServerFactory;
+import netty.framework.core.http.HttpServerFactory;
+import netty.framework.core.pureSocket.ProtobufServerFactory;
 import netty.framework.core.spring.SpringContext;
 import netty.framework.monitors.C3P0Monitor;
 

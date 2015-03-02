@@ -1,4 +1,4 @@
-package netty.framework.core.http;
+package netty.framework.core.parser;
 
 import io.netty.channel.ChannelHandlerContext;
 

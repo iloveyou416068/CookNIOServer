@@ -33,8 +33,7 @@ public class ProtobufParse implements Parse {
 		byte[] bytes = messageRequest.getContent().toByteArray();
 
 		// 根据消息号找到解析器,然后解析消息内容
-		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId
-				.getNumber());
+		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId.getNumber());
 		MessageLite request = null;
 		try {
 			request = (MessageLite) requestParser.parseFrom(bytes);
@@ -43,16 +42,17 @@ public class ProtobufParse implements Parse {
 		}
 
 		// 执行业务逻辑
-		logger.info("execute start -- " + msgId.name() + "(msgId:"
-				+ msgId.getNumber() + ")\n" + JsonTool.toJson(request));
+		logger.info("execute start -- " + msgId.name() + "(msgId:" + msgId.getNumber() + ")\n" + JsonTool.toJson(request));
+		
 		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
 		MessageLite result = action.execute(request);
 
-		logger.info("execute finshed -- " + msgId.name() + "(msgId:"
-				+ msgId.getNumber() + ")\n" + JsonTool.toJson(result));
+		logger.info("execute finshed -- " + msgId.name() + "(msgId:" + msgId.getNumber() + ")\n" + JsonTool.toJson(result));
 
 		MessagerRequest messageResult = MessagerRequest.newBuilder()
-				.setMsgID(msgId).setContent(result.toByteString()).build();
+				.setMsgID(msgId)
+				.setContent(result.toByteString())
+				.build();
 
 		if(ctx != null)
 			// 向客户端返回消息

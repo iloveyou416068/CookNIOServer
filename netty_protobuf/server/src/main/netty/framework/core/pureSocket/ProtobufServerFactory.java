@@ -1,5 +1,5 @@
 
-package netty.framework.core.pureSocket.server;
+package netty.framework.core.pureSocket;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
+import netty.framework.core.handlers.SocketHandler;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.ServerBootstrap;
@@ -26,7 +27,6 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.timeout.IdleStateHandler;
-import io.netty.util.concurrent.Promise;
 
 public enum ProtobufServerFactory {
 
@@ -84,7 +84,10 @@ public enum ProtobufServerFactory {
 								addProtobuf(pipeline);
 								addTimeout(pipeline);
 								
-								pipeline.addLast(new ProtobufServerHandler());
+								pipeline.addLast(new SocketHandler());
+								
+								// 转发消息时  采用Netty 自带的线程池
+//								pipeline.addLast(new NioEventLoopGroup(128), new SocketHandler());
 							}
 						});
 

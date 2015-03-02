@@ -1,24 +1,17 @@
-package netty.framework.core.http.server;
+package netty.framework.core.handlers;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;
 import netty.framework.EvevntMessage;
-import netty.framework.core.router.Router;
-import netty.framework.core.router.RouterFacoty;
+import netty.framework.core.parser.ParseFactory;
 
 import org.apache.log4j.Logger;
 
-public class HttpServerHandler extends
+public class HttpHandler extends
 		SimpleChannelInboundHandler<FullHttpRequest> {
 	
-	private static final Logger logger = Logger.getLogger(HttpServerHandler.class);
-	
-	private final Router router;
-	
-	public HttpServerHandler() {
-		router = RouterFacoty.newSinglethreadRouter();
-	}
+	private static final Logger logger = Logger.getLogger(HttpHandler.class);
 	
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
@@ -34,7 +27,7 @@ public class HttpServerHandler extends
 			FullHttpRequest request) throws Exception {
 		
 		EvevntMessage message = EvevntMessage.newHttpMessage(ctx, request);
-		router.router(message);
+		ParseFactory.parse(message);
 	}
 
 }

@@ -2,10 +2,9 @@ package netty.framework.core.pureSocket;
 
 import com.google.protobuf.MessageLite;
 
-import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 
-public class Session {
+public class SocketSession {
 
 	private ChannelHandlerContext context;
 

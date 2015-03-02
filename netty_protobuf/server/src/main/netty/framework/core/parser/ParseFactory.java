@@ -8,12 +8,12 @@ public class ParseFactory {
 	private static final Parse httpParse = new HttpParser();
 	private static final Parse protobufParse = new ProtobufParse();
 	
-	public static Parse getParse(EvevntMessage message) {
+	public static Object parse(EvevntMessage message) {
 		
 		if(message.getMessageType() == MessageType.HTTP)
-			return httpParse;
+			return httpParse.parse(message);
 		else if(message.getMessageType() == MessageType.PROTOBUF)
-			return protobufParse;
+			return protobufParse.parse(message);
 		
 		throw new RuntimeException("Error Event Type : " + message.getMessageType());
 	} 

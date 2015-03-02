@@ -1,9 +1,11 @@
-package netty.framework.core.http.server;
+package netty.framework.core.http;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import netty.framework.core.handlers.HttpHandler;
 
 import org.apache.log4j.Logger;
 
@@ -69,7 +71,7 @@ public enum HttpServerFactory {
 								ch.pipeline().addLast("http-chunked",
 										new ChunkedWriteHandler());			// TODO
 								ch.pipeline().addLast("ServerHandler",
-										new HttpServerHandler());
+										new HttpHandler());
 							}
 						});
 				

@@ -1,6 +1,6 @@
 package netty.framework.command;
 
-import netty.framework.core.http.HttpParamaters;
+import netty.framework.core.parser.HttpParamaters;
 
 /**
  * 执行Http请求

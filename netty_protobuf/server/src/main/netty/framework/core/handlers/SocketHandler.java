@@ -1,0 +1,69 @@
+package netty.framework.core.handlers;
+
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
+
+import org.apache.log4j.Logger;
+
+import netty.framework.EvevntMessage;
+import netty.framework.core.parser.ParseFactory;
+import netty.framework.core.pureSocket.SocketSession;
+import netty.framework.core.pureSocket.SocketSessionCache;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+
+public class SocketHandler extends ChannelInboundHandlerAdapter {
+
+	private final static Logger logger = Logger.getLogger(SocketHandler.class);
+
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) {
+
+		InetSocketAddress address = (InetSocketAddress)ctx.channel().remoteAddress();
+		String remote = address.getHostName() + ":" + address.getPort();
+		if (!SocketSessionCache.INSTANCE.contains(remote)) {
+			SocketSession session = new SocketSession();
+			session.setContext(ctx);
+			SocketSessionCache.INSTANCE.put(remote, session);
+			logger.debug("addSession :" + remote);
+		}
+	}
+
+	/*
+	 * 接受客户端的消息
+	 */
+	@Override
+	public void channelRead(ChannelHandlerContext ctx, Object msg)
+			throws Exception {
+
+		logger.debug("channelRead");
+
+		EvevntMessage message = EvevntMessage.newProtobufMessage(ctx, msg);
+
+		ParseFactory.parse(message);
+	}
+
+	/**
+	 * TODO userEventTriggered通常用于自定义事件的处理，其中IdleState就是一种。
+	 * 
+	 * 除了常见的Channel事件外，如果要扩展出自己的事件处理，就是调用这个方法的。
+	 * 要触发，就调用这个方法就好：fireUserEventTriggered(Object)
+	 */
+	@Override
+	public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
+			throws Exception {
+		logger.debug("Server : userEventTriggered");
+
+	}
+
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+
+		SocketAddress address = ctx.channel().remoteAddress();
+		logger.error(address.toString() + " -- " + cause.getMessage());
+		if (logger.isDebugEnabled())
+			cause.printStackTrace();
+
+		ctx.close();// 发生异常，关闭链路
+	}
+}
