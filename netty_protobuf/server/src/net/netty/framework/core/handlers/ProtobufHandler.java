@@ -5,16 +5,15 @@ import java.net.SocketAddress;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.EvevntMessage;
-import netty.framework.core.parser.ParseFactory;
+import netty.framework.core.parser.ProtobufParse;
 import netty.framework.core.pureSocket.SocketSession;
 import netty.framework.core.pureSocket.SocketSessionCache;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class SocketHandler extends ChannelInboundHandlerAdapter {
+public class ProtobufHandler extends ChannelInboundHandlerAdapter {
 
-	private final static Logger logger = Logger.getLogger(SocketHandler.class);
+	private final static Logger logger = Logger.getLogger(ProtobufHandler.class);
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) {
@@ -37,10 +36,8 @@ public class SocketHandler extends ChannelInboundHandlerAdapter {
 			throws Exception {
 
 		logger.debug("channelRead");
-
-		EvevntMessage message = EvevntMessage.newProtobufMessage(ctx, msg);
-
-		ParseFactory.parse(message);
+		ProtobufParse.INSTANCE.parse(ctx, msg);
+		
 	}
 
 	/**

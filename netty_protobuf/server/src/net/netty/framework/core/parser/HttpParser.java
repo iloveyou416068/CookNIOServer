@@ -22,18 +22,18 @@ import java.net.URLDecoder;
 
 import netty.framework.command.AbstractCommand;
 import netty.framework.core.CoreCache;
-import netty.framework.core.EvevntMessage;
 import netty.framework.util.JsonTool;
 
 import org.apache.log4j.Logger;
 
-public class HttpParser implements Parse{
+public enum HttpParser {
+	
+	INSTANCE;
 
 	private static final Logger logger = Logger.getLogger(HttpParser.class);
 
-	public Object parse(EvevntMessage event) {
-		FullHttpRequest request = event.getRequest();
-		ChannelHandlerContext ctx = event.getCtx();
+	public Object parse(ChannelHandlerContext ctx,
+			FullHttpRequest request) {
 
 		final String uri = request.getUri();
 		//

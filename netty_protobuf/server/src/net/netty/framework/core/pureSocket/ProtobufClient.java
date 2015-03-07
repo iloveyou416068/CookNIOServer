@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.handlers.SocketHandler;
+import netty.framework.core.handlers.ProtobufHandler;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -72,7 +72,7 @@ public enum ProtobufClient {
 						MessagerRequest req = MessagerRequest.getDefaultInstance();
 						ch.pipeline().addLast(new ProtobufDecoder(req)); // ProtobufDecoder解码器
 						ch.pipeline().addLast(new ProtobufEncoder()); // ProtobufDecoder编码器
-						ch.pipeline().addLast(new SocketHandler());
+						ch.pipeline().addLast(new ProtobufHandler());
 					}
 				});
 

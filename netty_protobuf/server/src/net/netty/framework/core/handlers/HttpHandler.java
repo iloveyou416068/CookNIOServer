@@ -3,8 +3,7 @@ package netty.framework.core.handlers;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;
-import netty.framework.core.EvevntMessage;
-import netty.framework.core.parser.ParseFactory;
+import netty.framework.core.parser.HttpParser;
 
 import org.apache.log4j.Logger;
 
@@ -26,8 +25,9 @@ public class HttpHandler extends
 	protected void channelRead0(ChannelHandlerContext ctx,
 			FullHttpRequest request) throws Exception {
 		
-		EvevntMessage message = EvevntMessage.newHttpMessage(ctx, request);
-		ParseFactory.parse(message);
+		
+		HttpParser.INSTANCE.parse(ctx, request);
+		
 	}
 
 }

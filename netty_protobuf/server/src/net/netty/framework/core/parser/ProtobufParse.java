@@ -5,7 +5,6 @@ import org.apache.log4j.Logger;
 import io.netty.channel.ChannelHandlerContext;
 import netty.framework.action.AbstractAction;
 import netty.framework.core.CoreCache;
-import netty.framework.core.EvevntMessage;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
@@ -15,16 +14,15 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 import com.google.protobuf.Parser;
 
-public class ProtobufParse implements Parse {
+public enum ProtobufParse {
+	
+	INSTANCE;
 	
 	private static final Logger logger = Logger
 			.getLogger(ProtobufParse.class);
 	
-	public MessagerRequest parse(EvevntMessage event) {
+	public MessagerRequest parse(ChannelHandlerContext ctx, Object msg) {
 
-		final ChannelHandlerContext ctx = event.getCtx();
-		final Object msg = event.getMsg();
-		
 		// 解析最外层的protobuf
 		MessagerMessage.MessagerRequest messageRequest = (MessagerMessage.MessagerRequest) msg;
 

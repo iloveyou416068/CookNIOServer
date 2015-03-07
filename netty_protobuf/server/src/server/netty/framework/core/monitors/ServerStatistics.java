@@ -4,7 +4,6 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelConfig;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelMetadata;
-import netty.framework.core.EvevntMessage;
 
 /**
  * 服务器统计
@@ -19,20 +18,6 @@ import netty.framework.core.EvevntMessage;
 public enum ServerStatistics {
 
 	ISNTANCE;
-	
-	public void statisticsNettyChannel(EvevntMessage message) {
-		
-		switch(message.getMessageType()) {
-		case PROTOBUF:
-			statisticProtobuf(message.getCtx());
-			break;
-		case HTTP:
-			break;
-		default:
-			throw new RuntimeException(message.getMessageType().name());
-		}
-		
-	}
 	
 	private void statisticProtobuf(ChannelHandlerContext ctx) {
 		Channel channel = ctx.channel();

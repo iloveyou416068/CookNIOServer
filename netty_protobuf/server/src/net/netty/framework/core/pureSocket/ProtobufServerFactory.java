@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.core.handlers.SocketHandler;
+import netty.framework.core.handlers.ProtobufHandler;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import io.netty.bootstrap.ServerBootstrap;
@@ -84,7 +84,7 @@ public enum ProtobufServerFactory {
 								addProtobuf(pipeline);
 								addTimeout(pipeline);
 								
-								pipeline.addLast(new SocketHandler());
+								pipeline.addLast(new ProtobufHandler());
 								
 								// 转发消息时  采用Netty 自带的线程池
 //								pipeline.addLast(new NioEventLoopGroup(128), new SocketHandler());
