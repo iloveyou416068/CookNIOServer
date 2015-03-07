@@ -1,4 +1,4 @@
-package netty.framework.monitors;
+package netty.framework.core.monitors;
 
 import java.util.Properties;
 

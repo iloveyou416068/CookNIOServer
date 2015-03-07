@@ -1,6 +1,6 @@
 package netty.framework.core.parser;
 
-import netty.framework.EvevntMessage;
+import netty.framework.core.EvevntMessage;
 
 public interface Parse {
 

@@ -8,8 +8,17 @@ option java_outer_classname = "TestMessage";
 
 message TestRequest {
     required MsgID  msgID    = 1; 
+	optional int32	data1	 = 2;
+	optional int32	data2	 = 3;
 }
 
 message TestResponse {
-    required MsgID      msgID     = 1;
+    required MsgID      msgID    = 1;
+	optional int32		data1	 = 2;
+	optional int32		data2	 = 3;
+}
+
+// 测试 OuterTest getTestRequestBuilder 
+message OuterTest {
+	optional TestRequest request = 1;
 }

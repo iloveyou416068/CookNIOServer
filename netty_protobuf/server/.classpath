@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="main/|test/" kind="src" path="src"/>
-	<classpathentry kind="src" path="src/main"/>
+	<classpathentry excluding="main/|test/|net/|server/" kind="src" path="src"/>
 	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="src" path="src/net"/>
+	<classpathentry kind="src" path="src/server"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/messages.jar"/>
 	<classpathentry kind="lib" path="lib/barchart-udt-bundle-2.3.0.jar"/>

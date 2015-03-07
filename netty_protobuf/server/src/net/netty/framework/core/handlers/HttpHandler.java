@@ -3,7 +3,7 @@ package netty.framework.core.handlers;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;
-import netty.framework.EvevntMessage;
+import netty.framework.core.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 
 import org.apache.log4j.Logger;

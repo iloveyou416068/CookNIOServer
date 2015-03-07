@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedTransferQueue;
 
-import netty.framework.EvevntMessage;
+import netty.framework.core.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 
 import org.apache.log4j.Logger;

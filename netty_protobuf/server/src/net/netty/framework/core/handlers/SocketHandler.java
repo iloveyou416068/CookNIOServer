@@ -5,7 +5,7 @@ import java.net.SocketAddress;
 
 import org.apache.log4j.Logger;
 
-import netty.framework.EvevntMessage;
+import netty.framework.core.EvevntMessage;
 import netty.framework.core.parser.ParseFactory;
 import netty.framework.core.pureSocket.SocketSession;
 import netty.framework.core.pureSocket.SocketSessionCache;

@@ -2,9 +2,9 @@ package netty.framework;
 
 import netty.framework.core.CoreCache;
 import netty.framework.core.http.HttpServerFactory;
+import netty.framework.core.monitors.C3P0Monitor;
 import netty.framework.core.pureSocket.ProtobufServerFactory;
 import netty.framework.core.spring.SpringContext;
-import netty.framework.monitors.C3P0Monitor;
 
 public class Server {
 

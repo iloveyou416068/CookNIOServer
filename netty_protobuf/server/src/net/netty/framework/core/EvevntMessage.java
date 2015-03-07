@@ -1,4 +1,4 @@
-package netty.framework;
+package netty.framework.core;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;

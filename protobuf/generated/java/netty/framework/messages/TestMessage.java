@@ -20,6 +20,26 @@ public final class TestMessage {
      * <code>required .cook.MsgID msgID = 1;</code>
      */
     netty.framework.messages.MsgId.MsgID getMsgID();
+
+    // optional int32 data1 = 2;
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    boolean hasData1();
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    int getData1();
+
+    // optional int32 data2 = 3;
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    boolean hasData2();
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    int getData2();
   }
   /**
    * Protobuf type {@code cook.TestRequest}
@@ -73,6 +93,16 @@ public final class TestMessage {
               }
               break;
             }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              data1_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              data2_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -116,8 +146,42 @@ public final class TestMessage {
       return msgID_;
     }
 
+    // optional int32 data1 = 2;
+    public static final int DATA1_FIELD_NUMBER = 2;
+    private int data1_;
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    public boolean hasData1() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    public int getData1() {
+      return data1_;
+    }
+
+    // optional int32 data2 = 3;
+    public static final int DATA2_FIELD_NUMBER = 3;
+    private int data2_;
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    public boolean hasData2() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    public int getData2() {
+      return data2_;
+    }
+
     private void initFields() {
       msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
+      data1_ = 0;
+      data2_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -138,6 +202,12 @@ public final class TestMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgID_.getNumber());
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, data1_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, data2_);
+      }
     }
 
     private int memoizedSerializedSize = -1;
@@ -149,6 +219,14 @@ public final class TestMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgID_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, data1_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, data2_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -243,6 +321,10 @@ public final class TestMessage {
         super.clear();
         msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
+        data1_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data2_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -270,6 +352,14 @@ public final class TestMessage {
           to_bitField0_ |= 0x00000001;
         }
         result.msgID_ = msgID_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.data1_ = data1_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.data2_ = data2_;
         result.bitField0_ = to_bitField0_;
         return result;
       }
@@ -278,6 +368,12 @@ public final class TestMessage {
         if (other == netty.framework.messages.TestMessage.TestRequest.getDefaultInstance()) return this;
         if (other.hasMsgID()) {
           setMsgID(other.getMsgID());
+        }
+        if (other.hasData1()) {
+          setData1(other.getData1());
+        }
+        if (other.hasData2()) {
+          setData2(other.getData2());
         }
         return this;
       }
@@ -345,6 +441,72 @@ public final class TestMessage {
         return this;
       }
 
+      // optional int32 data1 = 2;
+      private int data1_ ;
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public boolean hasData1() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public int getData1() {
+        return data1_;
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public Builder setData1(int value) {
+        bitField0_ |= 0x00000002;
+        data1_ = value;
+        
+        return this;
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public Builder clearData1() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data1_ = 0;
+        
+        return this;
+      }
+
+      // optional int32 data2 = 3;
+      private int data2_ ;
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public boolean hasData2() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public int getData2() {
+        return data2_;
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public Builder setData2(int value) {
+        bitField0_ |= 0x00000004;
+        data2_ = value;
+        
+        return this;
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public Builder clearData2() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data2_ = 0;
+        
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:cook.TestRequest)
     }
 
@@ -368,6 +530,26 @@ public final class TestMessage {
      * <code>required .cook.MsgID msgID = 1;</code>
      */
     netty.framework.messages.MsgId.MsgID getMsgID();
+
+    // optional int32 data1 = 2;
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    boolean hasData1();
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    int getData1();
+
+    // optional int32 data2 = 3;
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    boolean hasData2();
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    int getData2();
   }
   /**
    * Protobuf type {@code cook.TestResponse}
@@ -421,6 +603,16 @@ public final class TestMessage {
               }
               break;
             }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              data1_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              data2_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -464,8 +656,42 @@ public final class TestMessage {
       return msgID_;
     }
 
+    // optional int32 data1 = 2;
+    public static final int DATA1_FIELD_NUMBER = 2;
+    private int data1_;
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    public boolean hasData1() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 data1 = 2;</code>
+     */
+    public int getData1() {
+      return data1_;
+    }
+
+    // optional int32 data2 = 3;
+    public static final int DATA2_FIELD_NUMBER = 3;
+    private int data2_;
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    public boolean hasData2() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 data2 = 3;</code>
+     */
+    public int getData2() {
+      return data2_;
+    }
+
     private void initFields() {
       msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
+      data1_ = 0;
+      data2_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -486,6 +712,12 @@ public final class TestMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgID_.getNumber());
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, data1_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, data2_);
+      }
     }
 
     private int memoizedSerializedSize = -1;
@@ -497,6 +729,14 @@ public final class TestMessage {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgID_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, data1_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, data2_);
       }
       memoizedSerializedSize = size;
       return size;
@@ -591,6 +831,10 @@ public final class TestMessage {
         super.clear();
         msgID_ = netty.framework.messages.MsgId.MsgID.MESSAGER;
         bitField0_ = (bitField0_ & ~0x00000001);
+        data1_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data2_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -618,6 +862,14 @@ public final class TestMessage {
           to_bitField0_ |= 0x00000001;
         }
         result.msgID_ = msgID_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.data1_ = data1_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.data2_ = data2_;
         result.bitField0_ = to_bitField0_;
         return result;
       }
@@ -626,6 +878,12 @@ public final class TestMessage {
         if (other == netty.framework.messages.TestMessage.TestResponse.getDefaultInstance()) return this;
         if (other.hasMsgID()) {
           setMsgID(other.getMsgID());
+        }
+        if (other.hasData1()) {
+          setData1(other.getData1());
+        }
+        if (other.hasData2()) {
+          setData2(other.getData2());
         }
         return this;
       }
@@ -693,6 +951,72 @@ public final class TestMessage {
         return this;
       }
 
+      // optional int32 data1 = 2;
+      private int data1_ ;
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public boolean hasData1() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public int getData1() {
+        return data1_;
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public Builder setData1(int value) {
+        bitField0_ |= 0x00000002;
+        data1_ = value;
+        
+        return this;
+      }
+      /**
+       * <code>optional int32 data1 = 2;</code>
+       */
+      public Builder clearData1() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data1_ = 0;
+        
+        return this;
+      }
+
+      // optional int32 data2 = 3;
+      private int data2_ ;
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public boolean hasData2() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public int getData2() {
+        return data2_;
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public Builder setData2(int value) {
+        bitField0_ |= 0x00000004;
+        data2_ = value;
+        
+        return this;
+      }
+      /**
+       * <code>optional int32 data2 = 3;</code>
+       */
+      public Builder clearData2() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data2_ = 0;
+        
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:cook.TestResponse)
     }
 
@@ -702,6 +1026,395 @@ public final class TestMessage {
     }
 
     // @@protoc_insertion_point(class_scope:cook.TestResponse)
+  }
+
+  public interface OuterTestOrBuilder
+      extends com.google.protobuf.MessageLiteOrBuilder {
+
+    // optional .cook.TestRequest request = 1;
+    /**
+     * <code>optional .cook.TestRequest request = 1;</code>
+     */
+    boolean hasRequest();
+    /**
+     * <code>optional .cook.TestRequest request = 1;</code>
+     */
+    netty.framework.messages.TestMessage.TestRequest getRequest();
+  }
+  /**
+   * Protobuf type {@code cook.OuterTest}
+   *
+   * <pre>
+   * 测试 OuterTest getTestRequestBuilder 
+   * </pre>
+   */
+  public static final class OuterTest extends
+      com.google.protobuf.GeneratedMessageLite
+      implements OuterTestOrBuilder {
+    // Use OuterTest.newBuilder() to construct.
+    private OuterTest(com.google.protobuf.GeneratedMessageLite.Builder builder) {
+      super(builder);
+
+    }
+    private OuterTest(boolean noInit) {}
+
+    private static final OuterTest defaultInstance;
+    public static OuterTest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public OuterTest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private OuterTest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              netty.framework.messages.TestMessage.TestRequest.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = request_.toBuilder();
+              }
+              request_ = input.readMessage(netty.framework.messages.TestMessage.TestRequest.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(request_);
+                request_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static com.google.protobuf.Parser<OuterTest> PARSER =
+        new com.google.protobuf.AbstractParser<OuterTest>() {
+      public OuterTest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OuterTest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OuterTest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .cook.TestRequest request = 1;
+    public static final int REQUEST_FIELD_NUMBER = 1;
+    private netty.framework.messages.TestMessage.TestRequest request_;
+    /**
+     * <code>optional .cook.TestRequest request = 1;</code>
+     */
+    public boolean hasRequest() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .cook.TestRequest request = 1;</code>
+     */
+    public netty.framework.messages.TestMessage.TestRequest getRequest() {
+      return request_;
+    }
+
+    private void initFields() {
+      request_ = netty.framework.messages.TestMessage.TestRequest.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (hasRequest()) {
+        if (!getRequest().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, request_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, request_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static netty.framework.messages.TestMessage.OuterTest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(netty.framework.messages.TestMessage.OuterTest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    /**
+     * Protobuf type {@code cook.OuterTest}
+     *
+     * <pre>
+     * 测试 OuterTest getTestRequestBuilder 
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          netty.framework.messages.TestMessage.OuterTest, Builder>
+        implements netty.framework.messages.TestMessage.OuterTestOrBuilder {
+      // Construct using netty.framework.messages.TestMessage.OuterTest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private void maybeForceBuilderInitialization() {
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        request_ = netty.framework.messages.TestMessage.TestRequest.getDefaultInstance();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public netty.framework.messages.TestMessage.OuterTest getDefaultInstanceForType() {
+        return netty.framework.messages.TestMessage.OuterTest.getDefaultInstance();
+      }
+
+      public netty.framework.messages.TestMessage.OuterTest build() {
+        netty.framework.messages.TestMessage.OuterTest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public netty.framework.messages.TestMessage.OuterTest buildPartial() {
+        netty.framework.messages.TestMessage.OuterTest result = new netty.framework.messages.TestMessage.OuterTest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.request_ = request_;
+        result.bitField0_ = to_bitField0_;
+        return result;
+      }
+
+      public Builder mergeFrom(netty.framework.messages.TestMessage.OuterTest other) {
+        if (other == netty.framework.messages.TestMessage.OuterTest.getDefaultInstance()) return this;
+        if (other.hasRequest()) {
+          mergeRequest(other.getRequest());
+        }
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (hasRequest()) {
+          if (!getRequest().isInitialized()) {
+            
+            return false;
+          }
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        netty.framework.messages.TestMessage.OuterTest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (netty.framework.messages.TestMessage.OuterTest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .cook.TestRequest request = 1;
+      private netty.framework.messages.TestMessage.TestRequest request_ = netty.framework.messages.TestMessage.TestRequest.getDefaultInstance();
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public boolean hasRequest() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public netty.framework.messages.TestMessage.TestRequest getRequest() {
+        return request_;
+      }
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public Builder setRequest(netty.framework.messages.TestMessage.TestRequest value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        request_ = value;
+
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public Builder setRequest(
+          netty.framework.messages.TestMessage.TestRequest.Builder builderForValue) {
+        request_ = builderForValue.build();
+
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public Builder mergeRequest(netty.framework.messages.TestMessage.TestRequest value) {
+        if (((bitField0_ & 0x00000001) == 0x00000001) &&
+            request_ != netty.framework.messages.TestMessage.TestRequest.getDefaultInstance()) {
+          request_ =
+            netty.framework.messages.TestMessage.TestRequest.newBuilder(request_).mergeFrom(value).buildPartial();
+        } else {
+          request_ = value;
+        }
+
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .cook.TestRequest request = 1;</code>
+       */
+      public Builder clearRequest() {
+        request_ = netty.framework.messages.TestMessage.TestRequest.getDefaultInstance();
+
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cook.OuterTest)
+    }
+
+    static {
+      defaultInstance = new OuterTest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:cook.OuterTest)
   }
 
 
