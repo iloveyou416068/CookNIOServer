@@ -1,4 +1,4 @@
-package netty.framework.core.monitors;
+package netty.framework.core;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelConfig;
@@ -9,13 +9,12 @@ import io.netty.channel.ChannelMetadata;
  * 服务器统计
  * 1.protobuf消息执行时长
  * 2.http消息执行时长
- * 3.内存使用统计
  * 
  * TODO
  * @author wangming
  *
  */
-public enum ServerStatistics {
+public enum SocketStatistics {
 
 	ISNTANCE;
 	
