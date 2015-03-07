@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 
 import io.netty.channel.ChannelHandlerContext;
 import netty.framework.action.AbstractAction;
-import netty.framework.core.CoreCache;
+import netty.framework.core.ActionCommandCache;
 import netty.framework.messages.MessagerMessage;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
@@ -31,7 +31,7 @@ public enum ProtobufParse {
 		byte[] bytes = messageRequest.getContent().toByteArray();
 
 		// 根据消息号找到解析器,然后解析消息内容
-		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId.getNumber());
+		Parser requestParser = ActionCommandCache.INSTANCE.getRequestParserBy(msgId.getNumber());
 		MessageLite request = null;
 		try {
 			request = (MessageLite) requestParser.parseFrom(bytes);
@@ -42,7 +42,7 @@ public enum ProtobufParse {
 		// 执行业务逻辑
 		logger.info("execute start -- " + msgId.name() + "(msgId:" + msgId.getNumber() + ")\n" + JsonTool.toJson(request));
 		
-		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
+		AbstractAction<MessageLite> action = ActionCommandCache.INSTANCE.getAction(msgId.name());
 		MessageLite result = action.execute(request);
 
 		logger.info("execute finshed -- " + msgId.name() + "(msgId:" + msgId.getNumber() + ")\n" + JsonTool.toJson(result));

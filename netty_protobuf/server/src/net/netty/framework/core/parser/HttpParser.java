@@ -21,7 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
 import netty.framework.command.AbstractCommand;
-import netty.framework.core.CoreCache;
+import netty.framework.core.ActionCommandCache;
+import netty.framework.core.http.HttpParamaters;
 import netty.framework.util.JsonTool;
 
 import org.apache.log4j.Logger;
@@ -49,7 +50,7 @@ public enum HttpParser {
 		final HttpParamaters param = parseUri(ctx, uri);
 		logger.info(uri + "\n" + JsonTool.toJson(param));
 
-		AbstractCommand command = CoreCache.INSTANCE.getCommand(param.scheme,
+		AbstractCommand command = ActionCommandCache.INSTANCE.getCommand(param.scheme,
 				param.parameters.get("command"));
 		if (command == null) {
 			sendError(ctx, FORBIDDEN, uri);

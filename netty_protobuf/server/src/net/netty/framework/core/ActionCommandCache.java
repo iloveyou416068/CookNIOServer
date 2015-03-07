@@ -21,11 +21,11 @@ import com.google.protobuf.Parser;
  * @author wangming
  *
  */
-public enum CoreCache {
+public enum ActionCommandCache {
 
 	INSTANCE;
 	
-	private final Logger logger = Logger.getLogger(CoreCache.class);
+	private final Logger logger = Logger.getLogger(ActionCommandCache.class);
 	
 	// parser解析器
 	private final Map<String, Parser> requestMap = new HashMap<>();

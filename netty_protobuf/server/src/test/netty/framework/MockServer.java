@@ -5,7 +5,7 @@ import com.google.protobuf.MessageLite;
 import com.google.protobuf.Parser;
 
 import netty.framework.action.AbstractAction;
-import netty.framework.core.CoreCache;
+import netty.framework.core.ActionCommandCache;
 import netty.framework.core.spring.SpringContext;
 import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
@@ -16,7 +16,7 @@ public class MockServer {
 
 		SpringContext.INSTANCE.getApplicationContext();
 
-		CoreCache.INSTANCE.init();
+		ActionCommandCache.INSTANCE.init();
 
 		return new MockServer();
 
@@ -28,7 +28,7 @@ public class MockServer {
 		byte[] bytes = request.toByteArray();
 
 		// 根据消息号找到解析器,然后解析消息内容
-		Parser requestParser = CoreCache.INSTANCE.getRequestParserBy(msgId
+		Parser requestParser = ActionCommandCache.INSTANCE.getRequestParserBy(msgId
 				.getNumber());
 		MessageLite message = null;
 		try {
@@ -38,7 +38,7 @@ public class MockServer {
 		}
 
 		// 执行业务逻辑
-		AbstractAction<MessageLite> action = CoreCache.INSTANCE.getAction(msgId.name());
+		AbstractAction<MessageLite> action = ActionCommandCache.INSTANCE.getAction(msgId.name());
 
 		return action.execute(message);
 

@@ -1,6 +1,6 @@
 package netty.framework;
 
-import netty.framework.core.CoreCache;
+import netty.framework.core.ActionCommandCache;
 import netty.framework.core.http.HttpServerFactory;
 import netty.framework.core.monitors.C3P0Monitor;
 import netty.framework.core.pureSocket.ProtobufServerFactory;
@@ -12,7 +12,7 @@ public class Server {
 		
 		SpringContext.INSTANCE.getApplicationContext();
 		
-		CoreCache.INSTANCE.init();
+		ActionCommandCache.INSTANCE.init();
 		
 		C3P0Monitor.INSTANCE.monitor();
 
