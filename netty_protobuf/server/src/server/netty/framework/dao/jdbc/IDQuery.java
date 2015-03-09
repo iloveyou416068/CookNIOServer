@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 public class IDQuery {
 
-	public static int query(String tableName) {
+	public static int queryMaxID(String tableName) {
 		
 		final String sql = "SELECT Max(id) FROM " + tableName;
 		ResultSet result = DataBase.INSTANCE.query(sql);

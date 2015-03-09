@@ -7,7 +7,7 @@ public class testIDQuery {
 
 	@Test
 	public void test() {
-		int id = IDQuery.query("test");
+		int id = IDQuery.queryMaxID("test");
 		Assert.assertEquals(1, id);
 	}
 }

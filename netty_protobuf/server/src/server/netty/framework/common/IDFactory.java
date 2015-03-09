@@ -16,25 +16,27 @@ public enum IDFactory {
 	
 	private AtomicLong id;
 	
-	IDFactory(String tableName) {
-		id = new AtomicLong(IDQuery.query(tableName));
-	}
-	
 	/**
-	 * 考虑到并发问题,暂时先加把锁, TODO 待优化成更高效的方式
-	 * @return
+	 * 找到数据库里最大的值,作为初始ID
+	 * 
+	 * @param tableName 数据库表名
 	 */
-	public synchronized long increase() {
-		long newValue = addTail(id.incrementAndGet()) ;
-		id.set(newValue);
-		return newValue;
+	IDFactory(String tableName) {
+		int dbID = IDQuery.queryMaxID(tableName);
+		if(dbID == 0)
+			id = new AtomicLong(tail);
+		else 
+			id = new AtomicLong(dbID);
 	}
 	
-	private long addTail(long id) {
-		return id * 10000 + ServerProperties.SERVER_ID.intValue() ;
+	private final long increasevalue = 10000;
+	private final long tail = increasevalue + ServerProperties.SERVER_ID.intValue();
+	
+	public long increase() {
+		return id.addAndGet(increasevalue);
 	}
 	
 	public long get() {
-		return id.intValue();
+		return id.longValue();
 	}
 }
