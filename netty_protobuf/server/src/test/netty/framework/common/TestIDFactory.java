@@ -38,11 +38,11 @@ public class TestIDFactory {
 			@Override
 			public void run() {
 				int rand = ThreadLocalRandom.current().nextInt(5);
-//				try {
-//					TimeUnit.SECONDS.sleep(rand);
-//				} catch (InterruptedException e) {
-//					e.printStackTrace();
-//				}
+				try {
+					TimeUnit.SECONDS.sleep(rand);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				IDFactory.test.increase();
 			}
 		};
@@ -64,4 +64,63 @@ public class TestIDFactory {
 		long id = IDFactory.test.get();
 		Assert.assertEquals(100010001, id);
 	}
+	
+	// 测试testMutilIncrease 的并发环境模拟是正确的
+	@Test
+	public void testMockMutilIncrease() {
+		Runnable t = new Runnable() {
+			
+			@Override
+			public void run() {
+				int rand = ThreadLocalRandom.current().nextInt(5);
+				try {
+					TimeUnit.SECONDS.sleep(rand);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				MockIDFactory.test.increase();
+			}
+		};
+		
+		List<Thread> list = new ArrayList<>();
+		for(int i = 0; i < 10000; i++) {
+			Thread ta = new Thread(t);
+			ta.start();
+			list.add(ta);
+		}
+		
+		for (Thread thread : list) {
+			try {
+				thread.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		long id = MockIDFactory.test.get();
+		Assert.assertTrue(10000 != id);
+	}
+	
+	public enum MockIDFactory {
+
+		test("test");
+		
+		private long id = 0;
+		
+		/**
+		 * 找到数据库里最大的值,作为初始ID
+		 * 
+		 * @param tableName 数据库表名
+		 */
+		MockIDFactory(String tableName) {
+		}
+		
+		public long increase() {
+			return ++id;
+		}
+		
+		public long get() {
+			return id;
+		}
+	}
+
 }
