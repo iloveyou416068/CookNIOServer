@@ -1,4 +1,4 @@
-package netty.framework.dao;
+package netty.framework.dao.mybatis;
 
 import java.util.List;
 
