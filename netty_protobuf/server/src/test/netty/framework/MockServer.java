@@ -7,7 +7,6 @@ import com.google.protobuf.Parser;
 import netty.framework.action.AbstractAction;
 import netty.framework.core.ActionCommandCache;
 import netty.framework.core.spring.SpringContext;
-import netty.framework.messages.MessagerMessage.MessagerRequest;
 import netty.framework.messages.MsgId.MsgID;
 
 public class MockServer {

@@ -10,6 +10,7 @@
 		</property>
 	</bean>
 
-	<bean id="testDAO" class="netty.framework.dao.TestDAO" parent="abstractDAO" />
-
+	<bean id="testDAO" class="netty.framework.dao.mybatis.TestDAO" parent="abstractDAO" />
+	<bean id="ticketIDDAO" class="netty.framework.dao.mybatis.TicketIDDAO" parent="abstractDAO" />
+	
 </beans>
