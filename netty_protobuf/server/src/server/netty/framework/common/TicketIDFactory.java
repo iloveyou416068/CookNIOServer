@@ -11,7 +11,8 @@ import netty.framework.dao.mybatis.TicketIDDAO;
  */
 public enum TicketIDFactory {
 
-	A("ticket32_a");
+	A("a"),
+	B("b");
 	
 	TicketIDFactory(String table) {
 		this.table = table;

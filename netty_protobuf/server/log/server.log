@@ -1,123 +1,90 @@
-2015-03-10 17:08:01.626 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:08:04.499 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:08:04.583 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:08:04.583 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:08:04.626 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:08:04.633 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:08:04.666 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:08:04.667 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:12:27.466 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:12:30.221 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:12:30.285 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:12:30.285 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:12:30.324 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:12:30.331 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:12:30.369 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:12:30.370 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:15:38.798 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:15:41.549 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:15:41.616 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:15:41.616 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:15:41.656 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:15:41.663 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:15:41.704 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:15:41.705 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:15:41.736 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@35a33ec1]
-2015-03-10 17:15:41.741 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (stub) 
-2015-03-10 17:15:41.761 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
-2015-03-10 17:16:16.590 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:16:19.352 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:16:19.417 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:16:19.418 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:16:19.457 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:16:19.464 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:16:19.502 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:16:19.503 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:16:19.534 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3ffc4956]
-2015-03-10 17:16:19.538 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (stub) 
-2015-03-10 17:16:19.560 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
-2015-03-10 17:16:58.828 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:17:01.588 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:17:01.653 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:17:01.654 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:17:01.693 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:17:01.701 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:17:01.740 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:17:01.741 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:17:01.772 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@749fb29]
-2015-03-10 17:17:01.777 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (stub) 
-2015-03-10 17:17:01.798 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
-2015-03-10 17:17:34.969 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:17:37.735 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:17:37.802 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:17:37.802 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:17:37.844 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:17:37.851 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:17:37.892 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:17:37.893 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:17:37.925 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6d4a1c70]
-2015-03-10 17:17:37.930 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_stub (stub) VALUES (stub) 
-2015-03-10 17:17:37.951 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: 
-2015-03-10 17:18:08.504 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:18:11.257 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:18:11.323 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:18:11.323 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:18:11.363 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:18:11.370 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:18:11.408 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:18:11.409 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:18:11.442 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@165abd4a]
-2015-03-10 17:18:11.447 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_? (stub) VALUES (?) 
-2015-03-10 17:18:11.468 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String), a(String)
-2015-03-10 17:19:57.793 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:20:00.534 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:20:00.609 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:20:00.609 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:20:00.650 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:20:00.658 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:20:00.697 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:20:00.698 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:20:00.732 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7c7011c4]
-2015-03-10 17:20:00.737 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_? (stub) VALUES (?) 
-2015-03-10 17:20:00.758 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String), a(String)
-2015-03-10 17:27:00.367 DEBUG [ActionCommandCache.java:43] - begain load actions and parsers
-2015-03-10 17:27:03.137 DEBUG [ActionCommandCache.java:88] - Load Action : Test
-2015-03-10 17:27:03.206 DEBUG [ActionCommandCache.java:71] - Load Command : DownloadFile
-2015-03-10 17:27:03.206 DEBUG [ActionCommandCache.java:71] - Load Command : Test
-2015-03-10 17:27:03.245 DEBUG [ActionCommandCache.java:103] - load Request : MESSAGER
-2015-03-10 17:27:03.252 DEBUG [ActionCommandCache.java:103] - load Request : TEST
-2015-03-10 17:27:03.291 DEBUG [ActionCommandCache.java:103] - load Response : MESSAGER
-2015-03-10 17:27:03.292 DEBUG [ActionCommandCache.java:103] - load Response : TEST
-2015-03-10 17:27:03.324 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@40fe1db2]
-2015-03-10 17:27:03.329 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ? (stub) VALUES (?) 
-2015-03-10 17:27:03.351 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: ticket32_a(String), ticket32_a(String)
-2015-03-10 17:35:33.823 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@508a4583]
-2015-03-10 17:35:33.831 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:35:33.854 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:35:53.978 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2218d382]
-2015-03-10 17:35:53.986 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:35:54.010 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:36:01.143 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@be60d4b]
-2015-03-10 17:36:01.150 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:36:01.174 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:36:06.738 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2c72bd07]
-2015-03-10 17:36:06.746 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:36:06.770 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:50:31.628 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3969369f]
-2015-03-10 17:50:31.635 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:50:31.658 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:50:50.352 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@fca8f86]
-2015-03-10 17:50:50.359 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?) 
-2015-03-10 17:50:50.382 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:55:21.957 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2325f069]
-2015-03-10 17:55:21.965 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?); SELECT LAST_INSERT_ID(); 
-2015-03-10 17:55:21.988 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 17:55:34.586 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@25d9c4c4]
-2015-03-10 17:55:34.593 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?); 
-2015-03-10 17:55:34.617 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 18:33:31.017 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@31ec6bb1]
-2015-03-10 18:33:31.025 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32_a (stub) VALUES (?); 
-2015-03-10 18:33:31.050 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
-2015-03-10 18:43:52.268 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@691d897e]
-2015-03-10 18:43:52.275 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ? (stub) VALUES (?); 
-2015-03-10 18:43:52.299 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: ticket32_a(String), ticket32_a(String)
+2015-03-11 09:48:59.691 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1b6682fe]
+2015-03-11 09:48:59.703 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 09:48:59.732 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 09:49:37.843 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@691d897e]
+2015-03-11 09:49:37.851 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 09:49:37.874 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 09:49:46.366 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@36223d0b]
+2015-03-11 09:49:46.374 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 09:49:46.398 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:00:58.001 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@32bb7f04]
+2015-03-11 10:00:58.009 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:00:58.032 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:03:16.787 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@40e554e8]
+2015-03-11 10:03:16.795 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:16.818 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:03:16.821 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2064e42d]
+2015-03-11 10:03:16.821 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:16.821 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:03:31.023 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2a98a2e8]
+2015-03-11 10:03:31.030 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:31.053 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:03:31.056 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@21e40749]
+2015-03-11 10:03:31.056 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:31.057 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:03:36.666 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1b6682fe]
+2015-03-11 10:03:36.674 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:36.697 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:03:36.699 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1fec1485]
+2015-03-11 10:03:36.700 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:36.700 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:03:55.518 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7cbc80d8]
+2015-03-11 10:03:55.525 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:55.550 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:03:55.553 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@577b8d3d]
+2015-03-11 10:03:55.553 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:03:55.554 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:04:42.639 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@77409080]
+2015-03-11 10:04:42.646 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:04:42.669 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:04:42.672 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@33f9a0a8]
+2015-03-11 10:04:42.672 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:04:42.673 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:24:37.826 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@29370b18]
+2015-03-11 10:24:37.834 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:37.858 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:24:37.860 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4ca6c829]
+2015-03-11 10:24:37.861 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:37.861 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:24:51.472 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@60313e1e]
+2015-03-11 10:24:51.481 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:51.504 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:24:51.506 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1ad3359d]
+2015-03-11 10:24:51.507 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:51.507 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:24:56.378 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@691d897e]
+2015-03-11 10:24:56.385 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:56.408 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:24:56.411 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@546632b]
+2015-03-11 10:24:56.411 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:24:56.411 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:25:00.825 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@691d897e]
+2015-03-11 10:25:00.832 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:25:00.856 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:25:00.859 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@546632b]
+2015-03-11 10:25:00.859 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:25:00.859 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:25:21.300 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2dd22817]
+2015-03-11 10:25:21.308 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:25:21.331 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:25:21.333 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@241df3e6]
+2015-03-11 10:25:21.333 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:25:21.334 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:28:21.808 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3f34b16b]
+2015-03-11 10:28:21.817 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:28:21.841 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:28:21.843 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4fac7f84]
+2015-03-11 10:28:21.844 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:28:21.844 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:32:08.852 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@788fa31b]
+2015-03-11 10:32:08.860 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:32:08.883 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:32:08.887 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@791adc49]
+2015-03-11 10:32:08.887 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:32:08.887 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: b(String)
+2015-03-11 10:36:59.754 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@691d897e]
+2015-03-11 10:36:59.762 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:36:59.785 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)
+2015-03-11 10:37:35.293 DEBUG [BaseJdbcLogger.java:132] - ooo Using Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@aef4331]
+2015-03-11 10:37:35.300 DEBUG [BaseJdbcLogger.java:132] - ==>  Preparing: REPLACE INTO ticket32 (stub) VALUES (?); 
+2015-03-11 10:37:35.323 DEBUG [BaseJdbcLogger.java:132] - ==> Parameters: a(String)

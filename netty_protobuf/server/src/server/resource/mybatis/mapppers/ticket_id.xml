@@ -11,14 +11,14 @@
 		<result column="stub" property="stub" />
 	</resultMap>
 	
-	<insert id="getId32" parameterType="TicketID" useGeneratedKeys="true"
-		keyProperty="id">
-		REPLACE INTO 
-		<if test="#{stub} == 'a'">
-        	ticket32_a
-    	</if>
-		 (stub)
+	<insert id="getId32" parameterType="TicketID" useGeneratedKeys="true" 
+		>
+		REPLACE INTO ticket32 (stub)
 		VALUES (#{stub});
+		
+		<selectKey resultType="long" keyProperty="id"> 
+			SELECT LAST_INSERT_ID(); 
+		</selectKey>
 	</insert>
 
 </mapper>
